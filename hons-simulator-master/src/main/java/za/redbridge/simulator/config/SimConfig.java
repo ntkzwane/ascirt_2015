@@ -163,9 +163,9 @@ public class SimConfig extends Config {
             boolean valid = false;
             while(!valid)
             {
-                System.out.println("Enter number of robots (2 - 10)");
+                System.out.println("Enter number of robots (2 - 20)");
                 robots = Integer.parseInt(inputReader.readLine());
-                if(robots > 10 || robots <2)
+                if(robots > 20 || robots <2)
                 {
                     System.out.println("Please enter a number in range!");
                 }
