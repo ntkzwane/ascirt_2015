@@ -6,7 +6,6 @@ hs_err_pid*
 
 # Gradle
 .gradle/
-build/
 
 # Mac OS X mess
 .DS_Store

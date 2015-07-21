@@ -74,8 +74,8 @@ public class UltrasonicSensor extends AgentSensor {
 
     @Override
     protected Portrayal createPortrayal() {
-        return new ConePortrayal(range, fieldOfView, new Color(0, 0, 255, 50));
-//        return new ConePortrayal(range, fieldOfView, new Color(0, 255, 0, 50));
+//        return new ConePortrayal(range, fieldOfView, new Color(0, 0, 255, 50));
+        return new ConePortrayal(range, fieldOfView, new Color(0, 255, 0, 50));
     }
 
 }

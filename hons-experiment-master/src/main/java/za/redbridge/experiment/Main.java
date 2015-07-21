@@ -110,13 +110,13 @@ public class Main {
         private String configFile = "config/mediumSimConfig.yml";
 
         @Parameter(names = "-i", description = "Number of simulation iterations to train for")
-        private int numIterations = 1;
+        private int numIterations = 500;
 
         @Parameter(names = "-p", description = "Initial population size")
-        private int populationSize = 10;
+        private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 1;
+        private int simulationRuns = 5;
 
         @Parameter(names = "--conn-density", description = "Adjust the initial connection density"
                 + " for the population")

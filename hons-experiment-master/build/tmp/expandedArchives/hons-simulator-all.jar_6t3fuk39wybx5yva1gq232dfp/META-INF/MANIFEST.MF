@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Redbridge Mining Crew Simulator
+Main-Class: za.redbridge.simulator.experiment.Main
+

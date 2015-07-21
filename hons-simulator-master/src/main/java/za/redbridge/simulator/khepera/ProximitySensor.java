@@ -22,6 +22,7 @@ public class ProximitySensor extends AgentSensor {
     private static final float PROXIMITY_SENSOR_RANGE = 0.2f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
+//    public static final float RANGE = 0.2f;
     public static final float RANGE = 0.2f;
     public static final float FIELD_OF_VIEW = 0.2f; // This is a guess
 
