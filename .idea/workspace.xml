@@ -89,8 +89,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.02200489">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -914,12 +914,12 @@
       <workItem from="1437036504860" duration="59000" />
       <workItem from="1437039538046" duration="50972000" />
       <workItem from="1437399148787" duration="28000" />
-      <workItem from="1437399220763" duration="31605000" />
+      <workItem from="1437399220763" duration="32173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115243000" />
+    <option name="totallyTimeSpent" value="115811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="933" extended-state="0" />
@@ -1542,8 +1542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-experiment-master/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.02200489">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
