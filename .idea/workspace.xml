@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+              <caret line="122" column="62" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,15 +40,27 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#UltrasonicSensor#0" expanded="false" />
                 <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
                 <element signature="method#UltrasonicSensor#1;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="e#2230#2231#0" expanded="false" />
-                <element signature="e#2315#2316#0" expanded="false" />
+                <element signature="e#2230#2231#0" expanded="true" />
+                <element signature="e#2315#2316#0" expanded="true" />
+                <element signature="e#2364#2365#0" expanded="true" />
+                <element signature="e#2388#2389#0" expanded="true" />
                 <element signature="method#readAdditionalConfigs#0;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="e#2630#2631#0" expanded="false" />
-                <element signature="e#2657#2658#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NEATMUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27383864">
+              <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/config/SimConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44987774">
+            <state vertical-scroll-proportion="0.0">
               <caret line="165" column="65" selection-start-line="165" selection-start-column="65" selection-end-line="165" selection-end-column="65" />
               <folding />
             </state>
@@ -169,7 +181,6 @@
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/experiment/Main.java" />
         <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/SensorParameterSpec.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/portrayal/Portrayal.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java" />
         <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/experiment/controller/HeuristicPhenotype.java" />
         <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/experiment/NEATMPhenotype.java" />
         <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/experiment/controller/heuristics/HeuristicSchedule.java" />
@@ -197,7 +208,6 @@
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/factories/HomogeneousRobotFactory.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/Sensor.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/AgentSensor.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/HeuristicSchedule.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/Heuristic.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/configs/sensorList.yml" />
@@ -210,6 +220,8 @@
         <option value="$PROJECT_DIR$/hons-experiment-master/gradlew" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/HeuristicPhenotype.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/config/SimConfig.java" />
+        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java" />
+        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java" />
       </list>
     </option>
   </component>
@@ -373,6 +385,108 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hons-experiment-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-experiment-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-experiment-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="za" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-experiment-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="za" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NEATM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,12 +771,12 @@
       <workItem from="1437036504860" duration="59000" />
       <workItem from="1437039538046" duration="50972000" />
       <workItem from="1437399148787" duration="28000" />
-      <workItem from="1437399220763" duration="28376000" />
+      <workItem from="1437399220763" duration="29989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112014000" />
+    <option name="totallyTimeSpent" value="113627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="933" extended-state="0" />
@@ -678,7 +792,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1743215" sideWeight="0.48609433" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1743215" sideWeight="0.48609433" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -735,34 +849,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/SensorType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69193155">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/SensorConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-            <element signature="e#1097#1098#0" expanded="false" />
-            <element signature="e#1154#1155#0" expanded="false" />
-            <element signature="e#1187#1188#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/PhysicalObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42787287">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3329114">
@@ -1148,24 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#UltrasonicSensor#1;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="e#2230#2231#0" expanded="false" />
-            <element signature="e#2315#2316#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="e#2630#2631#0" expanded="false" />
-            <element signature="e#2657#2658#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1248,16 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hons-experiment-master/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.392858">
@@ -1300,9 +1358,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/config/SimConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44987774">
+        <state vertical-scroll-proportion="0.0">
           <caret line="165" column="65" selection-start-line="165" selection-start-column="65" selection-end-line="165" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMGenome">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMPopulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.12224939">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#UltrasonicSensor#0" expanded="false" />
+            <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
+            <element signature="method#UltrasonicSensor#1;class#UltrasonicSensor#0" expanded="false" />
+            <element signature="e#2230#2231#0" expanded="true" />
+            <element signature="e#2315#2316#0" expanded="true" />
+            <element signature="e#2364#2365#0" expanded="true" />
+            <element signature="e#2388#2389#0" expanded="true" />
+            <element signature="method#readAdditionalConfigs#0;class#UltrasonicSensor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="62" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27383864">
+          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

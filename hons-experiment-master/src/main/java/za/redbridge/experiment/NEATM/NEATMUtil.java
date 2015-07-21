@@ -134,7 +134,8 @@ public final class NEATMUtil {
         result.addOperation(0.05, fieldMutation);
 
         // Add sensor mutation
-        double connectionDensity = 0.1;
+//        double connectionDensity = 0.1; chuck : edit
+        double connectionDensity = 1;
         CompoundOperator addSensorMutation = new CompoundOperator();
         OperationList addSensorComponents = addSensorMutation.getComponents();
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.PROXIMITY,
