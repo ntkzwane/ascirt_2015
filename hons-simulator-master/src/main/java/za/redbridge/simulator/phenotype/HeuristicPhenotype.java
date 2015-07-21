@@ -43,7 +43,7 @@ public class HeuristicPhenotype implements Phenotype, Drawable {
     private PickupSensor pickupSensor;
 
     public HeuristicPhenotype(Phenotype controllerPhenotype, RobotObject robot,
-                              SimConfig.Direction targetAreaPlacement) {
+            SimConfig.Direction targetAreaPlacement) {
         this.controllerPhenotype = controllerPhenotype;
         this.robot = robot;
         this.targetAreaPlacement = targetAreaPlacement;
