@@ -1,0 +1,9 @@
+target/
+.DS_Store
+.settings/
+*.log
+
+# Intellij
+*.iml
+.idea/
+
