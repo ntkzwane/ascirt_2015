@@ -20,7 +20,7 @@ import static za.redbridge.simulator.Utils.wrapAngle;
 public class PickupHeuristic extends Heuristic {
 
     private static final Color COLOR = Color.GREEN;
-    private static final boolean ENABLE_PICKUP_POSITIONING = false;
+    private static final boolean ENABLE_PICKUP_POSITIONING = true;
 
     protected final PickupSensor pickupSensor;
     protected final SimConfig.Direction targetAreaDirection;

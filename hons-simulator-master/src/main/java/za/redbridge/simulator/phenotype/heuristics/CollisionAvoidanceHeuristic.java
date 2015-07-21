@@ -10,6 +10,7 @@ import za.redbridge.simulator.sensor.ClosestObjectSensor;
 import za.redbridge.simulator.sensor.CollisionSensor;
 import za.redbridge.simulator.sensor.Sensor;
 
+import za.redbridge.simulator.object.ResourceObject;
 
 import static za.redbridge.simulator.Utils.jitter;
 
@@ -33,9 +34,14 @@ public class CollisionAvoidanceHeuristic extends Heuristic {
     public Double2D step(List<List<Double>> list) {
         Optional<ClosestObjectSensor.ClosestObject> collision = collisionSensor.sense();
 
-        return collision.map(o -> o.getVectorToObject())
+        ResourceObject resource =
+            collisionSensor.sense().map(o -> (ResourceObject) o.getObject()).orElse(null);
+        if (resource == null || !resource.canBePickedUp()) {
+            return collision.map(o -> o.getVectorToObject())
                 .map(o -> wheelDriveForTargetPosition(jitter(o.negate(), 0.2f)))
                 .orElse(null);
+        }
+        return null;
     }
 
     @Override

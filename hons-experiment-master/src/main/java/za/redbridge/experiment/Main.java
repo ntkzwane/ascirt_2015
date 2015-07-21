@@ -91,6 +91,7 @@ public class Main {
         }
 
         final StatsRecorder statsRecorder = new StatsRecorder(train, calculateScore);
+        statsRecorder.recordIterationStats();
         for (int i = train.getIteration(); i < options.numIterations; i++) {
             train.iteration();
             statsRecorder.recordIterationStats();
