@@ -140,9 +140,9 @@ public final class NEATMUtil {
         CompoundOperator addSensorMutation = new CompoundOperator();
         OperationList addSensorComponents = addSensorMutation.getComponents();
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.PROXIMITY,
-                connectionDensity, new FixedLinkWeight()/* chuck : edit weight new MutateResetLinkWeight()*/));
+                connectionDensity, /*new FixedLinkWeight() chuck : edit weight */new MutateResetLinkWeight()));
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.ULTRASONIC,
-                connectionDensity, new FixedLinkWeight()/* chuck : edit weight new MutatePerturbLinkWeight(0.2)*/));
+                connectionDensity, /*new FixedLinkWeight() chuck : edit weight */new MutatePerturbLinkWeight(0.2)));
         addSensorComponents.finalizeStructure();
 
         result.addOperation(0.05, addSensorMutation);

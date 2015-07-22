@@ -75,9 +75,9 @@ public class FixedLinkWeight implements MutateLinkWeight {
 	@Override
 	public void mutateWeight(final Random rnd, final NEATLinkGene linkGene,
 			final double weightRange) {
-		/*linkGene.setWeight(RangeRandomizer.randomize(rnd, -weightRange,
-				weightRange));*/
-		linkGene.setWeight(0); // chuck : edit weight set weight to 0
+		linkGene.setWeight(RangeRandomizer.randomize(rnd, -weightRange,
+				weightRange));
+		/*linkGene.setWeight(0);*/ // chuck : edit weight set weight to 0
 	}
 
 	/**

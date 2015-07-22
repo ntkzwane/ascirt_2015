@@ -7,8 +7,8 @@ import org.encog.neural.neat.training.NEATInnovation;
 import org.encog.neural.neat.training.NEATLinkGene;
 import org.encog.neural.neat.training.NEATNeuronGene;
 import org.encog.neural.neat.training.opp.NEATMutation;
-/* chuck : edit weight import org.encog.neural.neat.training.opp.links.MutateLinkWeight;*/
-import za.redbridge.experiment.NEATM.training.opp.sensors.FixedLinkWeight;
+import org.encog.neural.neat.training.opp.links.MutateLinkWeight;
+/* chuck : edit weight */import za.redbridge.experiment.NEATM.training.opp.sensors.FixedLinkWeight;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,8 @@ public class NEATMMutateAddSensor extends NEATMutation {
 
     private final SensorType sensorType;
     private final double connectionDensity;
-    private final FixedLinkWeight weightMutator;
+    private final MutateLinkWeight weightMutator;
+    /*private final FixedLinkWeight weightMutator;*/// chuck : edit weight
 
     /**
      * @param sensorType the sensor type to add
@@ -46,7 +47,7 @@ public class NEATMMutateAddSensor extends NEATMutation {
      * @param weightMutator the mutator that will initialize the links of the new sensor
      */
     public NEATMMutateAddSensor(SensorType sensorType, double connectionDensity,
-                                FixedLinkWeight weightMutator) {
+                /*chuck : edit weight FixedLinkWeight*/MutateLinkWeight weightMutator) {
         this.sensorType = sensorType;
         this.connectionDensity = connectionDensity;
         this.weightMutator = weightMutator;

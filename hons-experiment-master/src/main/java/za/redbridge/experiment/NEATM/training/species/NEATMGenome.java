@@ -62,7 +62,7 @@ public class NEATMGenome extends NEATGenome {
             final NEATLinkGene newGene = new NEATLinkGene(
                     oldGene.getFromNeuronID(), oldGene.getToNeuronID(),
                     oldGene.isEnabled(), oldGene.getInnovationId(),
-                    0 /* chuck : edit weight oldGene.getWeight()*/);
+                    /*0 chuck : edit weight */oldGene.getWeight());
             links.add(newGene);
         }
     }
@@ -167,7 +167,7 @@ public class NEATMGenome extends NEATGenome {
                     long toID = neurons.get(inputCount + j + 1).getId();
                     double w = RangeRandomizer.randomize(rnd, -pop.getWeightRange(),
                             pop.getWeightRange());
-                    NEATLinkGene gene = new NEATLinkGene(fromID, toID, true, innovationID++, 0 /*chuck : edit weight w*/);
+                    NEATLinkGene gene = new NEATLinkGene(fromID, toID, true, innovationID++, /*0 chuck : edit weight*/ w);
                     links.add(gene);
 
                     if (i != 0) { // if not bias node
@@ -185,7 +185,7 @@ public class NEATMGenome extends NEATGenome {
             long fromID = neurons.get(inputIndex).getId();
             long toID = neurons.get(outputIndex).getId();
             double w = RangeRandomizer.randomize(rnd, -pop.getWeightRange(), pop.getWeightRange());
-            NEATLinkGene gene = new NEATLinkGene(fromID, toID, true, innovationID, 0 /*chuck : edit weight w*/);
+            NEATLinkGene gene = new NEATLinkGene(fromID, toID, true, innovationID, /*0 chuck : edit weight*/ w);
             links.add(gene);
         }
     }
