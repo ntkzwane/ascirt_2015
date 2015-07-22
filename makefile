@@ -14,18 +14,28 @@ all:
 	./gradlew fatJar && \
 	echo done
 
-buildsim: $(SRC_DIR)
+morphev:
+	@echo building simulator...
+	@cd hons-simulator-master && \
+	./gradlew fatJar && \
+	cd .. && \
+	rm hons-morphev-master/libs/hons-simulator-all.jar && \
+	cp hons-simulator-master/build/libs/hons-simulator-master-all.jar hons-morphev-master/libs && \
+	mv hons-morphev-master/libs/hons-simulator-master-all.jar hons-morphev-master/libs/hons-simulator-all.jar && \
+	echo building morphev... && \
+	cd hons-morphev-master && \
+	./gradlew fatJar && \
+	echo done
+
+experiment:
 	@echo building simulator...
 	@cd hons-simulator-master && \
 	./gradlew fatJar && \
 	cd .. && \
 	rm hons-experiment-master/libs/hons-simulator-all.jar && \
 	cp hons-simulator-master/build/libs/hons-simulator-master-all.jar hons-experiment-master/libs && \
-	mv hons-experiment-master/libs/hons-simulator-master-all.jar hons-experiment-master/libs/hons-simulator-all.jar &&\
-	echo done building simulator
-
-buildexp: $(EXP_DIR)
-	@echo building experiment... && \
+	mv hons-experiment-master/libs/hons-simulator-master-all.jar hons-experiment-master/libs/hons-simulator-all.jar && \
+	echo building experiment... && \
 	cd hons-experiment-master && \
 	./gradlew fatJar && \
-	echo done building experiment
+	echo done

@@ -10,7 +10,6 @@ import org.encog.neural.neat.training.opp.NEATMutateAddLink;
 import org.encog.neural.neat.training.opp.NEATMutateWeights;
 import org.encog.neural.neat.training.opp.links.MutatePerturbLinkWeight;
 import org.encog.neural.neat.training.opp.links.MutateResetLinkWeight;
-/* chuck : edit weight*/import za.redbridge.experiment.NEATM.training.opp.sensors.FixedLinkWeight;
 import org.encog.neural.neat.training.opp.links.SelectFixed;
 import org.encog.neural.neat.training.opp.links.SelectProportion;
 
