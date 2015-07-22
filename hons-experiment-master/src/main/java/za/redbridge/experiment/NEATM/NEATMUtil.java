@@ -135,7 +135,7 @@ public final class NEATMUtil {
         result.addOperation(0.05, fieldMutation);
 
         // Add sensor mutation
-//        double connectionDensity = 0.1; chuck : edit
+//        double connectionDensity = 0.1; chuck : edit connection density
         double connectionDensity = 1;
         CompoundOperator addSensorMutation = new CompoundOperator();
         OperationList addSensorComponents = addSensorMutation.getComponents();

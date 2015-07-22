@@ -64,7 +64,7 @@ public class NEATMCODEC implements GeneticCODEC, Serializable {
                         lookup.get(linkGene.getToNeuronID()), linkGene
                         .getWeight()));*/
                 links.add(new NEATLink(lookup.get(linkGene.getFromNeuronID()),
-                    lookup.get(linkGene.getToNeuronID()), 1)); // chuck : edit weight
+                    lookup.get(linkGene.getToNeuronID()), 0)); // chuck : edit weight
             }
 
         }

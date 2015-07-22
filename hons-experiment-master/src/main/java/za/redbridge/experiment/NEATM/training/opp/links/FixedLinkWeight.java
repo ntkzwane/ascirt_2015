@@ -77,7 +77,7 @@ public class FixedLinkWeight implements MutateLinkWeight {
 			final double weightRange) {
 		/*linkGene.setWeight(RangeRandomizer.randomize(rnd, -weightRange,
 				weightRange));*/
-		linkGene.setWeight(1); // chuck : edit weight set weight to 1
+		linkGene.setWeight(0); // chuck : edit weight set weight to 0
 	}
 
 	/**

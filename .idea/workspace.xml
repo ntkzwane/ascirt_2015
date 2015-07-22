@@ -48,16 +48,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NEATMGenome.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species/NEATMGenome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3329114">
-              <caret line="61" column="57" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NEATMMutateAddSensor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateAddSensor.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,9 +61,11 @@
       <file leaf-file-name="NEATMUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.071429">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="70" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="142" column="67" selection-start-line="142" selection-start-column="67" selection-end-line="142" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,18 +82,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FixedLinkWeight.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FixedLinkWeight.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.56746763">
+              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="docComment;field#trainer#0;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="docComment;method#getTrainer#0;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="docComment;method#init#0;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="docComment;method#mutateWeight#0;class#FixedLinkWeight#0" expanded="false" />
-                <element signature="method#mutateWeight#0;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="docComment;method#toString#0;class#FixedLinkWeight#0" expanded="false" />
                 <element signature="method#toString#0;class#FixedLinkWeight#0" expanded="false" />
               </folding>
@@ -122,8 +114,8 @@
       <file leaf-file-name="NEATMCODEC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.642857">
-              <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+            <state vertical-scroll-proportion="-2.25">
+              <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -183,13 +175,13 @@
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/BottomProximitySensor.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupHeuristic.java" />
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java" />
         <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/neural/neat/training/opp/links/MutateResetLinkWeight.java" />
         <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/MutateResetLinkWeight.java" />
         <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateAddSensor.java" />
         <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java" />
         <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species/NEATMGenome.java" />
+        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java" />
+        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java" />
       </list>
     </option>
   </component>
@@ -1372,16 +1364,16 @@
       <workItem from="1437036504860" duration="59000" />
       <workItem from="1437039538046" duration="50972000" />
       <workItem from="1437399148787" duration="28000" />
-      <workItem from="1437399220763" duration="53227000" />
+      <workItem from="1437399220763" duration="53577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136865000" />
+    <option name="totallyTimeSpent" value="137215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="933" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1395,7 +1387,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10908142" sideWeight="0.48609433" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1992,31 +1984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.071429">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
-          <folding>
-            <element signature="docComment;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="docComment;field#trainer#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="docComment;method#getTrainer#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="docComment;method#init#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="docComment;method#mutateWeight#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="method#mutateWeight#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#FixedLinkWeight#0" expanded="false" />
-            <element signature="method#toString#0;class#FixedLinkWeight#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/neural/neat/NEATLink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2042,14 +2009,6 @@
             <element signature="docComment;method#toString#0;class#NEATLink#0" expanded="false" />
             <element signature="method#toString#0;class#NEATLink#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.642857">
-          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2119,9 +2078,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species/NEATMGenome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329114">
-          <caret line="61" column="57" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="57" />
+        <state vertical-scroll-proportion="1.2310536">
+          <caret line="169" column="95" selection-start-line="169" selection-start-column="95" selection-end-line="169" selection-end-column="95" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.25">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="67" selection-start-line="142" selection-start-column="67" selection-end-line="142" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56746763">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="docComment;field#trainer#0;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="docComment;method#getTrainer#0;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="docComment;method#mutateWeight#0;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#FixedLinkWeight#0" expanded="false" />
+            <element signature="method#toString#0;class#FixedLinkWeight#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
