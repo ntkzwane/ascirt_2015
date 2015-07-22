@@ -121,7 +121,7 @@ public class Main {
 
         @Parameter(names = "--conn-density", description = "Adjust the initial connection density"
                 + " for the population")
-//        private double connectionDensity = 0.5; chuck : edit
+//        private double connectionDensity = 0.5; chuck : edit connection density
         private double connectionDensity = 1;
         @Parameter(names = "--demo", description = "Show a GUI demo of a given genome")
         private String genomePath = null;

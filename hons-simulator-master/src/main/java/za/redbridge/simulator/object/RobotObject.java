@@ -70,7 +70,7 @@ public class RobotObject extends PhysicalObject {
     private final Portrayal directionPortrayal = new DirectionPortrayal();
 
     //energy level of robots
-    private static float init_energy_level = 100;
+    private static float init_energy_level = 1000;
     private float energy_level;
 
     private static float default_motor_consumption = 0.5f;
@@ -185,7 +185,7 @@ public class RobotObject extends PhysicalObject {
                 samplePoints.clear();
             }
         }
-//        consumeEnergy();
+        consumeEnergy();
     }
 
     private void applyWheelDrive(float wheelDrive, Vec2 wheelPosition) {

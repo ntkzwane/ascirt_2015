@@ -14,7 +14,7 @@ all:
 	./gradlew fatJar && \
 	echo done
 
-buildsim: hons-simulator-master/src/%.java
+buildsim: $(SRC_DIR)
 	@echo building simulator...
 	@cd hons-simulator-master && \
 	./gradlew fatJar && \
