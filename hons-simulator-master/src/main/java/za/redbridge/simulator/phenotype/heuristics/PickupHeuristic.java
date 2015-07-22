@@ -45,6 +45,8 @@ public class PickupHeuristic extends Heuristic {
         ResourceObject resource =
                 pickupSensor.sense().map(o -> (ResourceObject) o.getObject()).orElse(null);
         if (resource == null || !resource.canBePickedUp()) {
+
+            //  chuck : todo Check if sensor directly above target area
             return null; // No viable resource, nothing to do
         }
 
@@ -83,6 +85,24 @@ public class PickupHeuristic extends Heuristic {
             targetAreaPosition = 0;
         } else if (targetAreaDirection == SimConfig.Direction.WEST) {
             targetAreaPosition = Math.PI;
+        }
+
+        return wrapAngle(targetAreaPosition - robotAngle);
+
+    }
+
+    protected double awayTargetAreaAngle() {
+        double robotAngle = robot.getBody().getAngle();
+        double targetAreaPosition = -1;
+
+        if (targetAreaDirection == SimConfig.Direction.NORTH) {
+            targetAreaPosition = -HALF_PI;
+        } else if (targetAreaDirection == SimConfig.Direction.SOUTH) {
+            targetAreaPosition = HALF_PI;
+        } else if (targetAreaDirection == SimConfig.Direction.EAST) {
+            targetAreaPosition = Math.PI;
+        } else if (targetAreaDirection == SimConfig.Direction.WEST) {
+            targetAreaPosition = 0;
         }
 
         return wrapAngle(targetAreaPosition - robotAngle);

@@ -10,6 +10,7 @@ import org.encog.neural.neat.training.opp.NEATMutateAddLink;
 import org.encog.neural.neat.training.opp.NEATMutateWeights;
 import org.encog.neural.neat.training.opp.links.MutatePerturbLinkWeight;
 import org.encog.neural.neat.training.opp.links.MutateResetLinkWeight;
+/* chuck : edit weight*/import za.redbridge.experiment.NEATM.training.opp.sensors.FixedLinkWeight;
 import org.encog.neural.neat.training.opp.links.SelectFixed;
 import org.encog.neural.neat.training.opp.links.SelectProportion;
 
@@ -139,9 +140,9 @@ public final class NEATMUtil {
         CompoundOperator addSensorMutation = new CompoundOperator();
         OperationList addSensorComponents = addSensorMutation.getComponents();
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.PROXIMITY,
-                connectionDensity, new MutateResetLinkWeight()));
+                connectionDensity, new FixedLinkWeight()/* chuck : edit weight new MutateResetLinkWeight()*/));
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.ULTRASONIC,
-                connectionDensity, new MutatePerturbLinkWeight(0.2)));
+                connectionDensity, new FixedLinkWeight()/* chuck : edit weight new MutatePerturbLinkWeight(0.2)*/));
         addSensorComponents.finalizeStructure();
 
         result.addOperation(0.05, addSensorMutation);
