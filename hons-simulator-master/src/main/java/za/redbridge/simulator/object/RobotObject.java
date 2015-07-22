@@ -185,7 +185,7 @@ public class RobotObject extends PhysicalObject {
                 samplePoints.clear();
             }
         }
-        consumeEnergy();
+//        consumeEnergy();
     }
 
     private void applyWheelDrive(float wheelDrive, Vec2 wheelPosition) {
