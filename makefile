@@ -15,6 +15,9 @@ all:
 	echo building experiment... && \
 	cd hons-experiment-master && \
 	./gradlew fatJar && \
+	echo building morphev... && \
+	cd hons-morphev-master && \
+	./gradlew fatJar && \
 	echo done
 
 simulator:

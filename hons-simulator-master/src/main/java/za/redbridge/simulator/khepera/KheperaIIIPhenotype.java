@@ -139,6 +139,8 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
         public boolean enableUltrasonicSensors40Degrees = false;
         public boolean enableUltrasonicSensors90Degrees = false;
 
+        /*public boolean enable*/
+
         public Configuration() {
         }
 
