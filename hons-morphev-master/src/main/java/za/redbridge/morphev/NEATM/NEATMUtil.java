@@ -97,7 +97,7 @@ public final class NEATMUtil {
 
         // Add all the operators, probability should sum to 1
         result.addOperation(0.5, new NEATMCrossover());
-//        result.addOperation(0.5, weightMutation);
+        result.addOperation(0.5, weightMutation);
 //        result.addOperation(0.05, new NEATMMutateAddNode());
 //        result.addOperation(0.05, new NEATMutateAddLink());
 //        result.addOperation(0.005, new NEATMMutateRemoveLink());

@@ -83,6 +83,10 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             sensors.add(createUltrasonicSensor((float) Math.PI / 2, 0f));
             sensors.add(createUltrasonicSensor((float) -Math.PI / 2, 0f));
         }
+
+        if (configuration.enableColourProximitySensor){
+            sensors.add(createColourProximitySensor((float) 0f, 0f));
+        }
     }
 
     /** Method can be overridden to customize proximity sensor */
@@ -99,6 +103,12 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
     protected AgentSensor createUltrasonicSensor(float bearing, float orientation) {
         return new UltrasonicSensor(bearing, orientation);
     }
+
+    /** Method can be overridden to customize colour proximity sensor */
+    protected AgentSensor createColourProximitySensor(float bearing, float orientation){
+        return new ColourProximitySensor(bearing, orientation);
+    }
+
 
     /** Returns a copy of the current configuration */
     public Configuration getConfiguration() {
@@ -139,7 +149,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
         public boolean enableUltrasonicSensors40Degrees = false;
         public boolean enableUltrasonicSensors90Degrees = false;
 
-        /*public boolean enable*/
+        public boolean enableColourProximitySensor = false;
 
         public Configuration() {
         }
@@ -156,6 +166,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             this.enableUltrasonicSensor0Degrees = other.enableUltrasonicSensor0Degrees;
             this.enableUltrasonicSensors40Degrees = other.enableUltrasonicSensors40Degrees;
             this.enableUltrasonicSensors90Degrees = other.enableUltrasonicSensors90Degrees;
+            this.enableColourProximitySensor = other.enableColourProximitySensor;
         }
         
         public int getNumberOfSensors() {
@@ -170,6 +181,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             if (enableUltrasonicSensor0Degrees) numSensors += 1;
             if (enableUltrasonicSensors40Degrees) numSensors += 2;
             if (enableUltrasonicSensors90Degrees) numSensors += 2;
+            if (enableColourProximitySensor) numSensors +=1;
             
             return numSensors;
         }
