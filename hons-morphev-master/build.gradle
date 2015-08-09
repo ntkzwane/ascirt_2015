@@ -12,11 +12,11 @@ dependencies {
 }
 
 apply plugin: 'application'
-mainClassName = 'za.redbridge.morphev.Main'
+mainClassName = 'za.redbridge.morphevo.Main'
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Main-Class': 'za.redbridge.morphev.Main'
+        attributes 'Main-Class': 'za.redbridge.morphevo.Main'
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }

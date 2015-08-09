@@ -15,6 +15,7 @@ all:
 	echo building experiment... && \
 	cd hons-experiment-master && \
 	./gradlew fatJar && \
+	cd .. && \
 	echo building morphev... && \
 	cd hons-morphev-master && \
 	./gradlew fatJar && \
@@ -33,7 +34,7 @@ simulator:
 	mv hons-morphev-master/libs/hons-simulator-master-all.jar hons-morphev-master/libs/hons-simulator-all.jar && \
 	echo done
 
-morphev:
+morphev_and_sim:
 	@echo building simulator...
 	@cd hons-simulator-master && \
 	./gradlew fatJar && \
@@ -46,7 +47,13 @@ morphev:
 	./gradlew fatJar && \
 	echo done
 
-experiment:
+morphev_only:
+	@echo building morphev... && \
+	cd hons-morphev-master && \
+	./gradlew fatJar && \
+	echo done
+
+experiment_and_sim:
 	@echo building simulator...
 	@cd hons-simulator-master && \
 	./gradlew fatJar && \

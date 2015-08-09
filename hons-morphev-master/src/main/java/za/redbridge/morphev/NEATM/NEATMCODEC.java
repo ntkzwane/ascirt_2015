@@ -77,7 +77,7 @@ public class NEATMCODEC implements GeneticCODEC, Serializable {
         SensorModel[] sensorModels = new SensorModel[inputCount];
         for (int i = 0; i < inputCount; i++) {
             NEATMNeuronGene inputNeuron = inputNeurons.get(i);
-            sensorModels[i] = inputNeuron.getSensorConfiguration().toSensorModel();
+                sensorModels[i] = inputNeuron.getSensorConfiguration().toSensorModel();
         }
 
         SensorMorphology morphology = new SensorMorphology(sensorModels);

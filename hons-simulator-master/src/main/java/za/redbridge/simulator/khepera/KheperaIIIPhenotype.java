@@ -85,7 +85,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
         }
 
         if (configuration.enableColourProximitySensor){
-            sensors.add(createColourProximitySensor((float) 0f, 0f));
+            sensors.add(createColourProximitySensor((float) Math.PI, 0f));
         }
     }
 

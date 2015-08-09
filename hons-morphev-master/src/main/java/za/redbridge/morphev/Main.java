@@ -134,7 +134,7 @@ public class Main {
                 + " control case")
         private String morphologyPath = null;
 
-        @Parameter(names = "--population", description = "To resume a previous morphev, provide"
+        @Parameter(names = "--population", description = "To resume a previous experiment, provide"
                 + " the path to a serialized population")
         private String populationPath = null;
 
