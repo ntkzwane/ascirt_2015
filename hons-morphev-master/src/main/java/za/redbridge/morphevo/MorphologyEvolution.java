@@ -35,7 +35,7 @@ import org.encog.ml.ea.sort.GenomeComparator;
 import org.encog.ml.ea.sort.MaximizeScoreComp;
 import org.encog.ml.ea.sort.MinimizeScoreComp;
 import org.encog.ml.ea.species.BasicSpecies;
-/*import org.encog.ml.ea.species.Species;*/
+import org.encog.ml.ea.species.Species;
 import org.encog.ml.ea.train.basic.TrainEA;
 import org.encog.ml.genetic.crossover.Splice;
 import org.encog.ml.genetic.mutate.MutatePerturb;
@@ -122,30 +122,37 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		super(TrainingImplementationType.Iterative);
 
 		// Create the population
-		/*final Population population = new BasicPopulation(populationSize, null);
-		final Species defaultSpecies = population.createSpecies();
+		final Population population = new BasicPopulation(populationSize, null);
+		final Species defaultSpecies = population.createSpecies( );//new BasicSpecies( );
+//		defaultSpecies.setPopulation(population);
 
 		for (int i = 0; i < population.getPopulationSize(); i++) {
 			final MorphGenome genome = randomGenome();
-			defaultSpecies.add(genome);
+
+			genome.setScore(0.0);
+			genome.setAdjustedScore(0.0);
+			defaultSpecies.getMembers( ).add(genome);
+//			defaultSpecies.add(genome);
+
+			////
+			if (Double.isInfinite(genome.getScore())
+				|| Double.isInfinite(genome.getAdjustedScore())
+				|| Double.isNaN(genome.getScore())
+				|| Double.isNaN(genome.getAdjustedScore())) {
+				System.out.println("Removed");
+			} else {
+				System.out.println("Staying");
+			}
+			////
 		}
+
 		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
 
 		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
-		population.getSpecies().add(defaultSpecies);*/
-		final Population population = new BasicPopulation(populationSize, null);
-		BasicSpecies defaultSpecies = new BasicSpecies( );
-		defaultSpecies.setPopulation(population);
+//		population.getSpecies().add(defaultSpecies);
+//		population.getSpecies().set(0,defaultSpecies);
+		System.out.println("Size: "+population.getSpecies().size());
 
-		for (int i = 0; i < population.getPopulationSize(); i++) {
-			final MorphGenome genome = randomGenome();
-			defaultSpecies.getMembers( ).add(genome);
-		}
-//		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
-
-		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
-		population.getSpecies().add(defaultSpecies);
-		
 		// create the trainer
 		this.genetic = new MorphologyEvolutionHelper(population, calculateScore);
 		this.genetic.setCODEC(new MorphCODEC( ));
@@ -159,13 +166,14 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		this.genetic.setBestComparator(comp);
 		this.genetic.setSelectionComparator(comp);
 
+		System.out.println("Sizie: "+getGenetic().getPopulation().getSpecies().size());
 		
 		// create the operators
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
 		getGenetic().setPopulation(population);
 
 		this.genetic.addOperation(0.9, new Splice(s));
-//		this.genetic.addOperation(0.1, new MutatePerturb(1.0));
+		this.genetic.addOperation(0.1, new MutatePerturb(1.0));
 
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
@@ -211,10 +219,10 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		setError(getGenetic().getError());
 
 //		statsRecorder.recordIterationStats();
-
+		System.out.println("Iterated");
 		getGenetic().iteration();
 
-		statsRecorder.recordIterationStats();
+//		statsRecorder.recordIterationStats();
 
 		if (getGenetic().getBestGenome().getScore() >= CONVERGENCE_SCORE) {
 			log.info("Convergence reached at epoch " + getGenetic().getIteration());
@@ -258,7 +266,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 	}
 
 	private MorphGenome randomGenome( ) {
-		MorphGenome result = new MorphGenome(PARAM_LENGTH);
+		final MorphGenome result = new MorphGenome(PARAM_LENGTH);
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
