@@ -134,24 +134,12 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 			defaultSpecies.getMembers( ).add(genome);
 //			defaultSpecies.add(genome);
 
-			////
-			if (Double.isInfinite(genome.getScore())
-				|| Double.isInfinite(genome.getAdjustedScore())
-				|| Double.isNaN(genome.getScore())
-				|| Double.isNaN(genome.getAdjustedScore())) {
-				System.out.println("Removed");
-			} else {
-				System.out.println("Staying");
-			}
-			////
 		}
 
 		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
 
 		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
 //		population.getSpecies().add(defaultSpecies);
-//		population.getSpecies().set(0,defaultSpecies);
-		System.out.println("Size: "+population.getSpecies().size());
 
 		// create the trainer
 		this.genetic = new MorphologyEvolutionHelper(population, calculateScore);
@@ -165,8 +153,6 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		}
 		this.genetic.setBestComparator(comp);
 		this.genetic.setSelectionComparator(comp);
-
-		System.out.println("Sizie: "+getGenetic().getPopulation().getSpecies().size());
 		
 		// create the operators
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
@@ -218,11 +204,11 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		preIteration();
 		setError(getGenetic().getError());
 
-//		statsRecorder.recordIterationStats();
+		statsRecorder.recordIterationStats();
 		System.out.println("Iterated");
 		getGenetic().iteration();
 
-//		statsRecorder.recordIterationStats();
+		statsRecorder.recordIterationStats();
 
 		if (getGenetic().getBestGenome().getScore() >= CONVERGENCE_SCORE) {
 			log.info("Convergence reached at epoch " + getGenetic().getIteration());
@@ -270,7 +256,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
-			organism[i] = Math.PI/4;
+			organism[i] = Math.PI/2*Math.random();
 		}
 		return result;
 	}

@@ -6,6 +6,7 @@ import org.encog.ml.MLEncodable;
 import org.encog.ml.genetic.GeneticError;
 import org.encog.ml.MLMethod;
 
+import java.lang.StackTraceElement;
 import java.lang.System;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,17 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
     public MorphPhenotype( ) {
         sensors = new ArrayList<AgentSensor>();
-        input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)
+        SensorModel[] sensormodels = new SensorModel[myNumSensors];
+        // create sensor models
+        sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
+
+        // construct the morphology
+        SensorMorphology morphology = new SensorMorphology(sensormodels);
+
+        final int numSensors = morphology.getNumSensors();
+        sensors = new ArrayList<>(numSensors);
+        sensors.add(morphology.getSensor(0));
+        input = new BasicMLData(1);// TODO : urgently fix this (should be num sensors, not 2)
     }
 
     @Override
@@ -42,6 +53,10 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
     @Override
     public Double2D step(List<List<Double>> sensorReadings) {
+        /*for(StackTraceElement treace : Thread.currentThread().getStackTrace()){
+            System.out.println(trace);
+        }*/
+
         final MLData input = this.input;
         for (int i = 0, n = input.size(); i < n; i++) {
             input.setData(i, sensorReadings.get(i).get(0));
@@ -85,19 +100,21 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
      * @param encoded The encoded array.
      */
     public void decodeFromArray(double[] encoded){
+        ////////
+        input = new BasicMLData(myNumSensors);
+        ////////
         SensorModel[] sensormodels = new SensorModel[myNumSensors];
+        // create sensor models
         sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
         sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],(float) encoded[2],(float) encoded[3]);
+
+        // construct the morphology
         SensorMorphology morphology = new SensorMorphology(sensormodels);
 
         final int numSensors = morphology.getNumSensors();
         sensors = new ArrayList<>(numSensors);
         sensors.add(morphology.getSensor(0));
         sensors.add(morphology.getSensor(1));
-        /*for(int i = 0; i < encoded.length; i++){
-            System.out.print(encoded[i]+" : ");
-        }
-        System.out.println();*/
     }
 
     public int getNumSensors( ){

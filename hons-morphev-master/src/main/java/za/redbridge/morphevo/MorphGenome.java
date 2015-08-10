@@ -22,6 +22,7 @@ public class MorphGenome extends DoubleArrayGenome{
      */
     public void decode() {
         this.phenotype.decodeFromArray(getData());
+
     }
 
     /**
