@@ -26,10 +26,9 @@ import za.redbridge.morphevo.sensor.SensorType;
 import java.io.Serializable;
 
 public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Serializable{
-//    private final MLData input;
+    private final MLData input;
     private List<AgentSensor> sensors;
     final private int myNumSensors = 2;
-    MLData input;
 
     public MorphPhenotype( ) {
         input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)

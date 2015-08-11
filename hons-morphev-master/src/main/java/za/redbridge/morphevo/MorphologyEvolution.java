@@ -204,14 +204,13 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		preIteration();
 		setError(getGenetic().getError());
 
-		System.out.println("Decoding all genomes");
+		/*System.out.println("Decoding all genomes");
 		for(Genome currGenome : getGenetic().getPopulation().getSpecies().get(0).getMembers()){
 			((MorphGenome)currGenome).decode( );
-		}
+		}*/
 
-		statsRecorder.recordIterationStats();
-		System.out.println("Iterated");
-//		MorphPhenotype phenotype = (MorphPhenotype) getGenetic().getCODEC().decode(genome);
+//		statsRecorder.recordIterationStats();
+		System.out.println("Iterating");
 		getGenetic().iteration();
 
 		statsRecorder.recordIterationStats();
