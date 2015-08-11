@@ -62,6 +62,7 @@ public class Main {
         MorphologyEvolution morphevo = new MorphologyEvolution(new MethodFactory(){
             @Override
             public MLMethod factor() {
+                System.out.println("Main.morphevo.factor( )");
                 return new MorphPhenotype( );
             }}, calculateScore, options.populationSize);
         log.debug("Population of size " + options.populationSize + " initialized");

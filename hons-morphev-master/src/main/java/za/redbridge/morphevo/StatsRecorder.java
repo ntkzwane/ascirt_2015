@@ -148,7 +148,7 @@ public class StatsRecorder {
     }
 
     private MorphPhenotype decodeGenome(Genome genome) {
-        System.out.println("StatsRecorder.decodeGenome(..) About to decode genome "+((MorphGenome)genome).getData()[0]);
+//        System.out.println("StatsRecorder.decodeGenome(..) About to decode genome "+((MorphGenome)genome).getData()[0]);
         return (MorphPhenotype) trainer.getCODEC().decode(genome);
     }
 

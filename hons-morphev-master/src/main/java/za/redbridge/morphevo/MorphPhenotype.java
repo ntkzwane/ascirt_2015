@@ -32,18 +32,7 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
     MLData input;
 
     public MorphPhenotype( ) {
-        sensors = new ArrayList<AgentSensor>();
-        SensorModel[] sensormodels = new SensorModel[myNumSensors];
-        // create sensor models
-        sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
-
-        // construct the morphology
-        SensorMorphology morphology = new SensorMorphology(sensormodels);
-
-        final int numSensors = morphology.getNumSensors();
-        sensors = new ArrayList<>(numSensors);
-        sensors.add(morphology.getSensor(0));
-        input = new BasicMLData(1);// TODO : urgently fix this (should be num sensors, not 2)
+        input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)
     }
 
     @Override
@@ -53,10 +42,7 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
     @Override
     public Double2D step(List<List<Double>> sensorReadings) {
-        /*for(StackTraceElement treace : Thread.currentThread().getStackTrace()){
-            System.out.println(trace);
-        }*/
-
+        System.out.println("numsensies: "+sensors.size());
         final MLData input = this.input;
         for (int i = 0, n = input.size(); i < n; i++) {
             input.setData(i, sensorReadings.get(i).get(0));
@@ -100,9 +86,6 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
      * @param encoded The encoded array.
      */
     public void decodeFromArray(double[] encoded){
-        ////////
-        input = new BasicMLData(myNumSensors);
-        ////////
         SensorModel[] sensormodels = new SensorModel[myNumSensors];
         // create sensor models
         sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
@@ -118,7 +101,6 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
     }
 
     public int getNumSensors( ){
-        System.out.println("getNumSensors( ): "+sensors.size());
         return sensors.size( );
     }
 }
