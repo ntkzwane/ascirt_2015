@@ -261,7 +261,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
-			organism[i] = Math.PI/2*Math.random();
+			organism[i] = Math.PI/4*Math.random();
 		}
 		return result;
 	}
