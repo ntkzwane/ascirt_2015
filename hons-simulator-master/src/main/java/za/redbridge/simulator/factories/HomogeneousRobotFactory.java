@@ -18,7 +18,6 @@ public class HomogeneousRobotFactory implements RobotFactory {
 
     public HomogeneousRobotFactory(Phenotype phenotype, float mass, float radius, Color color,
                                    int numRobots) {
-        if(phenotype==null){System.out.println("This Isht is null");}
         this.phenotype = phenotype;
         this.mass = mass;
         this.radius = radius;

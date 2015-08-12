@@ -6,6 +6,7 @@ import org.encog.ml.MLEncodable;
 import org.encog.ml.genetic.GeneticError;
 import org.encog.ml.MLMethod;
 
+import java.lang.Override;
 import java.lang.StackTraceElement;
 import java.lang.System;
 import java.util.ArrayList;
@@ -34,6 +35,14 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
         input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)
     }
 
+    public MorphPhenotype(MorphPhenotype other){
+        input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)
+        sensors = new ArrayList<>(getNumSensors());
+        for(int i = 0; i < other.getSensors().size(); i++){
+            this.sensors.set(i,other.getSensors().get(i));
+        }
+    }
+
     @Override
     public List<AgentSensor> getSensors( ) {
         return sensors;
@@ -41,7 +50,6 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
     @Override
     public Double2D step(List<List<Double>> sensorReadings) {
-        System.out.println("numsensies: "+sensors.size());
         final MLData input = this.input;
         for (int i = 0, n = input.size(); i < n; i++) {
             input.setData(i, sensorReadings.get(i).get(0));
@@ -49,12 +57,12 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
 //        MLData output = network.compute(input);
 //        return new Double2D(output.getData(0) * 2.0 - 1.0, output.getData(1) * 2.0 - 1.0);
-        return new Double2D(1,1);// TODO : urgently fix this
+        return new Double2D(1,1);// TODO : urgently fix this - incorporate cloned method
     }
 
     @Override
     public Phenotype clone() {
-        return new MorphPhenotype( );
+        return new MorphPhenotype(this);
 //        return new NEATMPhenotype(network);
     }
 
