@@ -7,3 +7,6 @@ hs_err_pid*
 # IDE
 *.iml
 .idea/
+
+# drive
+desktop.ini

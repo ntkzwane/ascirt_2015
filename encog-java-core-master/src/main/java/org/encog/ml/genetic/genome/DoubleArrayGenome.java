@@ -92,7 +92,7 @@ public class DoubleArrayGenome extends BasicGenome implements ArrayGenome {
 		EngineArray.arrayCopy(sourceDouble.data,this.data);
 		setScore(source.getScore());
 		setAdjustedScore(source.getAdjustedScore());
-		
+
 	}
 
 	/**

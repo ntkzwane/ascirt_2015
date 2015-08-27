@@ -16,69 +16,310 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="MorphPhenotype.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.6642487">
+                    <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="BasicGenome.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/genome/BasicGenome.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+                    <folding>
+                      <element signature="e#0#3408#0" expanded="false" />
+                      <element signature="imports" expanded="false" />
+                      <element signature="e#1769#1770#0" expanded="false" />
+                      <element signature="e#1801#1802#0" expanded="false" />
+                      <element signature="e#1890#1891#0" expanded="false" />
+                      <element signature="e#1924#1925#0" expanded="false" />
+                      <element signature="e#2010#2011#0" expanded="false" />
+                      <element signature="e#2039#2040#0" expanded="false" />
+                      <element signature="e#2112#2113#0" expanded="false" />
+                      <element signature="e#2136#2137#0" expanded="false" />
+                      <element signature="e#2308#2309#0" expanded="false" />
+                      <element signature="e#2352#2353#0" expanded="false" />
+                      <element signature="e#2504#2505#0" expanded="false" />
+                      <element signature="e#2549#2550#0" expanded="false" />
+                      <element signature="e#2694#2695#0" expanded="false" />
+                      <element signature="e#2732#2733#0" expanded="false" />
+                      <element signature="e#2875#2876#0" expanded="false" />
+                      <element signature="e#2903#2904#0" expanded="false" />
+                      <element signature="e#3268#3269#0" expanded="false" />
+                      <element signature="e#3289#3290#0" expanded="false" />
+                      <element signature="e#3380#3381#0" expanded="false" />
+                      <element signature="e#3403#3404#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="MorphGenome.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenome.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="5" column="44" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="44" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                      <element signature="method#MorphGenome#1;class#MorphGenome#0" expanded="false" />
+                      <element signature="docComment;method#decode#0;class#MorphGenome#0" expanded="false" />
+                      <element signature="docComment;method#getPhenotype#0;class#MorphGenome#0" expanded="false" />
+                      <element signature="e#729#730#0" expanded="false" />
+                      <element signature="e#766#767#0" expanded="false" />
+                      <element signature="docComment;method#setPhenotype#0;class#MorphGenome#0" expanded="false" />
+                      <element signature="e#909#910#0" expanded="false" />
+                      <element signature="e#951#952#0" expanded="false" />
+                      <element signature="e#985#986#0" expanded="false" />
+                      <element signature="e#1034#1035#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Main.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                      <element signature="docComment;class#Main#0" expanded="false" />
+                      <element signature="method#main#0;class#Main#0" expanded="false" />
+                      <element signature="e#1660#1749#0" expanded="false" />
+                      <element signature="class#2125:2326" expanded="false" />
+                      <element signature="method#factor#0;class#2125:2326" expanded="false" />
+                      <element signature="class#Args#0;class#Main#0" expanded="false" />
+                      <element signature="e#3575#3787#0" expanded="false" />
+                      <element signature="e#3843#3985#0" expanded="false" />
+                      <element signature="method#toString#0;class#Args#0;class#Main#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="KheperaIIIMorphology.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/KheperaIIIMorphology.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                      <element signature="docComment;class#KheperaIIIMorphology#0" expanded="false" />
+                      <element signature="initializer##0;class#KheperaIIIMorphology#0" expanded="false" />
+                      <element signature="e#1319#1320#0" expanded="false" />
+                      <element signature="e#1362#1363#0" expanded="false" />
+                      <element signature="e#1439#1440#0" expanded="false" />
+                      <element signature="e#1488#1489#0" expanded="false" />
+                      <element signature="method#createSensorModels#0;class#KheperaIIIMorphology#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="NEATMCODEC.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMCODEC.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                      <element signature="docComment;class#NEATMCODEC#0" expanded="false" />
+                      <element signature="e#3676#3677#0" expanded="false" />
+                      <element signature="e#3762#3763#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="2014 Project Code" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UltrasonicSensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java">
+      <file leaf-file-name="MorphologyEvolution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.7336152">
+              <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
               <folding>
-                <element signature="docComment;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="method#UltrasonicSensor#1;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="method#readAdditionalConfigs#0;class#UltrasonicSensor#0" expanded="false" />
-                <element signature="method#createPortrayal#0;class#UltrasonicSensor#0" expanded="false" />
+                <element signature="docComment;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;field#serialVersionUID#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#MorphologyEvolutionHelper#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="method#MorphologyEvolutionHelper#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;field#genetic#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#MorphologyEvolution#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="e#4832#4880#0" expanded="false" />
+                <element signature="docComment;method#canContinue#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#getGenetic#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#getMethod#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="method#getMethod#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#iteration#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#pause#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#resume#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="docComment;method#setGenetic#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="method#setThreadCount#0;class#MorphologyEvolution#0" expanded="false" />
+                <element signature="method#randomGenome#0;class#MorphologyEvolution#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProximitySensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding>
-                <element signature="docComment;class#ProximitySensor#0" expanded="false" />
-                <element signature="method#ProximitySensor#0;class#ProximitySensor#0" expanded="false" />
-                <element signature="method#ProximitySensor#1;class#ProximitySensor#0" expanded="false" />
-                <element signature="method#readAdditionalConfigs#0;class#ProximitySensor#0" expanded="false" />
-                <element signature="method#readingCurve#0;class#ProximitySensor#0" expanded="false" />
-                <element signature="e#2142#2232#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BottomProximitySensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/BottomProximitySensor.java">
+      <file leaf-file-name="HomogeneousRobotFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/factories/HomogeneousRobotFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
-                <element signature="docComment;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="method#createTransform#0;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="method#createShape#0;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="method#readAdditionalConfigs#0;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="method#sensePolygonFixture#0;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="method#readingCurve#0;class#BottomProximitySensor#0" expanded="false" />
-                <element signature="e#5913#5999#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NEATMUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMUtil.java">
+      <file leaf-file-name="DoubleArrayGenome.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/DoubleArrayGenome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.225">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#2495#0" expanded="false" />
+                <element signature="docComment;field#serialVersionUID#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="docComment;field#data#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="docComment;method#DoubleArrayGenome#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="e#1403#1404#0" expanded="false" />
+                <element signature="e#1438#1439#0" expanded="false" />
+                <element signature="docComment;method#DoubleArrayGenome#1;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="e#1568#1569#0" expanded="false" />
+                <element signature="e#1610#1611#0" expanded="false" />
+                <element signature="docComment;method#size#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="e#1671#1672#0" expanded="false" />
+                <element signature="e#1701#1702#0" expanded="false" />
+                <element signature="docComment;method#copy#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="method#copy#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="docComment;method#getData#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="e#1999#2000#0" expanded="false" />
+                <element signature="e#2022#2023#0" expanded="false" />
+                <element signature="docComment;method#copy#1;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="docComment;method#swap#0;class#DoubleArrayGenome#0" expanded="false" />
+                <element signature="method#swap#0;class#DoubleArrayGenome#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fixture.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jbox2d-topdown/jbox2d-library/src/main/java/org/jbox2d/dynamics/Fixture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#3074#3075#0" expanded="false" />
+                <element signature="e#3108#3109#0" expanded="false" />
+                <element signature="e#3343#3344#0" expanded="false" />
+                <element signature="e#3367#3368#0" expanded="false" />
+                <element signature="e#3520#3521#0" expanded="false" />
+                <element signature="e#3547#3548#0" expanded="false" />
+                <element signature="e#4241#4242#0" expanded="false" />
+                <element signature="e#4266#4267#0" expanded="false" />
+                <element signature="e#5338#5339#0" expanded="false" />
+                <element signature="e#5361#5362#0" expanded="false" />
+                <element signature="e#5512#5513#0" expanded="false" />
+                <element signature="e#5535#5536#0" expanded="false" />
+                <element signature="e#5666#5667#0" expanded="false" />
+                <element signature="e#5692#5693#0" expanded="false" />
+                <element signature="e#5879#5880#0" expanded="false" />
+                <element signature="e#5906#5907#0" expanded="false" />
+                <element signature="e#6057#6058#0" expanded="false" />
+                <element signature="e#6084#6085#0" expanded="false" />
+                <element signature="e#6289#6290#0" expanded="false" />
+                <element signature="e#6339#6340#0" expanded="false" />
+                <element signature="e#6908#6909#0" expanded="false" />
+                <element signature="e#6958#6959#0" expanded="false" />
+                <element signature="e#7059#7060#0" expanded="false" />
+                <element signature="e#7086#7087#0" expanded="false" />
+                <element signature="e#7266#7267#0" expanded="false" />
+                <element signature="e#7297#7298#0" expanded="false" />
+                <element signature="e#7404#7405#0" expanded="false" />
+                <element signature="e#7434#7435#0" expanded="false" />
+                <element signature="e#7634#7635#0" expanded="false" />
+                <element signature="e#7671#7672#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/AgentSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="421" column="32" selection-start-line="421" selection-start-column="32" selection-end-line="421" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#4072#4073#0" expanded="false" />
+                <element signature="e#4136#4137#0" expanded="false" />
+                <element signature="e#4415#4416#0" expanded="false" />
+                <element signature="e#4490#4491#0" expanded="false" />
+                <element signature="e#5565#5566#0" expanded="false" />
+                <element signature="e#5608#5609#0" expanded="false" />
+                <element signature="e#13512#13513#0" expanded="false" />
+                <element signature="e#13540#13541#0" expanded="false" />
+                <element signature="e#14563#14564#0" expanded="false" />
+                <element signature="e#14593#14594#0" expanded="false" />
+                <element signature="e#14630#14631#0" expanded="false" />
+                <element signature="e#14664#14665#0" expanded="false" />
+                <element signature="e#14695#14696#0" expanded="false" />
+                <element signature="e#14723#14724#0" expanded="false" />
+                <element signature="e#14760#14761#0" expanded="false" />
+                <element signature="e#14794#14795#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColourProximityAgentSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/ColourProximityAgentSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#546#547#0" expanded="false" />
+                <element signature="e#594#595#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,111 +327,46 @@
       <file leaf-file-name="RobotObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/RobotObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.75">
-              <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
-              <folding>
-                <element signature="method#RobotObject#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#initSensors#0;class#RobotObject#0" expanded="false" />
-                <element signature="class#3735:4783" expanded="false" />
-                <element signature="method#draw#0;class#3735:4783" expanded="false" />
-                <element signature="method#setTransform#0;class#3735:4783" expanded="false" />
-                <element signature="method#createPortrayal#0;class#RobotObject#0" expanded="false" />
-                <element signature="e#5537#5538#0" expanded="true" />
-                <element signature="e#5614#5615#0" expanded="true" />
-                <element signature="method#applyWheelDrive#0;class#RobotObject#0" expanded="false" />
-                <element signature="e#7314#7404#0" expanded="false" />
-                <element signature="docComment;method#torqueAtVelocity#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#torqueAtVelocity#0;class#RobotObject#0" expanded="false" />
-                <element signature="docComment;method#getLateralVelocity#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#getLateralVelocity#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#updateFriction#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#getHeuristicPhenotype#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#getAverageCoveragePolgygonArea#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#setBoundToResource#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#setColor#0;class#RobotObject#0" expanded="false" />
-                <element signature="e#10724#10725#0" expanded="true" />
-                <element signature="e#10756#10757#0" expanded="true" />
-                <element signature="class#DirectionPortrayal#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#DirectionPortrayal#0;class#DirectionPortrayal#0;class#RobotObject#0" expanded="false" />
-                <element signature="class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#SpatialPoint#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#compareTo#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#getCenterOfPoints#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#getPoint#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-                <element signature="method#calculatePolygonArea#0;class#RobotObject#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PickupHeuristic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupHeuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.285715">
-              <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="docComment;class#PickupHeuristic#0" expanded="false" />
-                <element signature="method#PickupHeuristic#0;class#PickupHeuristic#0" expanded="false" />
-                <element signature="e#2213#2214#0" expanded="false" />
-                <element signature="e#2241#2242#0" expanded="false" />
-                <element signature="e#2288#2289#0" expanded="false" />
-                <element signature="e#2323#2324#0" expanded="false" />
-                <element signature="method#targetAreaAngle#0;class#PickupHeuristic#0" expanded="false" />
-                <element signature="method#awayTargetAreaAngle#0;class#PickupHeuristic#0" expanded="false" />
+                <element signature="e#5537#5538#0" expanded="false" />
+                <element signature="e#5614#5615#0" expanded="false" />
+                <element signature="e#9617#9618#0" expanded="false" />
+                <element signature="e#9657#9658#0" expanded="false" />
+                <element signature="e#10724#10725#0" expanded="false" />
+                <element signature="e#10756#10757#0" expanded="false" />
+                <element signature="e#14830#14831#0" expanded="false" />
+                <element signature="e#14877#14878#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChasingPhenotype.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/ChasingPhenotype.java">
+      <file leaf-file-name="ScoreCalculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/ScoreCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="20" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="20" />
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding>
+                <element signature="docComment;class#ScoreCalculator#0" expanded="false" />
+                <element signature="method#ScoreCalculator#0;class#ScoreCalculator#0" expanded="false" />
+                <element signature="method#demo#0;class#ScoreCalculator#0" expanded="false" />
+                <element signature="method#calculateScore#0;class#ScoreCalculator#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MorphCODEC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphCODEC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#2145#0" expanded="false" />
                 <element signature="imports" expanded="false" />
-                <element signature="e#1020#1021#0" expanded="false" />
-                <element signature="e#1049#1050#0" expanded="false" />
-                <element signature="e#2176#2177#0" expanded="false" />
-                <element signature="e#2221#2222#0" expanded="false" />
-                <element signature="e#2451#2452#0" expanded="false" />
-                <element signature="e#2527#2528#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionAvoidanceHeuristic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/CollisionAvoidanceHeuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-              <folding>
-                <element signature="docComment;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-                <element signature="method#CollisionAvoidanceHeuristic#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-                <element signature="method#nextStep#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-                <element signature="method#calculateTargetPoint#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColourProximitySensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ColourProximitySensor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding>
-                <element signature="docComment;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#ColourProximitySensor#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#ColourProximitySensor#1;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#provideObjectReading#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#getPaint#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#readingCurve#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#readAdditionalConfigs#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#getReadingSize#0;class#ColourProximitySensor#0" expanded="false" />
-                <element signature="method#getAdditionalConfigs#0;class#ColourProximitySensor#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -206,57 +382,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/SensorParameter.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/SensorParameterSet.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/SensorParameterSpec.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/SensorParameterSpecSet.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Initializer.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Initializers.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Limiter.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Limiters.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/ParameterType.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Range.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/sensor/parameter/spec/Ranges.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/NEATMNeuronGene.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMCrossover.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateAddNode.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateIndividualSensor.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateRemoveLink.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateSensorGroup.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links/FixedLinkWeight.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/MutatePerturbSensorParameter.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/MutateResetSensorParameter.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/MutateSensor.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/SelectSensors.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/SelectSensorsFixed.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors/SelectSensorsType.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species/NEATMGenome.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species/NEATMSpeciation.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATMPhenotype.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATPhenotype.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/ScoreCalculator.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/StatsRecorder.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Utils.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/README.md" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateAddSensor.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/SimulationGUI.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/ColourProximityAgentSensor.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/ChasingPhenotype.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/KheperaIIIPhenotype.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ColourProximitySensor.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupPositioningHeuristic.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupHeuristic.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/CollisionAvoidanceHeuristic.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/RobotObject.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/HeuristicSchedule.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/HeuristicPhenotype.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java" />
-        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/BottomProximitySensor.java" />
-        <option value="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java" />
-        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMUtil.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/parameter/SensorParameterSpecSet.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/parameter/SensorParameterSpec.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/SensorType.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/Utils.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/parameter/SensorParameterSet.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/genome/MorphGenomeFactory.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/genome/MorphGenome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/KheperaIIIMorphology.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/CalculateScore.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/ScoreCalculator.java" />
+        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/Phenotype.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/SensorModel.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATPhenotype.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMCODEC.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/SensorConfiguration.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/NEATMNeuronGene.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor/SensorMorphology.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphCODEC.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphGenome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphChromosome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/ScoreCalculator.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphGenomeFactory.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/sensor/SensorConfiguration.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphologyEvolution.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/BasicML.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/Main.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/KheperaIIIMorphology.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/build.gradle" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/MLMethodGenome.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/DoubleArrayGenomeFactory.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/species/SingleSpeciation.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/MLEncodableCODEC.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/sensor/SensorMorphology.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/MorphPhenotype.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/GraphvizEngine.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/Main.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenomeFactory.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/MLMethodGeneticAlgorithm.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/population/BasicPopulation.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/genome/BasicGenome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATMPhenotype.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/StatsRecorder.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Main.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphCODEC.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/ScoreCalculator.java" />
+        <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/factories/HomogeneousRobotFactory.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Utils.java" />
+        <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/DoubleArrayGenome.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java" />
       </list>
     </option>
   </component>
@@ -268,8 +444,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="942" />
-    <option name="height" value="915" />
+    <option name="width" value="960" />
+    <option name="height" value="1061" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -294,6 +470,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -323,7 +501,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hons-simulator-master" />
+              <option name="myItemId" value="jbox2d-topdown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-topdown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-topdown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-topdown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jbox2d" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,6 +594,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hons-simulator-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-morphev-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-morphev-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-morphev-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -361,7 +667,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="simulator" />
+              <option name="myItemId" value="morphevo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,7 +681,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hons-simulator-master" />
+              <option name="myItemId" value="hons-morphev-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -399,173 +705,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="simulator" />
+              <option name="myItemId" value="morphevo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sensor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hons-simulator-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="za" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redbridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phenotype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hons-simulator-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="za" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redbridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hons-simulator-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="za" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redbridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="khepera" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hons-morphev-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014 Project Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hons-morphev-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -682,38 +826,341 @@
               <option name="myItemId" value="redbridge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="morphev" />
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NEATM" />
+              <option name="myItemId" value="hons-morphev-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sensor" />
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="train" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-java-core-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo" />
+      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic" />
+      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/sensor" />
       <recent name="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/links" />
       <recent name="$PROJECT_DIR$/hons-morphev-master" />
-      <recent name="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera" />
-      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/experiment/controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic/genome" />
+      <recent name="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/genetic" />
       <recent name="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/species" />
       <recent name="$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/sensors" />
     </key>
@@ -985,66 +1432,47 @@
       <workItem from="1437399148787" duration="28000" />
       <workItem from="1437399220763" duration="62490000" />
       <workItem from="1437571428992" duration="11227000" />
-      <workItem from="1437608352598" duration="10121000" />
+      <workItem from="1437608352598" duration="40373000" />
+      <workItem from="1437747260982" duration="88719000" />
+      <workItem from="1439043288708" duration="32120000" />
+      <workItem from="1439212135692" duration="27088000" />
+      <workItem from="1439416969691" duration="6710000" />
+      <workItem from="1440599169211" duration="586000" />
+      <workItem from="1440640341518" duration="1791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167476000" />
+    <option name="totallyTimeSpent" value="354742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="942" height="915" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1061" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23027718" sideWeight="0.48609433" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32648125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66906476" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39435145" sideWeight="0.4820144" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3559499" sideWeight="0.5139057" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32150313" sideWeight="0.5179856" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="96" y="64" width="760" height="733" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="96" y="64" width="760" height="733" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21555324" sideWeight="0.48609433" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3559499" sideWeight="0.5139057" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32094175" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1059,558 +1487,567 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/NEATMMutateSensorGroup.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/species/BasicSpecies.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="141" column="16" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/links/FixedLinkWeight.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/BasicEA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <caret line="587" column="38" selection-start-line="587" selection-start-column="38" selection-end-line="587" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/MutatePerturbSensorParameter.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/EAWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/MutateResetSensorParameter.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/EvolutionaryAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/MutateSensor.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/population/BasicPopulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="248" column="28" selection-start-line="248" selection-start-column="28" selection-end-line="248" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/SelectSensors.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/TrainEA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/SelectSensorsFixed.java">
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/StatsRecorder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/opp/sensors/SelectSensorsType.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/crossover/Splice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7393365">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/score/parallel/ParallelScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028436018">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/local.properties.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/NOTICE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenomeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEAT/NEATPopulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/species/SingleSpeciation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6862745">
+          <caret line="82" column="61" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/species/BasicSpecies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="141" column="16" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/population/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.114164904">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/TrainEA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/population/BasicPopulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="248" column="28" selection-start-line="248" selection-start-column="28" selection-end-line="248" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/ArrayGenome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATMPhenotype.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        <state vertical-scroll-proportion="-19.928572">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATPhenotype.java">
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/sensor/SensorMorphology.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/ScoreCalculator.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/EvolutionaryAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/StatsRecorder.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/EAWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.057082452">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/BasicEA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="587" column="38" selection-start-line="587" selection-start-column="38" selection-end-line="587" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56561923">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/species/NEATMGenome.java">
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/StatsRecorder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="151" column="66" selection-start-line="151" selection-start-column="66" selection-end-line="151" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/README.md">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/train/BasicTraining.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5447667">
-          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+        <state vertical-scroll-proportion="-10.928572">
+          <caret line="152" column="23" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/resources/logback.xml">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/MLMethodGeneticAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39608803">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.49070632">
+          <caret line="187" column="23" selection-start-line="187" selection-start-column="23" selection-end-line="187" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37408313">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/Utils.java">
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/RobotObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/training/species/NEATMSpeciation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/training/opp/NEATMMutateAddSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19133192">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMCODEC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35306555">
-          <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="40" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
+          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/KheperaIIIMorphology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.142857">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/KheperaIIIMorphology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1343#1344#0" expanded="false" />
-            <element signature="e#1386#1387#0" expanded="false" />
-            <element signature="e#1463#1464#0" expanded="false" />
-            <element signature="e#1512#1513#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05882353">
-          <caret line="129" column="57" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
-          <folding>
-            <element signature="docComment;class#Sensor#0" expanded="false" />
-            <element signature="method#Sensor#0;class#Sensor#0" expanded="false" />
-            <element signature="e#1711#1747#0" expanded="false" />
-            <element signature="docComment;method#getSensorTransform#0;class#Sensor#0" expanded="false" />
-            <element signature="method#getSensorTransform#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#getFixtureRelativeTransform#0;class#Sensor#0" expanded="false" />
-            <element signature="method#getFixtureRelativeTransform#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#createTransform#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#createShape#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#getFilterCategoryBits#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#getFilterMaskBits#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#createPortrayal#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#getPaint#0;class#Sensor#0" expanded="false" />
-            <element signature="docComment;method#provideReading#0;class#Sensor#0" expanded="false" />
-            <element signature="method#handleBeginContact#0;class#Sensor#0" expanded="false" />
-            <element signature="method#handleEndContact#0;class#Sensor#0" expanded="false" />
-            <element signature="method#getFixtureObject#0;class#Sensor#0" expanded="false" />
+            <element signature="e#5537#5538#0" expanded="false" />
+            <element signature="e#5614#5615#0" expanded="false" />
+            <element signature="e#9617#9618#0" expanded="false" />
+            <element signature="e#9657#9658#0" expanded="false" />
+            <element signature="e#10724#10725#0" expanded="false" />
+            <element signature="e#10756#10757#0" expanded="false" />
+            <element signature="e#14830#14831#0" expanded="false" />
+            <element signature="e#14877#14878#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/AgentSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4080338">
-          <caret line="410" column="45" selection-start-line="410" selection-start-column="39" selection-end-line="410" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/SimulationGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <caret line="421" column="32" selection-start-line="421" selection-start-column="32" selection-end-line="421" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#563#564#0" expanded="false" />
-            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#4072#4073#0" expanded="false" />
+            <element signature="e#4136#4137#0" expanded="false" />
+            <element signature="e#4415#4416#0" expanded="false" />
+            <element signature="e#4490#4491#0" expanded="false" />
+            <element signature="e#5565#5566#0" expanded="false" />
+            <element signature="e#5608#5609#0" expanded="false" />
+            <element signature="e#13512#13513#0" expanded="false" />
+            <element signature="e#13540#13541#0" expanded="false" />
+            <element signature="e#14563#14564#0" expanded="false" />
+            <element signature="e#14593#14594#0" expanded="false" />
+            <element signature="e#14630#14631#0" expanded="false" />
+            <element signature="e#14664#14665#0" expanded="false" />
+            <element signature="e#14695#14696#0" expanded="false" />
+            <element signature="e#14723#14724#0" expanded="false" />
+            <element signature="e#14760#14761#0" expanded="false" />
+            <element signature="e#14794#14795#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55741936">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/sensor/SensorType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/WallObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/ResourceObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2025">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/SimplePhenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/CollisionSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#804#805#0" expanded="false" />
-            <element signature="e#867#868#0" expanded="false" />
-            <element signature="e#1317#1318#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/PickupSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.714286">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1420#1421#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.285715">
-          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#PickupHeuristic#0" expanded="false" />
-            <element signature="method#PickupHeuristic#0;class#PickupHeuristic#0" expanded="false" />
-            <element signature="e#2213#2214#0" expanded="false" />
-            <element signature="e#2241#2242#0" expanded="false" />
-            <element signature="e#2288#2289#0" expanded="false" />
-            <element signature="e#2323#2324#0" expanded="false" />
-            <element signature="method#targetAreaAngle#0;class#PickupHeuristic#0" expanded="false" />
-            <element signature="method#awayTargetAreaAngle#0;class#PickupHeuristic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/RobotObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.75">
-          <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
-          <folding>
-            <element signature="method#RobotObject#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#initSensors#0;class#RobotObject#0" expanded="false" />
-            <element signature="class#3735:4783" expanded="false" />
-            <element signature="method#draw#0;class#3735:4783" expanded="false" />
-            <element signature="method#setTransform#0;class#3735:4783" expanded="false" />
-            <element signature="method#createPortrayal#0;class#RobotObject#0" expanded="false" />
-            <element signature="e#5537#5538#0" expanded="true" />
-            <element signature="e#5614#5615#0" expanded="true" />
-            <element signature="method#applyWheelDrive#0;class#RobotObject#0" expanded="false" />
-            <element signature="e#7314#7404#0" expanded="false" />
-            <element signature="docComment;method#torqueAtVelocity#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#torqueAtVelocity#0;class#RobotObject#0" expanded="false" />
-            <element signature="docComment;method#getLateralVelocity#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#getLateralVelocity#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#updateFriction#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#getHeuristicPhenotype#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#getAverageCoveragePolgygonArea#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#setBoundToResource#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#setColor#0;class#RobotObject#0" expanded="false" />
-            <element signature="e#10724#10725#0" expanded="true" />
-            <element signature="e#10756#10757#0" expanded="true" />
-            <element signature="class#DirectionPortrayal#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#DirectionPortrayal#0;class#DirectionPortrayal#0;class#RobotObject#0" expanded="false" />
-            <element signature="class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#SpatialPoint#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#compareTo#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#getCenterOfPoints#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#getPoint#0;class#SpatialPoint#0;class#RobotObject#0" expanded="false" />
-            <element signature="method#calculatePolygonArea#0;class#RobotObject#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/Phenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23056994">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/KheperaIIIPhenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33290157">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#KheperaIIIPhenotype#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#KheperaIIIPhenotype#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#KheperaIIIPhenotype#1;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#initSensors#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#createProximitySensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#createBottomProximitySensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#createUltrasonicSensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#createUltrasonicSensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#createColourProximitySensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#createColourProximitySensor#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="docComment;method#getConfiguration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#clone#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#configure#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="e#4645#4668#0" expanded="false" />
-            <element signature="docComment;class#Configuration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="class#Configuration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#Configuration#0;class#Configuration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#Configuration#1;class#Configuration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-            <element signature="method#getNumberOfSensors#0;class#Configuration#0;class#KheperaIIIPhenotype#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/CollisionAvoidanceHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="docComment;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-            <element signature="method#CollisionAvoidanceHeuristic#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-            <element signature="method#nextStep#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-            <element signature="method#calculateTargetPoint#0;class#CollisionAvoidanceHeuristic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/PickupPositioningHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6625">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;class#PickupPositioningHeuristic#0" expanded="false" />
-            <element signature="method#PickupPositioningHeuristic#0;class#PickupPositioningHeuristic#0" expanded="false" />
-            <element signature="method#step#0;class#PickupPositioningHeuristic#0" expanded="false" />
-            <element signature="method#nextStep#0;class#PickupPositioningHeuristic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/ChasingPhenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1049#1050#0" expanded="false" />
-            <element signature="e#2176#2177#0" expanded="false" />
-            <element signature="e#2221#2222#0" expanded="false" />
-            <element signature="e#2451#2452#0" expanded="false" />
-            <element signature="e#2527#2528#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/HeuristicSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6525">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/HeuristicPhenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.32901555">
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
-          <folding>
-            <element signature="docComment;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="method#HeuristicPhenotype#0;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="method#clone#0;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="method#configure#0;class#HeuristicPhenotype#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/ProximityAgentSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6175">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/ColourProximityAgentSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23056994">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
-            <element signature="method#provideObjectReading#0;class#ColourProximityAgentSensor#0" expanded="false" />
-            <element signature="method#getPaint#0;class#ColourProximityAgentSensor#0" expanded="false" />
-            <element signature="method#readingCurve#0;class#ColourProximityAgentSensor#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#ColourProximityAgentSensor#0" expanded="false" />
-            <element signature="method#getAdditionalConfigs#0;class#ColourProximityAgentSensor#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#594#595#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ColourProximitySensor.java">
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/util/EngineArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#ColourProximitySensor#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#ColourProximitySensor#1;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#provideObjectReading#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#getPaint#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#readingCurve#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#getReadingSize#0;class#ColourProximitySensor#0" expanded="false" />
-            <element signature="method#getAdditionalConfigs#0;class#ColourProximitySensor#0" expanded="false" />
-          </folding>
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java">
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82875264">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/DoubleArrayGenome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#ProximitySensor#0" expanded="false" />
-            <element signature="method#ProximitySensor#0;class#ProximitySensor#0" expanded="false" />
-            <element signature="method#ProximitySensor#1;class#ProximitySensor#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#ProximitySensor#0" expanded="false" />
-            <element signature="method#readingCurve#0;class#ProximitySensor#0" expanded="false" />
-            <element signature="e#2142#2232#0" expanded="false" />
+            <element signature="e#0#2495#0" expanded="false" />
+            <element signature="docComment;field#serialVersionUID#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="docComment;field#data#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="docComment;method#DoubleArrayGenome#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="e#1403#1404#0" expanded="false" />
+            <element signature="e#1438#1439#0" expanded="false" />
+            <element signature="docComment;method#DoubleArrayGenome#1;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="e#1568#1569#0" expanded="false" />
+            <element signature="e#1610#1611#0" expanded="false" />
+            <element signature="docComment;method#size#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="e#1671#1672#0" expanded="false" />
+            <element signature="e#1701#1702#0" expanded="false" />
+            <element signature="docComment;method#copy#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="method#copy#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="docComment;method#getData#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="e#1999#2000#0" expanded="false" />
+            <element signature="e#2022#2023#0" expanded="false" />
+            <element signature="docComment;method#copy#1;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="docComment;method#swap#0;class#DoubleArrayGenome#0" expanded="false" />
+            <element signature="method#swap#0;class#DoubleArrayGenome#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java">
+    <entry file="file://$PROJECT_DIR$/jbox2d-topdown/jbox2d-library/src/main/java/org/jbox2d/dynamics/Fixture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
           <folding>
-            <element signature="docComment;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#UltrasonicSensor#0;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#UltrasonicSensor#1;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#UltrasonicSensor#0" expanded="false" />
-            <element signature="method#createPortrayal#0;class#UltrasonicSensor#0" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3108#3109#0" expanded="false" />
+            <element signature="e#3343#3344#0" expanded="false" />
+            <element signature="e#3367#3368#0" expanded="false" />
+            <element signature="e#3520#3521#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+            <element signature="e#4241#4242#0" expanded="false" />
+            <element signature="e#4266#4267#0" expanded="false" />
+            <element signature="e#5338#5339#0" expanded="false" />
+            <element signature="e#5361#5362#0" expanded="false" />
+            <element signature="e#5512#5513#0" expanded="false" />
+            <element signature="e#5535#5536#0" expanded="false" />
+            <element signature="e#5666#5667#0" expanded="false" />
+            <element signature="e#5692#5693#0" expanded="false" />
+            <element signature="e#5879#5880#0" expanded="false" />
+            <element signature="e#5906#5907#0" expanded="false" />
+            <element signature="e#6057#6058#0" expanded="false" />
+            <element signature="e#6084#6085#0" expanded="false" />
+            <element signature="e#6289#6290#0" expanded="false" />
+            <element signature="e#6339#6340#0" expanded="false" />
+            <element signature="e#6908#6909#0" expanded="false" />
+            <element signature="e#6958#6959#0" expanded="false" />
+            <element signature="e#7059#7060#0" expanded="false" />
+            <element signature="e#7086#7087#0" expanded="false" />
+            <element signature="e#7266#7267#0" expanded="false" />
+            <element signature="e#7297#7298#0" expanded="false" />
+            <element signature="e#7404#7405#0" expanded="false" />
+            <element signature="e#7434#7435#0" expanded="false" />
+            <element signature="e#7634#7635#0" expanded="false" />
+            <element signature="e#7671#7672#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-experiment-master/src/main/java/za/redbridge/experiment/NEATM/NEATMUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3925">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/BottomProximitySensor.java">
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/factories/HomogeneousRobotFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
-            <element signature="docComment;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="method#createTransform#0;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="method#createShape#0;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="method#readAdditionalConfigs#0;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="method#sensePolygonFixture#0;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="method#readingCurve#0;class#BottomProximitySensor#0" expanded="false" />
-            <element signature="e#5913#5999#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMUtil.java">
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.225">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/genome/BasicGenome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#3408#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1769#1770#0" expanded="false" />
+            <element signature="e#1801#1802#0" expanded="false" />
+            <element signature="e#1890#1891#0" expanded="false" />
+            <element signature="e#1924#1925#0" expanded="false" />
+            <element signature="e#2010#2011#0" expanded="false" />
+            <element signature="e#2039#2040#0" expanded="false" />
+            <element signature="e#2112#2113#0" expanded="false" />
+            <element signature="e#2136#2137#0" expanded="false" />
+            <element signature="e#2308#2309#0" expanded="false" />
+            <element signature="e#2352#2353#0" expanded="false" />
+            <element signature="e#2504#2505#0" expanded="false" />
+            <element signature="e#2549#2550#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="false" />
+            <element signature="e#2732#2733#0" expanded="false" />
+            <element signature="e#2875#2876#0" expanded="false" />
+            <element signature="e#2903#2904#0" expanded="false" />
+            <element signature="e#3268#3269#0" expanded="false" />
+            <element signature="e#3289#3290#0" expanded="false" />
+            <element signature="e#3380#3381#0" expanded="false" />
+            <element signature="e#3403#3404#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/KheperaIIIMorphology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#KheperaIIIMorphology#0" expanded="false" />
+            <element signature="initializer##0;class#KheperaIIIMorphology#0" expanded="false" />
+            <element signature="e#1319#1320#0" expanded="false" />
+            <element signature="e#1362#1363#0" expanded="false" />
+            <element signature="e#1439#1440#0" expanded="false" />
+            <element signature="e#1488#1489#0" expanded="false" />
+            <element signature="method#createSensorModels#0;class#KheperaIIIMorphology#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphev/NEATM/NEATMCODEC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#NEATMCODEC#0" expanded="false" />
+            <element signature="e#3676#3677#0" expanded="false" />
+            <element signature="e#3762#3763#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#1660#1749#0" expanded="false" />
+            <element signature="class#2125:2326" expanded="false" />
+            <element signature="method#factor#0;class#2125:2326" expanded="false" />
+            <element signature="class#Args#0;class#Main#0" expanded="false" />
+            <element signature="e#3575#3787#0" expanded="false" />
+            <element signature="e#3843#3985#0" expanded="false" />
+            <element signature="method#toString#0;class#Args#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/ScoreCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding>
+            <element signature="docComment;class#ScoreCalculator#0" expanded="false" />
+            <element signature="method#ScoreCalculator#0;class#ScoreCalculator#0" expanded="false" />
+            <element signature="method#demo#0;class#ScoreCalculator#0" expanded="false" />
+            <element signature="method#calculateScore#0;class#ScoreCalculator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#MorphGenome#1;class#MorphGenome#0" expanded="false" />
+            <element signature="docComment;method#decode#0;class#MorphGenome#0" expanded="false" />
+            <element signature="docComment;method#getPhenotype#0;class#MorphGenome#0" expanded="false" />
+            <element signature="e#729#730#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="docComment;method#setPhenotype#0;class#MorphGenome#0" expanded="false" />
+            <element signature="e#909#910#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphCODEC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#2145#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6642487">
+          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7336152">
+          <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
+          <folding>
+            <element signature="docComment;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;field#serialVersionUID#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#MorphologyEvolutionHelper#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="method#MorphologyEvolutionHelper#0;class#MorphologyEvolutionHelper#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;field#genetic#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#MorphologyEvolution#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="e#4832#4880#0" expanded="false" />
+            <element signature="docComment;method#canContinue#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#getGenetic#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#getMethod#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="method#getMethod#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#iteration#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#pause#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#resume#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="docComment;method#setGenetic#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="method#setThreadCount#0;class#MorphologyEvolution#0" expanded="false" />
+            <element signature="method#randomGenome#0;class#MorphologyEvolution#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

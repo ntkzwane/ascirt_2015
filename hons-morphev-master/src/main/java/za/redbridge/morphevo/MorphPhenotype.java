@@ -37,9 +37,9 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
 
     public MorphPhenotype(MorphPhenotype other){
         input = new BasicMLData(myNumSensors);// TODO : urgently fix this (should be num sensors, not 2)
-        sensors = new ArrayList<>(getNumSensors());
+        sensors = new ArrayList<>(other.getNumSensors());
         for(int i = 0; i < other.getSensors().size(); i++){
-            this.sensors.set(i,other.getSensors().get(i));
+            this.sensors.add(other.getSensors().get(i));
         }
     }
 
