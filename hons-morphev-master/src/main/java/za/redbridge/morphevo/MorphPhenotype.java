@@ -96,8 +96,8 @@ public class MorphPhenotype implements Phenotype, MLEncodable, MLMethod, Seriali
         SensorModel[] sensormodels = new SensorModel[myNumSensors];
         // create sensor models
         sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
-        sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],(float) encoded[2],(float) encoded[3]);
-
+//        sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],(float) encoded[2],(float) encoded[3]);
+        sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0], 0.0f, 0.4f, 0.1f);
         // construct the morphology
         SensorMorphology morphology = new SensorMorphology(sensormodels);
 

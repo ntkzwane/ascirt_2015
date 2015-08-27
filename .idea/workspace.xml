@@ -24,8 +24,8 @@
             <file leaf-file-name="MorphPhenotype.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.6642487">
-                    <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+                  <state vertical-scroll-proportion="0.29655173">
+                    <caret line="99" column="81" selection-start-line="99" selection-start-column="81" selection-end-line="99" selection-end-column="81" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -157,7 +157,7 @@
       <file leaf-file-name="MorphologyEvolution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7336152">
+            <state vertical-scroll-proportion="1.0192307">
               <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
               <folding>
                 <element signature="docComment;class#MorphologyEvolution#0" expanded="false" />
@@ -431,8 +431,8 @@
         <option value="$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/factories/HomogeneousRobotFactory.java" />
         <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/Utils.java" />
         <option value="$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/genome/DoubleArrayGenome.java" />
-        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java" />
         <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java" />
+        <option value="$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java" />
       </list>
     </option>
   </component>
@@ -445,7 +445,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="960" />
-    <option name="height" value="1061" />
+    <option name="height" value="531" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1438,15 +1438,15 @@
       <workItem from="1439212135692" duration="27088000" />
       <workItem from="1439416969691" duration="6710000" />
       <workItem from="1440599169211" duration="586000" />
-      <workItem from="1440640341518" duration="1791000" />
+      <workItem from="1440640341518" duration="2936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354742000" />
+    <option name="totallyTimeSpent" value="355887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1061" extended-state="0" />
+    <frame x="0" y="0" width="960" height="531" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2013,19 +2013,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6642487">
-          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7336152">
+        <state vertical-scroll-proportion="1.0192307">
           <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
           <folding>
             <element signature="docComment;class#MorphologyEvolution#0" expanded="false" />
@@ -2047,6 +2037,16 @@
             <element signature="docComment;method#setGenetic#0;class#MorphologyEvolution#0" expanded="false" />
             <element signature="method#setThreadCount#0;class#MorphologyEvolution#0" expanded="false" />
             <element signature="method#randomGenome#0;class#MorphologyEvolution#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphPhenotype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29655173">
+          <caret line="99" column="81" selection-start-line="99" selection-start-column="81" selection-end-line="99" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
