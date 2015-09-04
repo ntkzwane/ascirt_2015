@@ -26,10 +26,12 @@ package za.redbridge.morphevo;
 import org.encog.ml.ea.genome.Genome;
 import org.encog.ml.ea.genome.GenomeFactory;
 
+import java.io.Serializable;
+
 /**
  * A factory that creates MorphGenome objects of a specific size.
  */
-public class MorphGenomeFactory implements GenomeFactory {
+public class MorphGenomeFactory implements GenomeFactory, Serializable {
 
 	/**
 	 * The size to create.

@@ -10,3 +10,7 @@ hs_err_pid*
 
 # drive
 desktop.ini
+
+# other
+OLD_MORPHEV/
+mymake

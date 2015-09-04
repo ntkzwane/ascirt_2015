@@ -2,6 +2,7 @@ package za.redbridge.morphevo;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.encog.ml.ea.genome.Genome;
+import org.encog.ml.ea.population.Population;
 import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +35,7 @@ public class StatsRecorder {
 
     private Path rootDirectory;
     private Path populationDirectory;
-    private Path bestNetworkDirectory;
+    private Path bestChromosomeDirectory;
 
     private Path performanceStatsFile;
     private Path scoreStatsFile;
@@ -59,8 +60,8 @@ public class StatsRecorder {
         populationDirectory = rootDirectory.resolve("populations");
         initDirectory(populationDirectory);
 
-        bestNetworkDirectory = rootDirectory.resolve("best networks");
-        initDirectory(bestNetworkDirectory);
+        bestChromosomeDirectory = rootDirectory.resolve("best chromosome");
+        initDirectory(bestChromosomeDirectory);
     }
 
     private static void initDirectory(Path path) {
@@ -100,9 +101,9 @@ public class StatsRecorder {
 
         recordStats(calculator.getSensorStatistics(), epoch, sensorStatsFile);
 
-//        savePopulation((NEATPopulation) trainer.getPopulation(), epoch);
+       savePopulation((Population) trainer.getPopulation(), epoch);
 
-        // Check if new best network and save it if so
+        // Check if new best chromosome and save it if so
         MorphGenome newBestGenome = (MorphGenome) trainer.getBestGenome();
         if (newBestGenome != currentBestGenome) {
             saveGenome(newBestGenome, epoch);
@@ -110,14 +111,14 @@ public class StatsRecorder {
         }
     }
 
-    /*private void savePopulation(NEATPopulation population, int epoch) {
+    private void savePopulation(Population population, int epoch) {
         String filename = "epoch-" + epoch + ".ser";
         Path path = populationDirectory.resolve(filename);
         saveObjectToFile(population, path);
-    }*/
+    }
 
     private void saveGenome(MorphGenome genome, int epoch) {
-        Path directory = bestNetworkDirectory.resolve("epoch-" + epoch);
+        Path directory = bestChromosomeDirectory.resolve("epoch-" + epoch);
         initDirectory(directory);
 
         String txt;
@@ -129,11 +130,11 @@ public class StatsRecorder {
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
             writer.write(txt);
         } catch (IOException e) {
-            log.error("Error writing best network info file", e);
+            log.error("Error writing best chromosome info file", e);
         }
 
-        MorphPhenotype morphPhenotype = decodeGenome(genome);
-        saveObjectToFile(morphPhenotype, directory.resolve("phenotype.ser"));
+        MorphChrom chromosome = decodeGenome(genome);
+        saveObjectToFile(chromosome, directory.resolve("chromosome.ser"));
     }
 
     private void recordStats(DescriptiveStatistics stats, int epoch, Path filepath) {
@@ -147,9 +148,8 @@ public class StatsRecorder {
         saveStats(filepath, epoch, max, min, mean, sd);
     }
 
-    private MorphPhenotype decodeGenome(Genome genome) {
-//        System.out.println("StatsRecorder.decodeGenome(..) About to decode genome "+((MorphGenome)genome).getData()[0]);
-        return (MorphPhenotype) trainer.getCODEC().decode(genome);
+    private MorphChrom decodeGenome(Genome genome) {
+        return (MorphChrom) trainer.getCODEC().decode(genome);
     }
 
     private static void saveStats(Path path, int epoch, double max, double min, double mean,

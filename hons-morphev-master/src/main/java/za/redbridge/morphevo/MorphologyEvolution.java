@@ -129,15 +129,14 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		for (int i = 0; i < population.getPopulationSize(); i++) {
 			final MorphGenome genome = randomGenome();
 
-			genome.setScore(0.0);
-			genome.setAdjustedScore(0.0);
-			defaultSpecies.getMembers( ).add(genome);
-//			defaultSpecies.add(genome);
+			/*genome.setScore(0.0);
+			genome.setAdjustedScore(0.0);*/
+			// defaultSpecies.getMembers().add(genome);
+			defaultSpecies.add(genome);
 
 		}
 
 		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
-
 		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
 //		population.getSpecies().add(defaultSpecies);
 
@@ -204,11 +203,6 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		preIteration();
 		setError(getGenetic().getError());
 
-		/*System.out.println("Decoding all genomes");
-		for(Genome currGenome : getGenetic().getPopulation().getSpecies().get(0).getMembers()){
-			((MorphGenome)currGenome).decode( );
-		}*/
-
 //		statsRecorder.recordIterationStats();
 		System.out.println("Iterating");
 		getGenetic().iteration();
@@ -261,7 +255,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
-			organism[i] = Math.PI/4*Math.random();
+			organism[i] = 2*Math.PI*Math.random();
 		}
 		return result;
 	}

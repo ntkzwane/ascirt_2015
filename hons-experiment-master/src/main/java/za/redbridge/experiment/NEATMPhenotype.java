@@ -48,9 +48,11 @@ public class NEATMPhenotype implements Phenotype {
         final MLData input = this.input;
         for (int i = 0, n = input.size(); i < n; i++) {
             input.setData(i, sensorReadings.get(i).get(0));
+            System.out.println(" -- neatmPhenotype.step.sensor reading: sensor -" + i + "- " + sensorReadings.get(i).get(0));
         }
 
         MLData output = network.compute(input);
+        System.out.println("L: "+(output.getData(0) * 2.0 - 1.0)+", R: "+(output.getData(1) * 2.0 - 1.0));
         return new Double2D(output.getData(0) * 2.0 - 1.0, output.getData(1) * 2.0 - 1.0);
     }
 

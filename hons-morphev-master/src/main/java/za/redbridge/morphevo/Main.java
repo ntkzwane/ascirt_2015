@@ -17,8 +17,8 @@ import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.simulator.config.SimConfig;
 
-import static za.redbridge.genetic.Utils.isBlank;
-import static za.redbridge.genetic.Utils.readObjectFromFile;
+import static za.redbridge.morphevo.Utils.isBlank;
+import static za.redbridge.morphevo.Utils.readObjectFromFile;
 
 /**
  * morphology evolution initializer
@@ -34,7 +34,7 @@ public class Main {
 
         log.info(options.toString());
 
-        // initialize the simulator using a predefined config file
+        // initialize the simulator using a predefined config file/set of configurations
         SimConfig simConfig;
         if (!isBlank(options.configFile)) {
             simConfig = new SimConfig(options.configFile);
@@ -51,11 +51,9 @@ public class Main {
 
         // demo the given configuration in the simulator
         if (!isBlank(options.genomePath)) {
-//            NEATNetwork network = (NEATNetwork) readObjectFromFile(options.genomePath);
-//            calculateScore.demo(network);
-//            MorphChromosome chromosome = (MorphChromosome) readObjectFromFile(options.genomePath);
-//            calculateScore.demo(chromosome);//\TODO finish this
-            return;
+           MorphChrom chromosome = (MorphChrom) readObjectFromFile(options.genomePath);
+           calculateScore.demo(chromosome);
+           return;
         }
 
         // initialize the genetic algorithm method and pupulation
@@ -63,7 +61,7 @@ public class Main {
             @Override
             public MLMethod factor() {
                 System.out.println("Main.morphevo.factor( )");
-                return new MorphPhenotype( );
+                return new MorphChrom( );
             }}, calculateScore, options.populationSize);
         log.debug("Population of size " + options.populationSize + " initialized");
 
@@ -84,13 +82,13 @@ public class Main {
         private String configFile = "config/mediumSimConfig.yml";
 
         @Parameter(names = "-i", description = "Number of simulation iterations to train for")
-        private int numIterations = 500;
+        private int numIterations = 1;//500;
 
         @Parameter(names = "-p", description = "Initial population size")
         private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 5;
+        private int simulationRuns = 1;//5;
 
         @Parameter(names = "--demo", description = "Show a GUI demo of a given genome")
         private String genomePath = null;
