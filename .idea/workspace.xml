@@ -25,21 +25,9 @@
       <file leaf-file-name="SensorType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/sensor/SensorType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.294118">
+            <state vertical-scroll-proportion="0.0">
               <caret line="53" column="25" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeuristicSchedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/HeuristicSchedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -47,7 +35,7 @@
       <file leaf-file-name="MorphologyEvolution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.382353">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="44" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="44" />
               <folding />
             </state>
@@ -57,19 +45,21 @@
       <file leaf-file-name="BasicEA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/BasicEA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.294118">
+            <state vertical-scroll-proportion="0.0">
               <caret line="309" column="28" selection-start-line="309" selection-start-column="16" selection-end-line="309" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MutatePerturb.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MutatePerturb.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/mutate/MutatePerturb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-              <folding />
+            <state vertical-scroll-proportion="1.1325842">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,12 +74,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProximitySensor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProximitySensor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23595506">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simulation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/Simulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.382353">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TargetAreaObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/TargetAreaObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#6932#6933#0" expanded="false" />
+                <element signature="e#6978#6979#0" expanded="false" />
+                <element signature="e#7007#7008#0" expanded="false" />
+                <element signature="e#7034#7035#0" expanded="false" />
+                <element signature="e#7063#7064#0" expanded="false" />
+                <element signature="e#7091#7092#0" expanded="false" />
+                <element signature="e#7121#7122#0" expanded="false" />
+                <element signature="e#7150#7151#0" expanded="false" />
+                <element signature="e#7195#7196#0" expanded="false" />
+                <element signature="e#7230#7231#0" expanded="false" />
+                <element signature="e#8221#8222#0" expanded="false" />
+                <element signature="e#8265#8266#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,54 +130,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Heuristic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/Heuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#631#632#0" expanded="false" />
-                <element signature="e#665#666#0" expanded="false" />
-                <element signature="e#714#715#0" expanded="false" />
-                <element signature="e#745#746#0" expanded="false" />
-                <element signature="e#792#793#0" expanded="false" />
-                <element signature="e#838#839#0" expanded="false" />
-                <element signature="e#2814#2815#0" expanded="false" />
-                <element signature="e#2845#2846#0" expanded="false" />
-                <element signature="e#2890#2891#0" expanded="false" />
-                <element signature="e#2930#2931#0" expanded="false" />
-                <element signature="e#2974#2975#0" expanded="false" />
-                <element signature="e#3002#3003#0" expanded="false" />
-                <element signature="e#3068#3069#0" expanded="false" />
-                <element signature="e#3108#3109#0" expanded="false" />
-                <element signature="e#3167#3168#0" expanded="false" />
-                <element signature="e#3241#3242#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AgentSensor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/AgentSensor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="427" column="27" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#AgentSensor#0" expanded="false" />
                 <element signature="method#AgentSensor#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#AgentSensor#1;class#AgentSensor#0" expanded="false" />
                 <element signature="e#2342#2406#0" expanded="false" />
                 <element signature="method#createTransform#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#createShape#0;class#AgentSensor#0" expanded="false" />
-                <element signature="e#4072#4073#0" expanded="false" />
-                <element signature="e#4136#4137#0" expanded="false" />
                 <element signature="method#getFilterMaskBits#0;class#AgentSensor#0" expanded="false" />
-                <element signature="e#4415#4416#0" expanded="false" />
-                <element signature="e#4490#4491#0" expanded="false" />
-                <element signature="e#5565#5566#0" expanded="false" />
-                <element signature="e#5608#5609#0" expanded="false" />
                 <element signature="docComment;method#senseFixture#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#senseFixture#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#senseCircleFixture#0;class#AgentSensor#0" expanded="false" />
@@ -161,18 +152,8 @@
                 <element signature="method#senseEdgeFixture#0;class#AgentSensor#0" expanded="false" />
                 <element signature="e#12618#12702#0" expanded="false" />
                 <element signature="docComment;method#filterOutObject#0;class#AgentSensor#0" expanded="false" />
-                <element signature="e#13512#13513#0" expanded="false" />
-                <element signature="e#13540#13541#0" expanded="false" />
                 <element signature="docComment;method#provideObjectReading#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#checkFieldPresent#0;class#AgentSensor#0" expanded="false" />
-                <element signature="e#14563#14564#0" expanded="false" />
-                <element signature="e#14593#14594#0" expanded="false" />
-                <element signature="e#14630#14631#0" expanded="false" />
-                <element signature="e#14664#14665#0" expanded="false" />
-                <element signature="e#14695#14696#0" expanded="false" />
-                <element signature="e#14723#14724#0" expanded="false" />
-                <element signature="e#14760#14761#0" expanded="false" />
-                <element signature="e#14794#14795#0" expanded="false" />
                 <element signature="method#getConsumption#0;class#AgentSensor#0" expanded="false" />
                 <element signature="method#setConsumption#0;class#AgentSensor#0" expanded="false" />
               </folding>
@@ -280,6 +261,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -611,6 +595,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="heuristics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2014 Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hons-simulator-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="za" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="object" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1452,9 +1478,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1764,11 +1787,12 @@
       <workItem from="1441252292961" duration="43127000" />
       <workItem from="1441397926311" duration="2739000" />
       <workItem from="1441411042964" duration="3530000" />
+      <workItem from="1441441019949" duration="1418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422872000" />
+    <option name="totallyTimeSpent" value="424290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1821,6 +1845,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/UltrasonicSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/phenotype/heuristics/Heuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/sensor/AgentSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="427" column="27" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;class#AgentSensor#0" expanded="false" />
+            <element signature="method#AgentSensor#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#AgentSensor#1;class#AgentSensor#0" expanded="false" />
+            <element signature="e#2342#2406#0" expanded="false" />
+            <element signature="method#createTransform#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#createShape#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#getFilterMaskBits#0;class#AgentSensor#0" expanded="false" />
+            <element signature="docComment;method#senseFixture#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#senseFixture#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#senseCircleFixture#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#lineCircleIntersection#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#sensePolygonFixture#0;class#AgentSensor#0" expanded="false" />
+            <element signature="e#9016#9076#0" expanded="false" />
+            <element signature="method#senseEdgeFixture#0;class#AgentSensor#0" expanded="false" />
+            <element signature="e#12618#12702#0" expanded="false" />
+            <element signature="docComment;method#filterOutObject#0;class#AgentSensor#0" expanded="false" />
+            <element signature="docComment;method#provideObjectReading#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#checkFieldPresent#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#getConsumption#0;class#AgentSensor#0" expanded="false" />
+            <element signature="method#setConsumption#0;class#AgentSensor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphGenome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1839,13 +1908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="637" column="29" selection-start-line="637" selection-start-column="23" selection-end-line="637" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/Simulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9705882">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2035,17 +2097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6339#6340#0" expanded="false" />
-            <element signature="e#6386#6387#0" expanded="false" />
-            <element signature="e#6450#6451#0" expanded="false" />
-            <element signature="e#6478#6479#0" expanded="false" />
-            <element signature="e#6851#6852#0" expanded="false" />
-            <element signature="e#6897#6898#0" expanded="false" />
-            <element signature="e#6942#6943#0" expanded="false" />
-            <element signature="e#6974#6975#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2060,15 +2111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="method#configure#0;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2933#2934#0" expanded="false" />
-            <element signature="method#draw#0;class#HeuristicPhenotype#0" expanded="false" />
-            <element signature="method#setTransform#0;class#HeuristicPhenotype#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2076,13 +2118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2213#2214#0" expanded="false" />
-            <element signature="e#2241#2242#0" expanded="false" />
-            <element signature="e#2288#2289#0" expanded="false" />
-            <element signature="e#2323#2324#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2090,13 +2125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1824#1825#0" expanded="false" />
-            <element signature="e#1852#1853#0" expanded="false" />
-            <element signature="e#1899#1900#0" expanded="false" />
-            <element signature="e#1934#1935#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2104,13 +2132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5256#5257#0" expanded="false" />
-            <element signature="e#5284#5285#0" expanded="false" />
-            <element signature="e#5331#5332#0" expanded="false" />
-            <element signature="e#5369#5370#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2118,18 +2139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="26" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="initializer##0;class#ChasingPhenotype#0" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1049#1050#0" expanded="false" />
-            <element signature="e#2176#2177#0" expanded="false" />
-            <element signature="e#2221#2222#0" expanded="false" />
-            <element signature="method#createUltrasonicSensor#0;class#ChasingPhenotype#0" expanded="false" />
-            <element signature="class#2342:2538" expanded="false" />
-            <element signature="e#2451#2452#0" expanded="false" />
-            <element signature="e#2527#2528#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2137,25 +2146,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-            <element signature="e#714#715#0" expanded="false" />
-            <element signature="e#745#746#0" expanded="false" />
-            <element signature="e#792#793#0" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#2814#2815#0" expanded="false" />
-            <element signature="e#2845#2846#0" expanded="false" />
-            <element signature="e#2890#2891#0" expanded="false" />
-            <element signature="e#2930#2931#0" expanded="false" />
-            <element signature="e#2974#2975#0" expanded="false" />
-            <element signature="e#3002#3003#0" expanded="false" />
-            <element signature="e#3068#3069#0" expanded="false" />
-            <element signature="e#3108#3109#0" expanded="false" />
-            <element signature="e#3167#3168#0" expanded="false" />
-            <element signature="e#3241#3242#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2174,20 +2165,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="427" column="27" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#AgentSensor#0" expanded="false" />
             <element signature="method#AgentSensor#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#AgentSensor#1;class#AgentSensor#0" expanded="false" />
             <element signature="e#2342#2406#0" expanded="false" />
             <element signature="method#createTransform#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#createShape#0;class#AgentSensor#0" expanded="false" />
-            <element signature="e#4072#4073#0" expanded="false" />
-            <element signature="e#4136#4137#0" expanded="false" />
             <element signature="method#getFilterMaskBits#0;class#AgentSensor#0" expanded="false" />
-            <element signature="e#4415#4416#0" expanded="false" />
-            <element signature="e#4490#4491#0" expanded="false" />
-            <element signature="e#5565#5566#0" expanded="false" />
-            <element signature="e#5608#5609#0" expanded="false" />
             <element signature="docComment;method#senseFixture#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#senseFixture#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#senseCircleFixture#0;class#AgentSensor#0" expanded="false" />
@@ -2197,18 +2181,8 @@
             <element signature="method#senseEdgeFixture#0;class#AgentSensor#0" expanded="false" />
             <element signature="e#12618#12702#0" expanded="false" />
             <element signature="docComment;method#filterOutObject#0;class#AgentSensor#0" expanded="false" />
-            <element signature="e#13512#13513#0" expanded="false" />
-            <element signature="e#13540#13541#0" expanded="false" />
             <element signature="docComment;method#provideObjectReading#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#checkFieldPresent#0;class#AgentSensor#0" expanded="false" />
-            <element signature="e#14563#14564#0" expanded="false" />
-            <element signature="e#14593#14594#0" expanded="false" />
-            <element signature="e#14630#14631#0" expanded="false" />
-            <element signature="e#14664#14665#0" expanded="false" />
-            <element signature="e#14695#14696#0" expanded="false" />
-            <element signature="e#14723#14724#0" expanded="false" />
-            <element signature="e#14760#14761#0" expanded="false" />
-            <element signature="e#14794#14795#0" expanded="false" />
             <element signature="method#getConsumption#0;class#AgentSensor#0" expanded="false" />
             <element signature="method#setConsumption#0;class#AgentSensor#0" expanded="false" />
           </folding>
@@ -2217,7 +2191,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/ea/train/basic/BasicEA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.294118">
+        <state vertical-scroll-proportion="0.0">
           <caret line="309" column="28" selection-start-line="309" selection-start-column="16" selection-end-line="309" selection-end-column="28" />
           <folding />
         </state>
@@ -2225,16 +2199,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/MorphologyEvolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.382353">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/mutate/MutatePerturb.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -2249,7 +2215,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-morphev-master/src/main/java/za/redbridge/morphevo/sensor/SensorType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.294118">
+        <state vertical-scroll-proportion="0.0">
           <caret line="53" column="25" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="25" />
           <folding />
         </state>
@@ -2265,9 +2231,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/khepera/ProximitySensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23595506">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.382353">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hons-simulator-master/src/main/java/za/redbridge/simulator/object/TargetAreaObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#6932#6933#0" expanded="false" />
+            <element signature="e#6978#6979#0" expanded="false" />
+            <element signature="e#7007#7008#0" expanded="false" />
+            <element signature="e#7034#7035#0" expanded="false" />
+            <element signature="e#7063#7064#0" expanded="false" />
+            <element signature="e#7091#7092#0" expanded="false" />
+            <element signature="e#7121#7122#0" expanded="false" />
+            <element signature="e#7150#7151#0" expanded="false" />
+            <element signature="e#7195#7196#0" expanded="false" />
+            <element signature="e#7230#7231#0" expanded="false" />
+            <element signature="e#8221#8222#0" expanded="false" />
+            <element signature="e#8265#8266#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encog-java-core-master/src/main/java/org/encog/ml/genetic/mutate/MutatePerturb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1325842">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
