@@ -158,8 +158,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		getGenetic().setPopulation(population);
 
 		this.genetic.addOperation(0.9, new Splice(s));
-		this.genetic.addOperation(0.1, new MutatePerturb(1.0));
-
+		this.genetic.addOperation(0.1, new MutatePerturb(0.1));
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
 	}
