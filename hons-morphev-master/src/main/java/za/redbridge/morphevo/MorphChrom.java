@@ -66,9 +66,9 @@ public class MorphChrom implements MLMethod, Serializable{
         // create sensor models
         sensormodels[0] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
         // sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],(float) encoded[2],(float) encoded[3]);
-        sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1], 4.0f,(float) encoded[3]);
-        sensormodels[2] = new SensorModel(SensorType.ULTRASONIC,(float) encoded[0],(float) encoded[1], 5.0f,(float) encoded[3]);
-        sensormodels[3] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1], 4.0f,(float) encoded[3]);
+        sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],  encoded[1],(float) encoded[3]);
+        sensormodels[2] = new SensorModel(SensorType.ULTRASONIC,(float) encoded[0],(float) encoded[1],  encoded[1],(float) encoded[3]);
+        sensormodels[3] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0],(float) encoded[1],  encoded[1],(float) encoded[3]);
         // sensormodels[1] = new SensorModel(SensorType.PROXIMITY,(float) encoded[0], 0.0f, 4.0f, 0.1f);
         // sensormodels[1] = new SensorModel(SensorType.ULTRASONIC,(float) encoded[0], 0.0f, 4.0f, 0.1f);
         // construct the morphology

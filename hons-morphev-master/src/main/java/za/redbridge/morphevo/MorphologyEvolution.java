@@ -76,7 +76,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 	private static final double CONVERGENCE_SCORE = 110;
 
-	private final int PARAM_LENGTH = 5;
+	private final int GENOME_LENGTH = 60;
 	/**
 	 * Very simple class that implements a genetic algorithm.
 	 *
@@ -137,7 +137,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		}
 
 		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
-		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
+		population.setGenomeFactory(new MorphGenomeFactory(GENOME_LENGTH));
 //		population.getSpecies().add(defaultSpecies);
 
 		// create the trainer
@@ -251,7 +251,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 	}
 
 	private MorphGenome randomGenome( ) {
-		final MorphGenome result = new MorphGenome(PARAM_LENGTH);
+		final MorphGenome result = new MorphGenome(GENOME_LENGTH);
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
