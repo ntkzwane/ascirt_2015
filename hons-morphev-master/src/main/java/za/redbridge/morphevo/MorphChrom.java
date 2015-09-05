@@ -83,14 +83,15 @@ public class MorphChrom implements MLMethod, Serializable{
         // construct the morphology
         sensorMorphology = new SensorMorphology(sensormodels);*/
 
-        final int numSensors = (int) decodePart(encoded, "numSensors", -1);
+        final int numSensors = (int) decodePart(encoded, "numSensors", -1) + 1; // the one is added to include the bottom proximity sensor
         // create the sensor models
         int sensorModelIter = 0; // incremented each time a sensor is added to the sensor models
         SensorModel[] sensormodels = new SensorModel[numSensors];
         // there will always be a bottom proximity sensor on an agent
+        // System.out.println("MorphChrom.decodeFromArray.numSense "+numSensors);
         sensormodels[sensorModelIter++] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
         
-        final int numProx = (int) decodePart(encoded, "numProx", -1);
+        /*final int numProx = (int) decodePart(encoded, "numProx", -1);
         final int numUltr = (int) decodePart(encoded, "numUltr", -1);
         // configure all the proximity sensors (if they exist)
         for(int proxiIter = proxiParamStart + MAX_NUM_PROXI_SENSORS; proxiIter < MAX_NUM_PROXI_SENSORS * BORF - 1; proxiIter = proxiIter + 4){
@@ -112,7 +113,39 @@ public class MorphChrom implements MLMethod, Serializable{
                 (float) decodePart(null, "range_ultra", encoded[ultraIter+1]),
                 (float) decodePart(null, "field_of_view", encoded[ultraIter+1])
             );
+        }*/
+        // configure all the 'on' proximity sensors
+        for(int proxiIter = proxiParamStart; proxiIter < MAX_NUM_PROXI_SENSORS; proxiIter++){
+            if(encoded[proxiIter] > 0){ // implies that this sensor is on
+                int paramRegion = MAX_NUM_PROXI_SENSORS + (proxiIter * BORF);
+                // System.out.println("MorphChrom.decodeFromArray.proxi.senseNum "+sensorModelIter);
+                sensormodels[sensorModelIter] = new SensorModel(
+                    SensorType.PROXIMITY,
+                    (float) decodePart(null, "angle", encoded[paramRegion]),
+                    (float) decodePart(null, "angle", encoded[paramRegion+1]),
+                    (float) decodePart(null, "range_proxi", encoded[paramRegion+1]),
+                    (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
+                );
+                sensorModelIter++;
+            }
         }
+
+        // configure all the 'on' ultrasonic sensors
+        for(int ultraIter = ultraParamStart; ultraIter < MAX_NUM_ULTRA_SENSORS; ultraIter++){
+            if(encoded[ultraIter] > 0){ // implies that this sensor is on
+                int paramRegion = MAX_NUM_ULTRA_SENSORS + (ultraIter * BORF);
+                // System.out.println("MorphChrom.decodeFromArray.ultra.senseNum "+sensorModelIter);
+                sensormodels[sensorModelIter] = new SensorModel(
+                    SensorType.ULTRASONIC,
+                    (float) decodePart(null, "angle", encoded[paramRegion]),
+                    (float) decodePart(null, "angle", encoded[paramRegion+1]),
+                    (float) decodePart(null, "range_ultra", encoded[paramRegion+1]),
+                    (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
+                );
+                sensorModelIter++;
+            }
+        }
+
         sensorMorphology = new SensorMorphology(sensormodels);
     }
 
@@ -133,7 +166,7 @@ public class MorphChrom implements MLMethod, Serializable{
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 // count the number of ultrasonic sensors
-                for(int i = ultraParamStart; i < MAX_NUM_PROXI_SENSORS; i++){
+                for(int i = ultraParamStart; i < MAX_NUM_ULTRA_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 return numSensors;
@@ -145,7 +178,7 @@ public class MorphChrom implements MLMethod, Serializable{
                 return numSensors;
             case "numUltr":
                 // count the number of ultrasonic sensors
-                for(int i = ultraParamStart; i < MAX_NUM_PROXI_SENSORS; i++){
+                for(int i = ultraParamStart; i < MAX_NUM_ULTRA_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 return numSensors;
