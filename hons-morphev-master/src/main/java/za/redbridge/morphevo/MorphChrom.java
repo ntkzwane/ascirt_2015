@@ -34,6 +34,7 @@ public class MorphChrom implements MLMethod, Serializable{
     private static final double ULTRASONIC_SENSOR_MAX_RANGE = 4.0; // 4 meters
     private static final double ULTRASONIC_SENSOR_MIN_RANGE = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE = 0.2; // 20 centimeters
+    private static final double PROXIMITY_SENSOR_RANGE_MIN = 0.01; //\TODO just check that this is acceptable
     private final int proxiParamStart = 0;
     private final int ultraParamStart = 40;
 
@@ -190,7 +191,8 @@ public class MorphChrom implements MLMethod, Serializable{
                 return atanh(gene - Math.PI)/Math.PI;
             case "range_proxi":
                 // convert the number in the range (-1:1) to a range valid for the proximity sensor (0:0.2)
-                return (gene + 1)/10;
+                gene = (gene + 1)/10;
+                return clamp(PROXIMITY_SENSOR_RANGE_MIN, PROXIMITY_SENSOR_RANGE, gene);
             case "range_ultra":
                 // convert the number in the range (-1:1) to a range valid for the ultrasonic sensor (0.2:4.0)
                 gene = gene * 2;
