@@ -127,6 +127,7 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) decodePart(null, "range_proxi", encoded[paramRegion+1]),
                     (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
                 );
+                if(decodePart(null, "angle", encoded[paramRegion+1]) > Math.PI || decodePart(null, "angle", encoded[paramRegion+1]) < 0) System.out.println("O_p: "+decodePart(null, "angle", encoded[paramRegion+1]));
                 sensorModelIter++;
             }
         }
@@ -143,6 +144,7 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) decodePart(null, "range_ultra", encoded[paramRegion+1]),
                     (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
                 );
+                if(decodePart(null, "angle", encoded[paramRegion+1]) > Math.PI || decodePart(null, "angle", encoded[paramRegion+1]) < 0) System.out.println("O-U: "+decodePart(null, "angle", encoded[paramRegion+1]));
                 sensorModelIter++;
             }
         }
