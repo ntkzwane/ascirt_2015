@@ -1,0 +1,29 @@
+digraph G {
+  0 [ label="Bias (0)" ];
+  1 [ label="Input (1)\nBottom proximity" ];
+  2 [ label="Input (2)\nProximity\nB:-2.06, O:-0.17, R:0.20, F:1.02" ];
+  3 [ label="Input (3)\nUltrasonic\nB:-1.30, O:-0.40, R:3.85, F:3.14" ];
+  16 [ label="Input (16)\nUltrasonic\nB:-0.60, O:-1.19, R:3.85, F:3.14" ];
+  26 [ label="Input (26)\nProximity\nB:-2.90, O:-1.57, R:0.20, F:1.02" ];
+  47 [ label="Input (47)\nUltrasonic\nB:-1.05, O:1.55, R:3.85, F:3.14" ];
+  54 [ label="Input (54)\nProximity\nB:-1.60, O:-1.17, R:0.20, F:1.02" ];
+  64 [ label="Input (64)\nUltrasonic\nB:0.45, O:0.36, R:3.85, F:3.14" ];
+  4 [ label="Output (4)" ];
+  5 [ label="Output (5)" ];
+  { rank=same 0 1 2 3 16 26 47 54 64 }
+  { rank=same 4 5 }
+  0 -> 5 [ label="-0.725" ];
+  1 -> 5 [ label="-0.108" ];
+  2 -> 4 [ label="-0.920" ];
+  3 -> 4 [ label="-0.981" ];
+  16 -> 4 [ label="-0.392" ];
+  16 -> 5 [ label="0.043" ];
+  26 -> 4 [ label="-0.719" ];
+  26 -> 5 [ label="0.103" ];
+  47 -> 4 [ label="-0.195" ];
+  47 -> 5 [ label="0.184" ];
+  54 -> 4 [ label="-0.745" ];
+  54 -> 5 [ label="0.309" ];
+  64 -> 4 [ label="0.227" ];
+  64 -> 5 [ label="-0.088" ];
+}
