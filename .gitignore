@@ -12,6 +12,7 @@ hs_err_pid*
 desktop.ini
 
 # other
+*/.idea/
 */results/
 OLD_MORPHEV/
 mymake
