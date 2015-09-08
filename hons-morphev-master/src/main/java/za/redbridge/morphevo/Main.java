@@ -17,8 +17,8 @@ import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.simulator.config.SimConfig;
 
-import static za.redbridge.genetic.Utils.isBlank;
-import static za.redbridge.genetic.Utils.readObjectFromFile;
+import static za.redbridge.morphevo.Utils.isBlank;
+import static za.redbridge.morphevo.Utils.readObjectFromFile;
 
 /**
  * morphology evolution initializer
@@ -34,7 +34,7 @@ public class Main {
 
         log.info(options.toString());
 
-        // initialize the simulator using a predefined config file
+        // initialize the simulator using a predefined config file/set of configurations
         SimConfig simConfig;
         if (!isBlank(options.configFile)) {
             simConfig = new SimConfig(options.configFile);
@@ -51,11 +51,9 @@ public class Main {
 
         // demo the given configuration in the simulator
         if (!isBlank(options.genomePath)) {
-//            NEATNetwork network = (NEATNetwork) readObjectFromFile(options.genomePath);
-//            calculateScore.demo(network);
-//            MorphChromosome chromosome = (MorphChromosome) readObjectFromFile(options.genomePath);
-//            calculateScore.demo(chromosome);//\TODO finish this
-            return;
+           MorphChrom chromosome = (MorphChrom) readObjectFromFile(options.genomePath);
+           calculateScore.demo(chromosome);
+           return;
         }
 
         // initialize the genetic algorithm method and pupulation
@@ -63,15 +61,12 @@ public class Main {
             @Override
             public MLMethod factor() {
                 System.out.println("Main.morphevo.factor( )");
-                return new MorphPhenotype( );
+                return new MorphChrom( );
             }}, calculateScore, options.populationSize);
         log.debug("Population of size " + options.populationSize + " initialized");
 
-        int epoch = 0;
         for (int i = 0; i < options.numIterations; i++) {
             morphevo.iteration();
-            log.info("Training step " + epoch);
-            epoch++;
         }
 
         log.debug("Training complete");

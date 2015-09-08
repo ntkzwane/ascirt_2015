@@ -31,6 +31,7 @@ import org.encog.ml.MLMethod;
 import org.encog.ml.genetic.GeneticError;
 import org.encog.ml.ea.codec.GeneticCODEC;
 import org.encog.ml.ea.genome.Genome;
+import org.encog.ml.genetic.genome.DoubleArrayGenome;
 
 /**
  * A CODEC for IMLEncodable classes.
@@ -49,13 +50,7 @@ public class MorphCODEC implements GeneticCODEC, Serializable {
     public MLMethod decode(final Genome genome) {
         final MorphGenome morphGenome = (MorphGenome) genome;
         morphGenome.decode();
-//        System.out.println("decoded "+morphGenome.getData()[0]);
-        /*for(StackTraceElement trackel : Thread.currentThread().getStackTrace()){
-            System.out.println(trackel.toString());
-        }
-        System.out.println();*/
-
-        return morphGenome.getPhenotype();
+        return morphGenome.getChrom();
     }
 
     /**

@@ -26,6 +26,10 @@ public class SensorMorphology implements Serializable {
         this.sensorModels = Arrays.copyOf(sensorModels, sensorModels.length);
     }
 
+    public SensorMorphology(SensorMorphology other){
+        this.sensorModels = Arrays.copyOf(other.getSensorModels(), other.getNumSensors());
+    }
+
     public int getNumSensors() {
         return sensorModels.length;
     }
@@ -46,6 +50,10 @@ public class SensorMorphology implements Serializable {
         }
 
         return null;
+    }
+
+    public SensorModel[] getSensorModels(){
+        return this.sensorModels;
     }
 
     private void checkValidIndex(int index) {

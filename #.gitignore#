@@ -1,0 +1,17 @@
+# Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# gedit backups
+*~
+
+# IDE
+*.iml
+.idea/
+
+# drive
+desktop.ini
+
+# other
+OLD_MORPHEV/
+
+mymake

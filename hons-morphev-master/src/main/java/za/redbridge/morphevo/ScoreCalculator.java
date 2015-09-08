@@ -30,49 +30,34 @@ public class ScoreCalculator implements CalculateScore{
 
     private final SimConfig simConfig;
     private final int simulationRuns;
-    private final SensorMorphology sensorMorphology;
+    private final SensorMorphology sensorMorphology;//\TODO might not need this
 
     private final DescriptiveStatistics performanceStats = new SynchronizedDescriptiveStatistics();
     private final DescriptiveStatistics scoreStats = new SynchronizedDescriptiveStatistics();
     private final DescriptiveStatistics sensorStats;
 
-    public ScoreCalculator(SimConfig simConfig, int simulationRuns, SensorMorphology sensorMorphology) {
+    public ScoreCalculator(SimConfig simConfig, int simulationRuns,
+                           SensorMorphology sensorMorphology) {
         this.simConfig = simConfig;
         this.simulationRuns = simulationRuns;
         this.sensorMorphology = sensorMorphology;
 
+        // record the sensor stats
         this.sensorStats = new SynchronizedDescriptiveStatistics();
-    }
-
-    public void demo(MLMethod method) {
-        // Create the robot and resource factories
-        MorphPhenotype morphPhenotype = (MorphPhenotype) method;
-        RobotFactory robotFactory = new HomogeneousRobotFactory((Phenotype) method,
-            simConfig.getRobotMass(),
-            simConfig.getRobotRadius(),
-            simConfig.getRobotColour(),
-            simConfig.getObjectsRobots());
-
-        // Create the simulation and run it
-        Simulation simulation = new Simulation(simConfig, robotFactory);
-
-        SimulationGUI video = new SimulationGUI(simulation);
-
-        //new console which displays this simulation
-        Console console = new Console(video);
-        console.setVisible(true);
     }
 
     @Override
     public double calculateScore(MLMethod method){
         long start = System.nanoTime();
 
-        MorphPhenotype morphPhenotype = (MorphPhenotype) method;
-        RobotFactory robotFactory = new HomogeneousRobotFactory((Phenotype) method,
+        MorphChrom chromosome = (MorphChrom) method;
+        RobotFactory robotFactory = new HomogeneousRobotFactory(
+            getPhenotypeForChromosome(chromosome),
             simConfig.getRobotMass(),
             simConfig.getRobotRadius(),
             simConfig.getRobotColour(),
-            simConfig.getObjectsRobots());
+            simConfig.getObjectsRobots()
+        );
 
         // Create the simulation and run it
         Simulation simulation = new Simulation(simConfig, robotFactory);
@@ -86,9 +71,10 @@ public class ScoreCalculator implements CalculateScore{
 
         // Get the fitness and update the total score
         double score = fitness / simulationRuns;
+        // add to score stats
         scoreStats.addValue(score);
-
-        sensorStats.addValue(morphPhenotype.getNumSensors( ));
+        // add to sensor stats
+        sensorStats.addValue(chromosome.encodedArrayLength( ));
 
         log.debug("Score calculation completed: " + score);
 
@@ -96,6 +82,30 @@ public class ScoreCalculator implements CalculateScore{
         performanceStats.addValue(duration);
 
         return score;
+    }
+
+    private Phenotype getPhenotypeForChromosome(MorphChrom morphChrom) {
+        return new MorphPhenotype((MorphChrom) morphChrom);
+    }
+
+    public void demo(MLMethod method) {
+        // Create the robot and resource factories
+        MorphChrom chromosome = (MorphChrom) method;
+        RobotFactory robotFactory = new HomogeneousRobotFactory(
+                getPhenotypeForChromosome(chromosome),
+                simConfig.getRobotMass(),
+                simConfig.getRobotRadius(),
+                simConfig.getRobotColour(),
+                simConfig.getObjectsRobots());
+
+        // Create the simulation and run it
+        Simulation simulation = new Simulation(simConfig, robotFactory);
+
+        SimulationGUI video = new SimulationGUI(simulation);
+
+        //new console which displays this simulation
+        Console console = new Console(video);
+        console.setVisible(true);
     }
 
     @Override

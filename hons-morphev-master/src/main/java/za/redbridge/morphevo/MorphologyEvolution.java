@@ -38,7 +38,7 @@ import org.encog.ml.ea.species.BasicSpecies;
 import org.encog.ml.ea.species.Species;
 import org.encog.ml.ea.train.basic.TrainEA;
 import org.encog.ml.genetic.crossover.Splice;
-import org.encog.ml.genetic.mutate.MutatePerturb;
+import za.redbridge.morphevo.mutate.MorphMutate;
 import org.encog.ml.train.BasicTraining;
 import org.encog.neural.networks.training.propagation.TrainingContinuation;
 import org.encog.util.concurrency.MultiThreadable;
@@ -49,6 +49,7 @@ import org.encog.ml.genetic.MLMethodGenomeFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.Random;
 
 /**
  * Implements a genetic algorithm that allows an MLMethod that is encodable
@@ -76,7 +77,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 	private static final double CONVERGENCE_SCORE = 110;
 
-	private final int PARAM_LENGTH = 5;
+	private final int GENOME_LENGTH = 60;
 	/**
 	 * Very simple class that implements a genetic algorithm.
 	 *
@@ -129,16 +130,15 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		for (int i = 0; i < population.getPopulationSize(); i++) {
 			final MorphGenome genome = randomGenome();
 
-			genome.setScore(0.0);
-			genome.setAdjustedScore(0.0);
-			defaultSpecies.getMembers( ).add(genome);
-//			defaultSpecies.add(genome);
+			/*genome.setScore(0.0);
+			genome.setAdjustedScore(0.0);*/
+			// defaultSpecies.getMembers().add(genome);
+			defaultSpecies.add(genome);
 
 		}
 
 		defaultSpecies.setLeader(defaultSpecies.getMembers().get(0));
-
-		population.setGenomeFactory(new MorphGenomeFactory(PARAM_LENGTH));
+		population.setGenomeFactory(new MorphGenomeFactory(GENOME_LENGTH));
 //		population.getSpecies().add(defaultSpecies);
 
 		// create the trainer
@@ -158,9 +158,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
 		getGenetic().setPopulation(population);
 
-		this.genetic.addOperation(0.9, new Splice(s));
-		this.genetic.addOperation(0.1, new MutatePerturb(1.0));
-
+		this.genetic.addOperation(0.9, new Splice(s));		// crossover operation
+		this.genetic.addOperation(0.1, new MorphMutate(0.1));
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
 	}
@@ -204,13 +203,6 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		preIteration();
 		setError(getGenetic().getError());
 
-		/*System.out.println("Decoding all genomes");
-		for(Genome currGenome : getGenetic().getPopulation().getSpecies().get(0).getMembers()){
-			((MorphGenome)currGenome).decode( );
-		}*/
-
-//		statsRecorder.recordIterationStats();
-		System.out.println("Iterating");
 		getGenetic().iteration();
 
 		statsRecorder.recordIterationStats();
@@ -257,11 +249,14 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 	}
 
 	private MorphGenome randomGenome( ) {
-		final MorphGenome result = new MorphGenome(PARAM_LENGTH);
+		Random rand = new Random();
+		final MorphGenome result = new MorphGenome(GENOME_LENGTH);
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
-			organism[i] = Math.PI/4*Math.random();
+			// gene is a random number between the range (-1:1)
+			double randNum = rand.nextDouble() * 2*Math.PI - Math.PI; // random number in the range [-pi:pi]
+			organism[i] = Math.tanh(randNum);
 		}
 		return result;
 	}
