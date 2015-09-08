@@ -5,6 +5,11 @@ import java.io.Serializable;
 import za.redbridge.simulator.khepera.BottomProximitySensor;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
+
+// make a new one in the simulator and import it.
+
+
+
 import za.redbridge.simulator.sensor.AgentSensor;
 
 /**

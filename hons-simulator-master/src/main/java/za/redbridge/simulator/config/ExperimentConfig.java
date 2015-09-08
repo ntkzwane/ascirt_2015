@@ -14,7 +14,7 @@ import java.util.Map;
 //parameters for experiment configuration
 public class ExperimentConfig extends Config {
 
-    private static final long DEFAULT_MAX_EPOCHS = 1000;
+    private static final long DEFAULT_MAX_EPOCHS = 1;
     private static final EvolutionaryAlgorithm DEFAULT_CONTROLLER_EA = EvolutionaryAlgorithm.NEAT;
     private static final int DEFAULT_POPULATION_SIZE = 15;
     private static final String DEFAULT_MORPHOLOGY_FILEPATH= "sensorList.yml";

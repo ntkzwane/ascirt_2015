@@ -11,6 +11,10 @@ import za.redbridge.simulator.sensor.AgentSensor;
  * Phenotype that mimics the morphology of a Khepera III robot.
  * Created by jamie on 2014/09/22.
  */
+
+
+// Naeem:  We need to copy all the configurations for the other sensors and add them for the colourproximitysensor
+// I also noticed that the number of sensors is found here.
 public abstract class KheperaIIIPhenotype implements Phenotype {
 
     private final List<AgentSensor> sensors;

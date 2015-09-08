@@ -19,6 +19,9 @@ import za.redbridge.simulator.sensor.sensedobjects.SensedObject;
  */
 public class ProximitySensor extends AgentSensor {
 
+
+    // Naeem : there is no lower range for the ProximitySensor.
+
     private static final float PROXIMITY_SENSOR_RANGE = 3.0f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
