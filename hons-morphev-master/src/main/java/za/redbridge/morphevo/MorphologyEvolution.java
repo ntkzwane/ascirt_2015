@@ -255,7 +255,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 		for (int i = 0; i < organism.length; i++) {
 			// gene is a random number between the range (-1:1)
-			organism[i] = Math.tanh(Math.random() * 4*Math.PI - Math.PI);
+			// organism[i] = Math.tanh(Math.random() * 4*Math.PI - Math.PI);
+			organism[i] = Math.tanh(Math.random() * 2*Math.PI - Math.PI);
 		}
 		return result;
 	}

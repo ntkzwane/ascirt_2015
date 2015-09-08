@@ -88,9 +88,11 @@ public class MorphChrom implements MLMethod, Serializable{
         // create the sensor models
         int sensorModelIter = 0; // incremented each time a sensor is added to the sensor models
         SensorModel[] sensormodels = new SensorModel[numSensors];
+        System.out.println(numSensors);
         // there will always be a bottom proximity sensor on an agent
         // System.out.println("MorphChrom.decodeFromArray.numSense "+numSensors);
-        sensormodels[sensorModelIter++] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
+        sensormodels[sensorModelIter] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
+        sensorModelIter++;
         
         /*final int numProx = (int) decodePart(encoded, "numProx", -1);
         final int numUltr = (int) decodePart(encoded, "numUltr", -1);
@@ -99,54 +101,54 @@ public class MorphChrom implements MLMethod, Serializable{
             if(numProx == 0){break;} // do not need to add them since they are not on
             sensormodels[sensorModelIter++] = new SensorModel(
                 SensorType.PROXIMITY,
-                (float) decodePart(null, "angle", encoded[proxiIter]),
-                (float) decodePart(null, "angle", encoded[proxiIter+1]),
+                (float) decodePart(null, "zero_to_2pi", encoded[proxiIter]),
+                (float) decodePart(null, "zero_to_2pi", encoded[proxiIter+1]),
                 (float) decodePart(null, "range_proxi", encoded[proxiIter+1]),
-                (float) decodePart(null, "field_of_view", encoded[proxiIter+1])
+                (float) decodePart(null, "zero_to_pi", encoded[proxiIter+1])
             );
         }
         for(int ultraIter = ultraParamStart + MAX_NUM_PROXI_SENSORS; ultraIter < MAX_NUM_ULTRA_SENSORS * BORF -1; ultraIter = ultraIter + 4){
             if(numUltr == 0){break;} // do not need to add them since they are not on
             sensormodels[sensorModelIter++] = new SensorModel(
                 SensorType.ULTRASONIC,
-                (float) decodePart(null, "angle", encoded[ultraIter]),
-                (float) decodePart(null, "angle", encoded[ultraIter+1]),
+                (float) decodePart(null, "zero_to_2pi", encoded[ultraIter]),
+                (float) decodePart(null, "zero_to_2pi", encoded[ultraIter+1]),
                 (float) decodePart(null, "range_ultra", encoded[ultraIter+1]),
-                (float) decodePart(null, "field_of_view", encoded[ultraIter+1])
+                (float) decodePart(null, "zero_to_pi", encoded[ultraIter+1])
             );
         }*/
         // configure all the 'on' proximity sensors
-        for(int proxiIter = proxiParamStart; proxiIter < MAX_NUM_PROXI_SENSORS; proxiIter++){
+        for(int proxiIter = proxiParamStart; proxiIter < proxiParamStart + MAX_NUM_PROXI_SENSORS; proxiIter++){
             if(encoded[proxiIter] > 0){ // implies that this sensor is on
                 int paramRegion = MAX_NUM_PROXI_SENSORS + (proxiIter * BORF);
                 // System.out.println("MorphChrom.decodeFromArray.proxi.senseNum "+sensorModelIter);
                 sensormodels[sensorModelIter] = new SensorModel(
                     SensorType.PROXIMITY,
-                    (float) decodePart(null, "angle", encoded[paramRegion]),
-                    (float) decodePart(null, "angle", encoded[paramRegion+1]),
-                    (float) decodePart(null, "range_proxi", encoded[paramRegion+1]),
-                    (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
+                    (float) 0.0f,//decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+1]), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) 4.0f,//decodePart(null, "range_proxi", encoded[paramRegion+1]),
+                    (float) 0.1f//decodePart(null, "zero_to_pi", encoded[paramRegion+1])
                 );
-                if(decodePart(null, "angle", encoded[paramRegion+1]) > Math.PI || decodePart(null, "angle", encoded[paramRegion+1]) < 0) System.out.println("O_p: "+decodePart(null, "angle", encoded[paramRegion+1]));
                 sensorModelIter++;
             }
+            System.out.println("p_iter "+proxiIter+" s_model "+sensorModelIter+" val "+encoded[proxiIter]);
         }
 
         // configure all the 'on' ultrasonic sensors
-        for(int ultraIter = ultraParamStart; ultraIter < MAX_NUM_ULTRA_SENSORS; ultraIter++){
+        for(int ultraIter = ultraParamStart; ultraIter < ultraParamStart + MAX_NUM_ULTRA_SENSORS; ultraIter++){
             if(encoded[ultraIter] > 0){ // implies that this sensor is on
                 int paramRegion = MAX_NUM_ULTRA_SENSORS + (ultraIter * BORF);
                 // System.out.println("MorphChrom.decodeFromArray.ultra.senseNum "+sensorModelIter);
                 sensormodels[sensorModelIter] = new SensorModel(
                     SensorType.ULTRASONIC,
-                    (float) decodePart(null, "angle", encoded[paramRegion]),
-                    (float) decodePart(null, "angle", encoded[paramRegion+1]),
-                    (float) decodePart(null, "range_ultra", encoded[paramRegion+1]),
-                    (float) decodePart(null, "field_of_view", encoded[paramRegion+1])
+                    (float) 0.0f,//decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+1] + Math.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) 4.0f,//decodePart(null, "range_ultra", encoded[paramRegion+1]),
+                    (float) 0.1f//decodePart(null, "zero_to_pi", encoded[paramRegion+1])
                 );
-                if(decodePart(null, "angle", encoded[paramRegion+1]) > Math.PI || decodePart(null, "angle", encoded[paramRegion+1]) < 0) System.out.println("O-U: "+decodePart(null, "angle", encoded[paramRegion+1]));
                 sensorModelIter++;
             }
+            System.out.println("u_iter "+ultraIter+" s_model "+sensorModelIter+" val "+encoded[ultraIter]);
         }
 
         sensorMorphology = new SensorMorphology(sensormodels);
@@ -165,11 +167,11 @@ public class MorphChrom implements MLMethod, Serializable{
             case "numSensors":
                 // count the number of proximity sensors
                 // if gene > 0, then the sensors is on, else it is off
-                for(int i = proxiParamStart; i < MAX_NUM_PROXI_SENSORS; i++){
+                for(int i = proxiParamStart; i < proxiParamStart + MAX_NUM_PROXI_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 // count the number of ultrasonic sensors
-                for(int i = ultraParamStart; i < MAX_NUM_ULTRA_SENSORS; i++){
+                for(int i = ultraParamStart; i < ultraParamStart + MAX_NUM_ULTRA_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 return numSensors;
@@ -185,12 +187,12 @@ public class MorphChrom implements MLMethod, Serializable{
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 return numSensors;
-            case "angle":
-                // convert the gene to an angle in the range [0 : 2*pi) 
-                return atanh(gene - Math.PI);
-            case "field_of_view":
+            case "zero_to_pi":
                 // convert the gene to an angle in the range [0 : pi) 
-                return atanh(gene - Math.PI)/Math.PI;
+                return atanh(gene + Math.PI)/2;
+            case "zero_to_2pi":
+                // convert the gene to an angle in the range [0 : 2*pi) 
+                return atanh(gene + Math.PI);
             case "range_proxi":
                 // convert the number in the range (-1:1) to a range valid for the proximity sensor (0:0.2)
                 gene = (gene + 1)/10;
