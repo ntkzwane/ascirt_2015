@@ -118,14 +118,17 @@ public class StatsRecorder {
     }
 
     private void saveGenome(MorphGenome genome, int epoch) {
+        MorphChrom chromosome = decodeGenome(genome);
+
         Path directory = bestChromosomeDirectory.resolve("epoch-" + epoch);
         initDirectory(directory);
 
         String txt;
-        log.info("New best genome! Epoch: " + epoch + ", score: " + genome.getScore()
-                + ", num sensors: " + genome.getNumSensors());
-        txt = String.format("epoch: %d, fitness: %f, sensors: %d", epoch, genome.getScore(),
-                genome.getNumSensors());
+        log.info("New best genome! Epoch: " + epoch + ", score: " + genome.getScore());
+        log.info("Sensors: "+ genome.getNumSensors() + ", Proximity: " + 
+            chromosome.getNumProxiSensors() + ", Ultrasonic: " + chromosome.getNumUltraSensors());
+        txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d",
+            epoch, genome.getScore(), genome.getNumSensors(), chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors());
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
             writer.write(txt);
@@ -133,7 +136,7 @@ public class StatsRecorder {
             log.error("Error writing best chromosome info file", e);
         }
 
-        MorphChrom chromosome = decodeGenome(genome);
+        // save the current best chromosome object
         saveObjectToFile(chromosome, directory.resolve("chromosome.ser"));
     }
 

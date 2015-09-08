@@ -49,6 +49,7 @@ import org.encog.ml.genetic.MLMethodGenomeFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.Random;
 
 /**
  * Implements a genetic algorithm that allows an MLMethod that is encodable
@@ -202,8 +203,6 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		preIteration();
 		setError(getGenetic().getError());
 
-//		statsRecorder.recordIterationStats();
-		System.out.println("Iterating");
 		getGenetic().iteration();
 
 		statsRecorder.recordIterationStats();
@@ -250,13 +249,14 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 	}
 
 	private MorphGenome randomGenome( ) {
+		Random rand = new Random();
 		final MorphGenome result = new MorphGenome(GENOME_LENGTH);
 		final double organism[] = result.getData();
 
 		for (int i = 0; i < organism.length; i++) {
 			// gene is a random number between the range (-1:1)
-			// organism[i] = Math.tanh(Math.random() * 4*Math.PI - Math.PI);
-			organism[i] = Math.tanh(Math.random() * 2*Math.PI - Math.PI);
+			double randNum = rand.nextDouble() * 2*Math.PI - Math.PI; // random number in the range [-pi:pi]
+			organism[i] = Math.tanh(randNum);
 		}
 		return result;
 	}

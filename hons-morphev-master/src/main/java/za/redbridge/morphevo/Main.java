@@ -65,11 +65,8 @@ public class Main {
             }}, calculateScore, options.populationSize);
         log.debug("Population of size " + options.populationSize + " initialized");
 
-        int epoch = 0;
         for (int i = 0; i < options.numIterations; i++) {
             morphevo.iteration();
-            log.info("Training step " + epoch);
-            epoch++;
         }
 
         log.debug("Training complete");

@@ -106,18 +106,21 @@ public class MorphPhenotype implements Phenotype, Serializable{
         //return new Double2D(1.0,1.0);
         // System.out.println("MorphPhenotype.step.numreadings: "+sensorReadings.size());
         int nearestSensed = -1;
-        float minSensed = 0.0f;
+        float maxSensed = 0.0f;
         for(int i = 0; i < sensorReadings.size(); i++){
-            if(sensorReadings.get(i).get(0) < minSensed){
+            if(sensorReadings.get(i).get(0) > maxSensed){
                 nearestSensed = i; //\TODO check that this is a sensor that is 'allowed' to sense resources
             }
         }
         // get bearing and move in direction of the bearing of the sensor
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
-            return wheelDriveForTargetAngle(bearing);
-        }else{
+            lastMove = wheelDriveForTargetAngle(bearing);
+            return lastMove;
+        }else if(lastMove == null){
             return new Double2D((float)Math.random()*2f - 1f, (float)Math.random()*2f - 1f);
+        }else{
+            return lastMove;
         }
     }
 
