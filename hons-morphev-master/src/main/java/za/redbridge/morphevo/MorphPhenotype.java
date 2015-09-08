@@ -117,10 +117,10 @@ public class MorphPhenotype implements Phenotype, Serializable{
             double bearing = sensors.get(nearestSensed).getBearing();
             lastMove = wheelDriveForTargetAngle(bearing);
             return lastMove;
-        }else if(lastMove == null){
-            return new Double2D((float)Math.random()*2f - 1f, (float)Math.random()*2f - 1f);
-        }else{
+        }else if(lastMove != null){
             return lastMove;
+        }else{
+            return new Double2D((float)Math.random()*2f - 1f, (float)Math.random()*2f - 1f);
         }
     }
 

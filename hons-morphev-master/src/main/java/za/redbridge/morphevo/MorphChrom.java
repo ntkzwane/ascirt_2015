@@ -22,6 +22,7 @@ import za.redbridge.simulator.khepera.UltrasonicSensor;
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.morphevo.sensor.SensorModel;
 import za.redbridge.morphevo.sensor.SensorType;
+import org.apache.commons.math3.complex.Complex;
 
 import java.io.Serializable;
 
@@ -155,10 +156,10 @@ public class MorphChrom implements MLMethod, Serializable{
                 return numSensors;
             case "zero_to_pi":
                 // convert the gene to an angle in the range [0 : pi) 
-                return atanh(gene + Math.PI)/2;
+                return atanh(gene)/2;
             case "zero_to_2pi":
-                // convert the gene to an angle in the range [0 : 2*pi) 
-                return atanh(gene + Math.PI);
+                // convert the gene to an angle in the range [0 : 2pi) 
+                return atanh(gene);
             case "range_proxi":
                 // convert the number in the range (-1:1) to a range valid for the proximity sensor (0:0.2)
                 gene = (gene + 1)/10;
@@ -180,7 +181,11 @@ public class MorphChrom implements MLMethod, Serializable{
     }
 
     private double atanh(double x){
-        return 0.5*Math.log( (x + 1.0) / (x - 1.0) ) + Math.PI;
+        // create a complex number using the gene as the real part
+        Complex c = new Complex((x + 1.0) / (x - 1.0), 0.0);
+        // calculate its logarithm, and return the absolute value of the resulting complex number
+        // pi is added to move the range from [-pi:pi] to [0:2pi)
+        return c.log().abs() + Math.PI;//0.5*Math.log( (x + 1.0) / (x - 1.0) ) + Math.PI;
     }
 
     private double clamp(double min, double max, double number){
