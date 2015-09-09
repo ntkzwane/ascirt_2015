@@ -16,7 +16,6 @@ import org.encog.ml.genetic.MLMethodGenomeFactory;
 import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.simulator.config.SimConfig;
-import org.jbox2d.common.MathUtils;
 
 import static za.redbridge.morphevo.Utils.isBlank;
 import static za.redbridge.morphevo.Utils.readObjectFromFile;
@@ -80,13 +79,13 @@ public class Main {
         private String configFile = "config/mediumSimConfig.yml";
 
         @Parameter(names = "-i", description = "Number of simulation iterations to train for")
-        private int numIterations = 1;//500;
+        private int numIterations = 500;
 
         @Parameter(names = "-p", description = "Initial population size")
-        private int populationSize = 1;//100;
+        private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 1;//5;
+        private int simulationRuns = 5;
 
         @Parameter(names = "--demo", description = "Show a GUI demo of a given genome")
         private String genomePath = null;

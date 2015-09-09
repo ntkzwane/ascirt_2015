@@ -125,10 +125,15 @@ public class StatsRecorder {
 
         String txt;
         log.info("New best genome! Epoch: " + epoch + ", score: " + genome.getScore());
-        log.info("Sensors: "+ genome.getNumSensors() + ", Proximity: " + 
-            chromosome.getNumProxiSensors() + ", Ultrasonic: " + chromosome.getNumUltraSensors());
+        log.info(
+            "Sensors: "+ genome.getNumSensors() + 
+            ", BottomProximity: 1" +
+            ", Proximity: " + chromosome.getNumProxiSensors() + 
+            ", Ultrasonic: " + chromosome.getNumUltraSensors()
+        );
         txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d",
-            epoch, genome.getScore(), genome.getNumSensors(), chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors());
+            epoch, genome.getScore(), genome.getNumSensors() - 1 /*exclude bottom prox*/, 
+            chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors());
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
             writer.write(txt);

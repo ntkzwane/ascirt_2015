@@ -1,7 +1,5 @@
 package za.redbridge.morphevo;
 
-import org.encog.ml.data.MLData;
-import org.encog.ml.data.basic.BasicMLData;
 import org.encog.ml.MLEncodable;
 import org.encog.ml.genetic.GeneticError;
 
@@ -27,7 +25,6 @@ import java.io.Serializable;
 
 public class MorphPhenotype implements Phenotype, Serializable{
     protected static final double HALF_PI = MathUtils.PI / 2;
-    private final MLData input;
     private List<AgentSensor> sensors;
     private SensorMorphology morphology;
 
@@ -44,7 +41,6 @@ public class MorphPhenotype implements Phenotype, Serializable{
         for(int i = 0; i < numSensors; i++){
             sensors.add(morphology.getSensor(i));
         }
-        input = new BasicMLData(numSensors);
 
         // for the sake of the copy constructor
         this.morphology = morphology;
@@ -57,7 +53,6 @@ public class MorphPhenotype implements Phenotype, Serializable{
         for(int i = 0; i < numSensors; i++){
             sensors.add(newMorph.getSensor(i));
         }
-        input = new BasicMLData(numSensors);
     }
 
     public SensorMorphology getPhenotypeMorphology( ){

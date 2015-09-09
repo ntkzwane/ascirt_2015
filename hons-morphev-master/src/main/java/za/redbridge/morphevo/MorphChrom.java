@@ -101,7 +101,7 @@ public class MorphChrom implements MLMethod, Serializable{
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.PROXIMITY,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
-                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_proxi", encoded[paramRegion+2]),
                     (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
                 );
@@ -122,7 +122,7 @@ public class MorphChrom implements MLMethod, Serializable{
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.ULTRASONIC,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
-                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_ultra", encoded[paramRegion+2]),
                     (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
                 );
@@ -181,7 +181,7 @@ public class MorphChrom implements MLMethod, Serializable{
                 return clamp(PROXIMITY_SENSOR_RANGE_MIN, PROXIMITY_SENSOR_RANGE, gene);
             case "range_ultra":
                 // convert the number in the range (-1:1) to a range valid for the ultrasonic sensor (0.2:4.0)
-                gene = gene * 2;
+                gene = (gene + 1) * 2;
                 return clamp(ULTRASONIC_SENSOR_MIN_RANGE, ULTRASONIC_SENSOR_MAX_RANGE, gene);
         }
         return 0.0; // should not reach here
@@ -225,7 +225,7 @@ public class MorphChrom implements MLMethod, Serializable{
 
     private double clamp(double min, double max, double number){
         if(number < min) return min;
-        if(number > max) return max;
+        if(number > max) return max; // should not happen
         return number;
     }
 
