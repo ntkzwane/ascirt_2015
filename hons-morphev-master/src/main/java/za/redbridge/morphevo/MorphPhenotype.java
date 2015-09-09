@@ -21,11 +21,12 @@ import za.redbridge.simulator.khepera.UltrasonicSensor;
 import za.redbridge.simulator.khepera.ColourProximitySensor;
 
 import za.redbridge.morphevo.sensor.SensorMorphology;
+import org.jbox2d.common.MathUtils;
 
 import java.io.Serializable;
 
 public class MorphPhenotype implements Phenotype, Serializable{
-    protected static final double HALF_PI = Math.PI / 2;
+    protected static final double HALF_PI = MathUtils.PI / 2;
     private final MLData input;
     private List<AgentSensor> sensors;
     private SensorMorphology morphology;
@@ -167,7 +168,7 @@ public class MorphPhenotype implements Phenotype, Serializable{
      */
     protected static Double2D wheelDriveForTargetAngle(double targetAngle) {
         final double left, right;
-        if(Math.abs(targetAngle) > Math.PI) targetAngle = Math.PI*Math.signum(targetAngle);
+        if(Math.abs(targetAngle) > MathUtils.PI) targetAngle = MathUtils.PI*Math.signum(targetAngle);
         // Different response for each of four quadrants
         if (targetAngle >= 0) {
             if (targetAngle < HALF_PI) {

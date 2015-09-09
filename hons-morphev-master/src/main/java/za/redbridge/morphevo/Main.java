@@ -16,6 +16,7 @@ import org.encog.ml.genetic.MLMethodGenomeFactory;
 import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.simulator.config.SimConfig;
+import org.jbox2d.common.MathUtils;
 
 import static za.redbridge.morphevo.Utils.isBlank;
 import static za.redbridge.morphevo.Utils.readObjectFromFile;

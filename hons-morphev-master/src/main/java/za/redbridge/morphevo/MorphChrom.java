@@ -23,6 +23,7 @@ import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.morphevo.sensor.SensorModel;
 import za.redbridge.morphevo.sensor.SensorType;
 import org.apache.commons.math3.complex.Complex;
+import org.jbox2d.common.MathUtils;
 
 import java.io.Serializable;
 
@@ -90,12 +91,19 @@ public class MorphChrom implements MLMethod, Serializable{
             if(encoded[proxiIter] > 0){ // implies that this sensor is on
                 // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_PROXI_SENSORS + proxiParamStart) + ((proxiIter - proxiParamStart) * BORF);
+                /*System.out.println(
+                    "P | ------------------------------ \nB: "+
+                    decodePart(null, "zero_to_2pi", encoded[paramRegion])+
+                    "\nO: "+(decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2)+
+                    "\nR: "+4.0f+
+                    "\nF: "+decodePart(null, "zero_to_pi", encoded[paramRegion+3])+
+                    "\nG: "+encoded[paramRegion]+", "+encoded[paramRegion+1]+", "+encoded[paramRegion+2]+", "+encoded[paramRegion+3]);*/
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.PROXIMITY,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
-                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + Math.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
-                    (float) 3.0f,//decodePart(null, "range_proxi", encoded[paramRegion+1]),
-                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+1])
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) decodePart(null, "range_proxi", encoded[paramRegion+2]),
+                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
                 );
             }
         }
@@ -104,12 +112,19 @@ public class MorphChrom implements MLMethod, Serializable{
         for(int ultraIter = ultraParamStart; ultraIter < ultraParamStart + MAX_NUM_ULTRA_SENSORS; ultraIter++){
             if(encoded[ultraIter] > 0){ // implies that this sensor is on
                 int paramRegion = (MAX_NUM_ULTRA_SENSORS + ultraParamStart) + ((ultraIter - ultraParamStart) * BORF);
+                /*System.out.println(
+                    "U | ------------------------------ \nB: "+
+                    decodePart(null, "zero_to_2pi", encoded[paramRegion])+
+                    "\nO: "+(decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2)+
+                    "\nR: "+4.0f+
+                    "\nF: "+decodePart(null, "zero_to_pi", encoded[paramRegion+3])+
+                    "\nG: "+encoded[paramRegion]+", "+encoded[paramRegion+1]+", "+encoded[paramRegion+2]+", "+encoded[paramRegion+3]);*/
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.ULTRASONIC,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
-                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + Math.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
-                    (float) 4.0f,//decodePart(null, "range_ultra", encoded[paramRegion+1]),
-                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+1])
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2), //\TODO: urgent, find out why this angle is sooo wrong
+                    (float) decodePart(null, "range_ultra", encoded[paramRegion+2]),
+                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
                 );
             }
         }
@@ -180,12 +195,32 @@ public class MorphChrom implements MLMethod, Serializable{
 
     }
 
+    /**
+     * map from the genome space to the phenome space using the inverse tanh (atanh) function defined as
+     * atanh = 0.5*ln( (x + 1)/(x - 1) ). Since our domain for x is such that x = [-1,1], the mapping
+     * also maps to positive or negative infinity, these are simply the cases when the angle is either
+     * 0 or pi respectively
+     * @param x the gene to be mapped to phenome space
+     * @return the phenome mapping of the gene x
+     */
     private double atanh(double x){
-        // create a complex number using the gene as the real part
-        Complex c = new Complex((x + 1.0) / (x - 1.0), 0.0);
-        // calculate its logarithm, and return the absolute value of the resulting complex number
-        // pi is added to move the range from [-pi:pi] to [0:2pi)
-        return c.log().abs() + Math.PI;//0.5*Math.log( (x + 1.0) / (x - 1.0) ) + Math.PI;
+        // create a complex number using the argument of the gene's inverse tanch as the real part
+        Complex compX = new Complex((x + 1.0) / (x - 1.0), 0.0);
+
+        // calculate its natural logarithm and extract real part of the resulting complex number
+        double logX = compX.log().getReal();
+
+        // compute the inverse tanh function
+        double atanh = 0.5*logX; 
+
+        // now check that the resulting value is not +/- infinity (when the gene is +/-1.0)
+        if(atanh == Double.POSITIVE_INFINITY){
+            return 2*MathUtils.PI;
+        } else if(atanh == Double.NEGATIVE_INFINITY){
+            return 0;
+        } else { // pi is added to move the range from [-pi:pi] to [0:2pi)
+            return atanh + MathUtils.PI;
+        }
     }
 
     private double clamp(double min, double max, double number){
@@ -194,10 +229,18 @@ public class MorphChrom implements MLMethod, Serializable{
         return number;
     }
 
+    /**
+     * get the number of proximity sensor that are acitvated
+     * @return the number of proximity sensors
+     */
     public int getNumProxiSensors( ){
         return NumProxiSensors;
     }
 
+    /**
+     * get the number of ultrasonic sensor that are acitvated
+     * @return the number of ulstrasonic sensors
+     */
     public int getNumUltraSensors( ){
         return NumUltraSensors;
     }

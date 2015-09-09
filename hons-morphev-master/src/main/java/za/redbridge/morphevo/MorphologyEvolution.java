@@ -50,6 +50,7 @@ import org.encog.ml.genetic.MLMethodGenomeFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Random;
+import org.jbox2d.common.MathUtils;
 
 /**
  * Implements a genetic algorithm that allows an MLMethod that is encodable
@@ -255,7 +256,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 		for (int i = 0; i < organism.length; i++) {
 			// gene is a random number between the range (-1:1)
-			double randNum = rand.nextDouble() * 2*Math.PI - Math.PI; // random number in the range [-pi:pi]
+			double randNum = rand.nextDouble() * 2*MathUtils.PI - MathUtils.PI; // random number in the range [-pi:pi]
 			organism[i] = Math.tanh(randNum);
 		}
 		return result;
