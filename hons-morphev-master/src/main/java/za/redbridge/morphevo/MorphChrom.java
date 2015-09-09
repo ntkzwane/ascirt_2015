@@ -29,13 +29,14 @@ import java.io.Serializable;
 
 public class MorphChrom implements MLMethod, Serializable{
     private SensorMorphology sensorMorphology;
-    private final int MAX_NUM_PROXI_SENSORS = 8;
-    private final int MAX_NUM_ULTRA_SENSORS = 4;
+    protected static final int MAX_NUM_PROXI_SENSORS = 8;
+    protected static final int MAX_NUM_ULTRA_SENSORS = 4;
+    
     private int numSensors;
     private int NumProxiSensors;
     private int NumUltraSensors; // for stats recording purposes
 
-    private final int BORF = 4; // the number of parameters needed to encode bearing, orientation, range, field of viewss
+    protected static final int BORF = 4; // the number of parameters needed to encode bearing, orientation, range, field of viewss
     private static final double ULTRASONIC_SENSOR_MAX_RANGE = 4.0; // 4 meters
     private static final double ULTRASONIC_SENSOR_MIN_RANGE = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE = 0.2; // 20 centimeters
@@ -104,7 +105,7 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
                     (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_proxi", encoded[paramRegion+2]),
-                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
+                    (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
                 );
             }
         }
@@ -125,7 +126,7 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
                     (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_ultra", encoded[paramRegion+2]),
-                    (float) decodePart(null, "zero_to_pi", encoded[paramRegion+3])
+                    (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
                 );
             }
         }

@@ -78,7 +78,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 	private static final double CONVERGENCE_SCORE = 110;
 
-	private final int GENOME_LENGTH = 60;
+	private int GENOME_LENGTH;
 	/**
 	 * Very simple class that implements a genetic algorithm.
 	 *
@@ -124,6 +124,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		super(TrainingImplementationType.Iterative);
 
 		// Create the population
+		GENOME_LENGTH = calcGenomeLength();
 		final Population population = new BasicPopulation(populationSize, null);
 		final Species defaultSpecies = population.createSpecies( );//new BasicSpecies( );
 //		defaultSpecies.setPopulation(population);
@@ -260,5 +261,26 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 			organism[i] = Math.tanh(randNum);
 		}
 		return result;
+	}
+
+	/**
+	 * calculate the length of the genome for the currently set parameter range.
+	 * the genome is constructed by parameter sets that define the attributes
+	 * of each sensor type. the genome length of one sensory type would take the form
+	 * genomeLength = numSensorsOfThisType + numSensorsOfThisType * parameter scope,
+	 * where parameter scope = the different parameters that define the sensors (i.e
+	 * bearing, orientation etc.)
+	 */
+	private int calcGenomeLength( ){
+		int genomeLength = 0;
+
+		// number of sensors of each type
+		int[] numPossibleSensors = {MorphChrom.MAX_NUM_PROXI_SENSORS,
+									MorphChrom.MAX_NUM_ULTRA_SENSORS};
+
+		for(int sensorType : numPossibleSensors){
+			genomeLength += sensorType + sensorType * MorphChrom.BORF;
+		}
+		return genomeLength;
 	}
 }
