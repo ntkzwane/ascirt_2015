@@ -40,6 +40,7 @@ public class MorphChrom implements MLMethod, Serializable{
     private static final double ULTRASONIC_SENSOR_MIN_RANGE = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE_MIN = 0.01; //\TODO just check that this is acceptable
+    private static final double MIN_FOV = 0.01; //\TODO: just check that this too is reasonable apparently this cannot be zero
     private final int proxiParamStart = 0;
     private final int ultraParamStart = 40;
 
@@ -175,6 +176,10 @@ public class MorphChrom implements MLMethod, Serializable{
             case "zero_to_2pi":
                 // convert the gene to an angle in the range [0 : 2pi) 
                 return atanh(gene);
+            case "filed_of_view":
+                // since field of view cannot have a value of zero
+                gene = atanh(gene)/2;
+                return clamp(MIN_FOV, MathUtils.PI, gene);
             case "range_proxi":
                 // convert the number in the range (-1:1) to a range valid for the proximity sensor (0:0.2)
                 gene = (gene + 1)/10;
