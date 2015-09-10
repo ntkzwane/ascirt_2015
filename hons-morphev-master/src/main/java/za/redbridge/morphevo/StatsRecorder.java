@@ -132,7 +132,7 @@ public class StatsRecorder {
             ", Ultrasonic: " + chromosome.getNumUltraSensors()
         );
         txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d",
-            epoch, genome.getScore(), genome.getNumSensors() - 1 /*exclude bottom prox*/, 
+            epoch, genome.getScore(), genome.getNumSensors() /*exclude bottom prox*/, 
             chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors());
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {

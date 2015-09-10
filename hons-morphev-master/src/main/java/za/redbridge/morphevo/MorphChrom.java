@@ -93,13 +93,6 @@ public class MorphChrom implements MLMethod, Serializable{
             if(encoded[proxiIter] > 0){ // implies that this sensor is on
                 // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_PROXI_SENSORS + proxiParamStart) + ((proxiIter - proxiParamStart) * BORF);
-                /*System.out.println(
-                    "P | ------------------------------ \nB: "+
-                    decodePart(null, "zero_to_2pi", encoded[paramRegion])+
-                    "\nO: "+(decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2)+
-                    "\nR: "+4.0f+
-                    "\nF: "+decodePart(null, "zero_to_pi", encoded[paramRegion+3])+
-                    "\nG: "+encoded[paramRegion]+", "+encoded[paramRegion+1]+", "+encoded[paramRegion+2]+", "+encoded[paramRegion+3]);*/
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.PROXIMITY,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
@@ -114,13 +107,6 @@ public class MorphChrom implements MLMethod, Serializable{
         for(int ultraIter = ultraParamStart; ultraIter < ultraParamStart + MAX_NUM_ULTRA_SENSORS; ultraIter++){
             if(encoded[ultraIter] > 0){ // implies that this sensor is on
                 int paramRegion = (MAX_NUM_ULTRA_SENSORS + ultraParamStart) + ((ultraIter - ultraParamStart) * BORF);
-                /*System.out.println(
-                    "U | ------------------------------ \nB: "+
-                    decodePart(null, "zero_to_2pi", encoded[paramRegion])+
-                    "\nO: "+(decodePart(null, "zero_to_pi", encoded[paramRegion+1]) + MathUtils.PI/2)+
-                    "\nR: "+4.0f+
-                    "\nF: "+decodePart(null, "zero_to_pi", encoded[paramRegion+3])+
-                    "\nG: "+encoded[paramRegion]+", "+encoded[paramRegion+1]+", "+encoded[paramRegion+2]+", "+encoded[paramRegion+3]);*/
                 sensormodels[sensorModelIter++] = new SensorModel(
                     SensorType.ULTRASONIC,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),

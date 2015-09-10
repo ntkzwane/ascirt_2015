@@ -112,6 +112,7 @@ public class MorphPhenotype implements Phenotype, Serializable{
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
             lastMove = wheelDriveForTargetAngle(bearing);
+            // System.out.println("B "+bearing+" ("+lastMove.x+","+lastMove.y+")");
             return lastMove;
         }else if(lastMove != null){
             return lastMove;
