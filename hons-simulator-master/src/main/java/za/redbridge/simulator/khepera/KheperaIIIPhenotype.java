@@ -48,33 +48,33 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
 
     private void initSensors() {
         // Proximity sensors
-        if (configuration.enableProximitySensors45Degrees) {
+        if (configuration.enableProximitySensor45Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(45), 0f));}
 
-        if (configuration.enableProximitySensors90Degrees) {
+        if (configuration.enableProximitySensor90Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(90), 0f));}
          
-        if (configuration.enableProximitySensors135Degrees) {
+        if (configuration.enableProximitySensor135Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(135), 0f));}
         
-        if (configuration.enableProximitySensors180Degrees) {
+        if (configuration.enableProximitySensor180Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(180), 0f));}
 
-        if (configuration.enableProximitySensors225Degrees) {
+        if (configuration.enableProximitySensor225Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(-45), 0f));}
 
-        if (configuration.enableProximitySensors270Degrees) {
+        if (configuration.enableProximitySensor270Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(-90), 0f));}
 
-        if (configuration.enableProximitySensors315Degrees) {
+        if (configuration.enableProximitySensor315Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(-135), 0f));}        
 
-        if (configuration.enableProximitySensors3600Degrees) {
+        if (configuration.enableProximitySensor360Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(0), 0f));}
 
 
         // Bottom Proximity Sensos
-        if (configuration.enableProximitySensorBottom) {
+        if (configuration.enableBottomProximitySensor) {
             sensors.add(createBottomProximitySensor());}
 
         // Ultrasonic sensors
@@ -180,11 +180,11 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
         public boolean enableUltrasonicSensor300Degrees = false;
         public boolean enableUltrasonicSensor360Degrees = false;
 
-        // Colour Proximity Sensors
+        // Colour Proximity Sensor
         public boolean enableColourProximitySensor180Degrees = false;
         public boolean enableColourProximitySensor360Degrees = false;
 
-        public boolean enableProximitySensorBottom = false;
+        public boolean enableBottomProximitySensor = false;
 
         public Configuration() {
         }
@@ -197,7 +197,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             this.enableProximitySensor135Degrees = other.enableProximitySensor135Degrees;
             this.enableProximitySensor180Degrees = other.enableProximitySensor180Degrees;
 
-            this.enableProximitySensor225Degrees = other.enableProximitySensor215Degrees;
+            this.enableProximitySensor225Degrees = other.enableProximitySensor225Degrees;
             this.enableProximitySensor270Degrees = other.enableProximitySensor270Degrees;
             this.enableProximitySensor315Degrees = other.enableProximitySensor315Degrees;
             this.enableProximitySensor360Degrees = other.enableProximitySensor360Degrees;
@@ -224,31 +224,31 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             int numSensors = 0;
             
             // Proximity Sensors
-            if(enableProximitySensor45Degrees) numberSensors += 1;
-            if(enableProximitySensor90Degrees) numberSensors += 1;
-            if(enableProximitySensor135Degrees) numberSensors += 1;
-            if(enableProximitySensor180Degrees) numberSensors += 1;
+            if(enableProximitySensor45Degrees) numSensors += 1;
+            if(enableProximitySensor90Degrees) numSensors += 1;
+            if(enableProximitySensor135Degrees) numSensors += 1;
+            if(enableProximitySensor180Degrees) numSensors += 1;
 
-            if(enableProximitySensor225Degrees) numberSensors += 1;
-            if(enableProximitySensor270Degrees) numberSensors += 1;
-            if(enableProximitySensor315Degrees) numberSensors += 1;
-            if(enableProximitySensor360Degrees) numberSensors += 1;
+            if(enableProximitySensor225Degrees) numSensors += 1;
+            if(enableProximitySensor270Degrees) numSensors += 1;
+            if(enableProximitySensor315Degrees) numSensors += 1;
+            if(enableProximitySensor360Degrees) numSensors += 1;
 
             // Ultrasonic Sensors
-            if(enableUltrasonicSensor60Degrees) numberSensors += 1;
-            if(enableUltrasonicSensor120Degrees) numberSensors += 1;
-            if(enableUltrasonicSensor180Degrees) numberSensors += 1;
+            if(enableUltrasonicSensor60Degrees) numSensors += 1;
+            if(enableUltrasonicSensor120Degrees) numSensors += 1;
+            if(enableUltrasonicSensor180Degrees) numSensors += 1;
 
-            if(enableUltrasonicSensor240Degrees) numberSensors += 1;
-            if(enableUltrasonicSensor300Degrees) numberSensors += 1;
-            if(enableUltrasonicSensor360Degrees) numberSensors += 1;
+            if(enableUltrasonicSensor240Degrees) numSensors += 1;
+            if(enableUltrasonicSensor300Degrees) numSensors += 1;
+            if(enableUltrasonicSensor360Degrees) numSensors += 1;
 
             // Colour Proximity Sensors
-            if(enableColourProximitySensor180Degrees) numberSensors += 1;
-            if(enableColourProximitySensor360Degrees) numberSensors += 1;
+            if(enableColourProximitySensor180Degrees) numSensors += 1;
+            if(enableColourProximitySensor360Degrees) numSensors += 1;
 
             // Bottom Proximity Sensor
-            if(enableBottomProximitySensor) numberSensors +- 1;
+            if(enableBottomProximitySensor) numSensors +=1;
             
             return numSensors;
         }

@@ -79,7 +79,3 @@ experiment_and_sim:
 	cd hons-experiment-master && \
 	./gradlew fatJar && \
 	echo done
-<<<<<<< HEAD
-
-=======
->>>>>>> a8c1b26336fba5a0066f4de68d891e276a34e083

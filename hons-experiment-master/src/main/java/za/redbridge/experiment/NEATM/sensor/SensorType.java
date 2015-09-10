@@ -41,7 +41,7 @@ public enum SensorType {
             new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp()))),
-    // Naeem : clamp sets a bound on the range of the sensor.
+  
 
     ULTRASONIC(new SensorParameterSpecSet(
             new BearingSpec(random(), plusMinusPi(), wrap()),
@@ -50,14 +50,7 @@ public enum SensorType {
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
             new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
-                    clamp())))
-
-
-    // Naeem : Implement a new sensor here as per our discussion. Good FOV, Good range, but expensive
-    //         We also want to put a new color on the new sensor and give it a fancy name
-
-
-                    /*,
+                    clamp()))),
 
     PICKUP(new SensorParameterSpecSet(
         new BearingSpec(random(), plusMinusPi(), wrap()),
@@ -68,6 +61,16 @@ public enum SensorType {
         new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
             clamp()))),
 
+    COLOUR_PROXIMITY(new SensorParameterSpecSet(
+            new BearingSpec(random(), plusMinusPi(), wrap()),
+            new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
+            // TODO: query environment size for range value
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
+            new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
+                    clamp()))),
+  
+
     COLLISION(new SensorParameterSpecSet(
         new BearingSpec(random(), plusMinusPi(), wrap()),
         new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
@@ -75,7 +78,7 @@ public enum SensorType {
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
         new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
         new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
-    clamp())))*/;
+    clamp())));
 
     private final SensorParameterSpecSet defaultSpecSet;
 
