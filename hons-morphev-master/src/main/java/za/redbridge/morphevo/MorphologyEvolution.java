@@ -160,8 +160,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
 		getGenetic().setPopulation(population);
 
-		this.genetic.addOperation(0.9, new Splice(s));		// crossover operation
-		this.genetic.addOperation(0.1, new MorphMutate(0.1));
+		this.genetic.addOperation(0.5, new Splice(s));		// crossover operation
+		this.genetic.addOperation(0.5, new MorphMutate(0.1));
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
 	}
