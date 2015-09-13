@@ -38,30 +38,47 @@ public enum SensorType {
             new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
             // TODO: query environment size for range value
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-            // new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
-            new RangeSpec(copyExistingOrRandom(), exclusiveRange(3.9f, 4.0f), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp()))),
+  
 
     ULTRASONIC(new SensorParameterSpecSet(
             new BearingSpec(random(), plusMinusPi(), wrap()),
             new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
             // TODO: query environment size for range value
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-            // new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
-            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 5.0f), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp()))),
 
-    COLOURPROXIMITY(new SensorParameterSpecSet(
+    PICKUP(new SensorParameterSpecSet(
         new BearingSpec(random(), plusMinusPi(), wrap()),
         new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
         // TODO: query environment size for range value
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-        // new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
-        new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 4.0f), clamp()),
+        new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
         new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
-            clamp())));
+            clamp()))),
+
+    COLOUR_PROXIMITY(new SensorParameterSpecSet(
+            new BearingSpec(random(), plusMinusPi(), wrap()),
+            new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
+            // TODO: query environment size for range value
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
+            new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
+                    clamp()))),
+  
+
+    COLLISION(new SensorParameterSpecSet(
+        new BearingSpec(random(), plusMinusPi(), wrap()),
+        new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
+        // TODO: query environment size for range value
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+        new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
+        new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
+    clamp())));
 
     private final SensorParameterSpecSet defaultSpecSet;
 
