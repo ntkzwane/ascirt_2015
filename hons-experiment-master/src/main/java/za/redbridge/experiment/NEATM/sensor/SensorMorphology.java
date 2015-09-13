@@ -6,6 +6,7 @@ import java.util.Arrays;
 import za.redbridge.simulator.khepera.BottomProximitySensor;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.ColourProximitySensor;
 import za.redbridge.simulator.sensor.AgentSensor;
 
 /**
@@ -55,6 +56,15 @@ public class SensorMorphology implements Serializable {
                                 config.getFieldOfView()
                 );
                 return new UltrasonicSensor(config.getBearing(), config.getOrientation(),
+                        config.getRange(), config.getFieldOfView());
+            case COLOUR_PROXIMITY:
+                System.out.println(
+                        config.getBearing() +" "+
+                        config.getOrientation() +" "+
+                        config.getRange() +" "+
+                        config.getFieldOfView()
+                );
+                return new ColourProximitySensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
         }
 
