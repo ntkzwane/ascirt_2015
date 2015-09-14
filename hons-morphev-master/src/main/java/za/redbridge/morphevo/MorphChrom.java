@@ -93,32 +93,46 @@ public class MorphChrom implements MLMethod, Serializable{
             if(encoded[proxiIter] > 0){ // implies that this sensor is on
                 // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_PROXI_SENSORS + proxiParamStart) + ((proxiIter - proxiParamStart) * BORF);
-                sensormodels[sensorModelIter++] = new SensorModel(
-                    SensorType.PROXIMITY,
-                    (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
-                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
-                    (float) decodePart(null, "range_proxi", encoded[paramRegion+2]),
-                    (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
-                );
+                addSensor(SensorType.PROXIMITY, sensormodels, encoded, paramRegion, sensorModelIter);
+                sensorModelIter++; // included the added sensor
             }
         }
 
         // configure all the 'on' ultrasonic sensors
         for(int ultraIter = ultraParamStart; ultraIter < ultraParamStart + MAX_NUM_ULTRA_SENSORS; ultraIter++){
             if(encoded[ultraIter] > 0){ // implies that this sensor is on
+                // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_ULTRA_SENSORS + ultraParamStart) + ((ultraIter - ultraParamStart) * BORF);
-                sensormodels[sensorModelIter++] = new SensorModel(
+                addSensor(SensorType.ULTRASONIC, sensormodels, encoded, paramRegion, sensorModelIter);
+                sensorModelIter++; // included the added sensor
+            }
+        }
+
+        // create the sensor morphology
+        sensorMorphology = new SensorMorphology(sensormodels);
+    }
+
+    public void addSensor(SensorType sensorType, SensorModel[] sensorModels_, double[] encoded, int paramRegion, int sensorModelIter){
+        switch(sensorType){
+            case PROXIMITY:
+                sensorModels_[sensorModelIter] = new SensorModel(
+                    SensorType.PROXIMITY,
+                    (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
+                    (float) decodePart(null, "range_proxi", encoded[paramRegion+2]),
+                    (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
+                );
+                break;
+            case ULTRASONIC:
+                sensorModels_[sensorModelIter] = new SensorModel(
                     SensorType.ULTRASONIC,
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
                     (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_ultra", encoded[paramRegion+2]),
                     (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
                 );
-            }
+                break;
         }
-
-        // create the sensor morphology
-        sensorMorphology = new SensorMorphology(sensormodels);
     }
 
     /**
