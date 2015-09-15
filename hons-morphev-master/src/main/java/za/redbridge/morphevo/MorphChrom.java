@@ -114,14 +114,14 @@ public class MorphChrom implements MLMethod, Serializable{
         }
 
         // configure all the 'on' colour proximity sensors
-        /*for(int colourProxiIter = colourProxiParamStart; colourProxiIter < colourProxiParamStart + MAX_NUM_COLOUR_PROXI_SENSORS; colourProxiIter++){
+        for(int colourProxiIter = colourProxiParamStart; colourProxiIter < colourProxiParamStart + MAX_NUM_COLOUR_PROXI_SENSORS; colourProxiIter++){
             if(encoded[colourProxiIter] > 0){ // implies that this sensor is on
                 // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_COLOUR_PROXI_SENSORS + colourProxiParamStart) + ((colourProxiIter - colourProxiParamStart) * BORF);
                 addSensor(SensorType.COLOUR_PROXIMITY, sensormodels, encoded, paramRegion, sensorModelIter);
                 sensorModelIter++; // included the added sensor
             }
-        }*/
+        }
 
         // create the sensor morphology
         sensorMorphology = new SensorMorphology(sensormodels);
