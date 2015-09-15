@@ -31,19 +31,24 @@ public class MorphChrom implements MLMethod, Serializable{
     private SensorMorphology sensorMorphology;
     protected static final int MAX_NUM_PROXI_SENSORS = 8;
     protected static final int MAX_NUM_ULTRA_SENSORS = 4;
-    
+    protected static final int MAX_NUM_COLOUR_PROXI_SENSORS = 2;
+
     private int numSensors;
     private int NumProxiSensors;
-    private int NumUltraSensors; // for stats recording purposes
+    private int NumUltraSensors;
+    private int NumColourProxiSensors; // for stats recording purposes
 
     protected static final int BORF = 4; // the number of parameters needed to encode bearing, orientation, range, field of viewss
-    private static final double ULTRASONIC_SENSOR_MAX_RANGE = 4.0; // 4 meters
-    private static final double ULTRASONIC_SENSOR_MIN_RANGE = 0.2; // 20 centimeters
+    private static final double ULTRASONIC_SENSOR_RANGE_MAX = 4.0; // 4 meters
+    private static final double ULTRASONIC_SENSOR_RANGE_MIN = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE = 0.2; // 20 centimeters
     private static final double PROXIMITY_SENSOR_RANGE_MIN = 0.01; //\TODO just check that this is acceptable
+    private static final double COLOUR_PROXIMITY_SENSOR_RANGE = 3.0; // 4 meters
+    private static final double COLOUR_PROXIMITY_SENSOR_RANGE_MIN = 0.01; //\TODO just check that this is acceptable
     private static final double MIN_FOV = 0.01; //\TODO: just check that this too is reasonable apparently this cannot be zero
     private final int proxiParamStart = 0;
     private final int ultraParamStart = 40;
+    private final int colourProxiParamStart = 60;
 
     public MorphChrom( ){
         sensorMorphology = null;
@@ -87,7 +92,7 @@ public class MorphChrom implements MLMethod, Serializable{
         SensorModel[] sensormodels = new SensorModel[numSensors];
         // there will always be a bottom proximity sensor on an agent
         sensormodels[sensorModelIter++] = new SensorModel(SensorType.BOTTOM_PROXIMITY);
-        
+
         // configure all the 'on' proximity sensors
         for(int proxiIter = proxiParamStart; proxiIter < proxiParamStart + MAX_NUM_PROXI_SENSORS; proxiIter++){
             if(encoded[proxiIter] > 0){ // implies that this sensor is on
@@ -104,6 +109,16 @@ public class MorphChrom implements MLMethod, Serializable{
                 // get the position of this sensor's specs
                 int paramRegion = (MAX_NUM_ULTRA_SENSORS + ultraParamStart) + ((ultraIter - ultraParamStart) * BORF);
                 addSensor(SensorType.ULTRASONIC, sensormodels, encoded, paramRegion, sensorModelIter);
+                sensorModelIter++; // included the added sensor
+            }
+        }
+
+        // configure all the 'on' colour proximity sensors
+        for(int colourProxiIter = colourProxiParamStart; colourProxiIter < colourProxiParamStart + MAX_NUM_COLOUR_PROXI_SENSORS; colourProxiIter++){
+            if(encoded[colourProxiIter] > 0){ // implies that this sensor is on
+                // get the position of this sensor's specs
+                int paramRegion = (MAX_NUM_COLOUR_PROXI_SENSORS + colourProxiParamStart) + ((colourProxiIter - colourProxiParamStart) * BORF);
+                addSensor(SensorType.COLOUR_PROXIMITY, sensormodels, encoded, paramRegion, sensorModelIter);
                 sensorModelIter++; // included the added sensor
             }
         }
@@ -129,6 +144,15 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
                     (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_ultra", encoded[paramRegion+2]),
+                    (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
+                );
+                break;
+            case COLOUR_PROXIMITY:
+                sensorModels_[sensorModelIter] = new SensorModel(
+                    SensorType.ULTRASONIC,
+                    (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                    (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
+                    (float) decodePart(null, "range_colour_proxi", encoded[paramRegion+2]),
                     (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
                 );
                 break;
@@ -158,6 +182,10 @@ public class MorphChrom implements MLMethod, Serializable{
                 for(int i = ultraParamStart; i < ultraParamStart + MAX_NUM_ULTRA_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
+                // count the number of colour proximity sensors
+                for(int i = proxiParamStart; i < proxiParamStart + MAX_NUM_COLOUR_PROXI_SENSORS; i++){
+                    if(encoded[i] > 0){numSensors = numSensors + 1;}
+                }
                 return numSensors;
             case "numProxi":
                 // count the number of proximity sensors
@@ -168,6 +196,12 @@ public class MorphChrom implements MLMethod, Serializable{
             case "numUltra":
                 // count the number of ultrasonic sensors
                 for(int i = ultraParamStart; i < ultraParamStart + MAX_NUM_ULTRA_SENSORS; i++){
+                    if(encoded[i] > 0){numSensors = numSensors + 1;}
+                }
+                return numSensors;
+            case "numColorProxi":
+                // count the number of colour proximity sensors
+                for(int i = proxiParamStart; i < proxiParamStart + MAX_NUM_COLOUR_PROXI_SENSORS; i++){
                     if(encoded[i] > 0){numSensors = numSensors + 1;}
                 }
                 return numSensors;
@@ -188,7 +222,11 @@ public class MorphChrom implements MLMethod, Serializable{
             case "range_ultra":
                 // convert the number in the range (-1:1) to a range valid for the ultrasonic sensor (0.2:4.0)
                 gene = (gene + 1) * 2;
-                return clamp(ULTRASONIC_SENSOR_MIN_RANGE, ULTRASONIC_SENSOR_MAX_RANGE, gene);
+                return clamp(ULTRASONIC_SENSOR_RANGE_MIN, ULTRASONIC_SENSOR_RANGE_MAX, gene);
+            case "range_colour_proxi":
+                // convert the number in the rante (-1:1) to a range valid for the colour proximity sensor (0:3.0)
+                gene = (3 * gene + 3) / 2;
+                return clamp(COLOUR_PROXIMITY_SENSOR_RANGE_MIN, COLOUR_PROXIMITY_SENSOR_RANGE, gene);
         }
         return 0.0; // should not reach here
     }
@@ -198,6 +236,7 @@ public class MorphChrom implements MLMethod, Serializable{
         numSensors = ((int) Math.round(decodePart(encoded, "numSensors", -1))) + 1;
         NumProxiSensors = (int) decodePart(encoded, "numProxi", -1);
         NumUltraSensors = (int) decodePart(encoded, "numUltra", -1);
+        NumColourProxiSensors = (int) decodePart(encoded, "numColorProxi", -1);
 
     }
 
@@ -217,7 +256,7 @@ public class MorphChrom implements MLMethod, Serializable{
         double logX = compX.log().getReal();
 
         // compute the inverse tanh function
-        double atanh = 0.5*logX; 
+        double atanh = 0.5*logX;
 
         // now check that the resulting value is not +/- infinity (when the gene is +/-1.0)
         if(atanh == Double.POSITIVE_INFINITY){
@@ -236,7 +275,7 @@ public class MorphChrom implements MLMethod, Serializable{
     }
 
     /**
-     * get the number of proximity sensor that are acitvated
+     * get the number of proximity sensors that are acitvated
      * @return the number of proximity sensors
      */
     public int getNumProxiSensors( ){
@@ -244,10 +283,18 @@ public class MorphChrom implements MLMethod, Serializable{
     }
 
     /**
-     * get the number of ultrasonic sensor that are acitvated
+     * get the number of ultrasonic sensors that are acitvated
      * @return the number of ulstrasonic sensors
      */
     public int getNumUltraSensors( ){
         return NumUltraSensors;
+    }
+
+    /**
+     * get the number of colour proximity sensors that are acitvated
+     * @return the number of ulstrasonic sensors
+     */
+    public int getNumColourProxiSensors( ){
+        return NumColourProxiSensors;
     }
 }

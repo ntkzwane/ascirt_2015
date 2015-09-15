@@ -99,7 +99,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		 *            The score function.
 		 */
 		public MorphologyEvolutionHelper(final Population thePopulation,
-				final CalculateScore theScoreFunction) {
+										 final CalculateScore theScoreFunction) {
 			super(thePopulation, theScoreFunction);
 		}
 	}
@@ -155,7 +155,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		}
 		this.genetic.setBestComparator(comp);
 		this.genetic.setSelectionComparator(comp);
-		
+
 		// create the operators
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
 		getGenetic().setPopulation(population);
@@ -236,7 +236,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 	/**
 	 * Set the genetic helper class.
-	 * 
+	 *
 	 * @param genetic
 	 *            The genetic helper class.
 	 */
@@ -276,7 +276,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 
 		// number of sensors of each type
 		int[] numPossibleSensors = {MorphChrom.MAX_NUM_PROXI_SENSORS,
-									MorphChrom.MAX_NUM_ULTRA_SENSORS};
+			MorphChrom.MAX_NUM_ULTRA_SENSORS,
+			MorphChrom.MAX_NUM_COLOUR_PROXI_SENSORS};
 
 		for(int sensorType : numPossibleSensors){
 			genomeLength += sensorType + sensorType * MorphChrom.BORF;

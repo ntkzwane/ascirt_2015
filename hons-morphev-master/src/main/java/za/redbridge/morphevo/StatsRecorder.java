@@ -101,7 +101,7 @@ public class StatsRecorder {
 
         recordStats(calculator.getSensorStatistics(), epoch, sensorStatsFile);
 
-       savePopulation((Population) trainer.getPopulation(), epoch);
+        savePopulation((Population) trainer.getPopulation(), epoch);
 
         // Check if new best chromosome and save it if so
         MorphGenome newBestGenome = (MorphGenome) trainer.getBestGenome();
@@ -126,14 +126,15 @@ public class StatsRecorder {
         String txt;
         log.info("New best genome! Epoch: " + epoch + ", score: " + genome.getScore());
         log.info(
-            "Sensors: "+ genome.getNumSensors() + 
-            ", BottomProximity: 1" +
-            ", Proximity: " + chromosome.getNumProxiSensors() + 
-            ", Ultrasonic: " + chromosome.getNumUltraSensors()
+            "Sensors: "+ genome.getNumSensors() +
+                ", BottomProximity: 1" +
+                ", Proximity: " + chromosome.getNumProxiSensors() +
+                ", Ultrasonic: " + chromosome.getNumUltraSensors() +
+                ", Colour Proximity: " + chromosome.getNumColourProxiSensors()
         );
-        txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d",
-            epoch, genome.getScore(), genome.getNumSensors() /*exclude bottom prox*/, 
-            chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors());
+        txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d, colour proximity: %d",
+            epoch, genome.getScore(), genome.getNumSensors() /*exclude bottom prox*/,
+            chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors(), chromosome.getNumColourProxiSensors());
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
             writer.write(txt);
@@ -161,14 +162,14 @@ public class StatsRecorder {
     }
 
     private static void saveStats(Path path, int epoch, double max, double min, double mean,
-            double sd) {
+                                  double sd) {
         String line = String.format("%d, %f, %f, %f, %f\n", epoch, max, min, mean, sd);
 
         final OpenOption[] options = {
-                StandardOpenOption.APPEND, StandardOpenOption.CREATE, StandardOpenOption.WRITE
+            StandardOpenOption.APPEND, StandardOpenOption.CREATE, StandardOpenOption.WRITE
         };
         try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(path,
-                Charset.defaultCharset(), options))) {
+            Charset.defaultCharset(), options))) {
             writer.append(line);
         } catch (IOException e) {
             log.error("Failed to append to log file", e);
