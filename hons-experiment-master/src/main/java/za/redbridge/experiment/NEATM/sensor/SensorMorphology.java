@@ -40,30 +40,12 @@ public class SensorMorphology implements Serializable {
             case BOTTOM_PROXIMITY:
                 return new BottomProximitySensor();
             case PROXIMITY:
-                System.out.println(
-                        config.getBearing() +" "+
-                        config.getOrientation() +" "+
-                        config.getRange() +" "+
-                        config.getFieldOfView()
-                );
                 return new ProximitySensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
             case ULTRASONIC:
-                System.out.println(
-                        config.getBearing() +" "+
-                                config.getOrientation() +" "+
-                                config.getRange() +" "+
-                                config.getFieldOfView()
-                );
                 return new UltrasonicSensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
             case COLOUR_PROXIMITY:
-                System.out.println(
-                        config.getBearing() +" "+
-                        config.getOrientation() +" "+
-                        config.getRange() +" "+
-                        config.getFieldOfView()
-                );
                 return new ColourProximitySensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
         }

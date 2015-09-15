@@ -99,7 +99,8 @@ public abstract class Sensor<T> implements Collideable {
 
     public final void attach(RobotObject robot) {
         // Clear existing fixture
-        if (sensorFixture != null) {
+        if (sensorFixture != null)
+        {
             sensorFixture.destroy();
             sensorFixture = null;
 

@@ -79,3 +79,8 @@ experiment_and_sim:
 	cd hons-experiment-master && \
 	./gradlew fatJar && \
 	echo done
+
+
+run_experiment:
+	@echo running experiment
+	@java -jar hons-experiment-master/build/libs/hons-experiment-master-all.jar -c hons-experiment-master/config/mediumSimConfig.yml

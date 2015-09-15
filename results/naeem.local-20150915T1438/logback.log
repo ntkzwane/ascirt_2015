@@ -1,0 +1,16 @@
+14:38:51.399 [main] INFO  za.redbridge.experiment.Main - Options: 
+	Config file path: hons-experiment-master/config/mediumSimConfig.yml
+	Number of simulation steps: 1
+	Population size: 1
+	Number of simulation tests per iteration: 1
+	Initial connection density: 0.5
+	Demo network config path: null
+	Running with the control case: false
+	Morphology path: null
+	Population path: null
+14:38:58.360 [main] DEBUG za.redbridge.experiment.Main - Population initialized
+14:38:58.425 [main] INFO  z.redbridge.experiment.StatsRecorder - Epoch 0 complete
+14:38:58.426 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+14:38:58.430 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+14:38:58.431 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+14:38:58.565 [main] INFO  z.redbridge.experiment.StatsRecorder - New best genome! Epoch: 0, score: NaN, num sensors: 6

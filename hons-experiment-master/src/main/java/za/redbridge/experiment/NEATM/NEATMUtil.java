@@ -121,6 +121,7 @@ public final class NEATMUtil {
         // Add the sensor field mutators
         CompoundOperator fieldMutation = new CompoundOperator();
         OperationList fieldMutationComponents = fieldMutation.getComponents();
+        
         fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
                 new SelectSensorsType(ULTRASONIC), new MutatePerturbSensorParameter(5.0f, RANGE)));
         fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(

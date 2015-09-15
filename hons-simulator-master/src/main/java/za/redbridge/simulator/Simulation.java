@@ -73,9 +73,8 @@ public class Simulation extends SimState {
         // Create ALL the objects
         createWalls();
         createTargetArea();
-        robotFactory
-                .placeInstances(placementArea.new ForType<>(), physicsWorld,
-                        config.getTargetAreaPlacement());
+        robotFactory.placeInstances(placementArea.new ForType<>(), physicsWorld, 
+            config.getTargetAreaPlacement());
         config.getResourceFactory().placeInstances(placementArea.new ForType<>(), physicsWorld);
 
         // Now actually add the objects that have been placed to the world and schedule

@@ -24,7 +24,7 @@ public class ChasingPhenotype extends KheperaIIIPhenotype {
         CONFIG.enableProximitySensor180Degrees = false;
 
         CONFIG.enableProximitySensor225Degrees = false;
-        CONFIG.enableProximitySensor270Degrees = true;
+        CONFIG.enableProximitySensor270Degrees = false;
         CONFIG.enableProximitySensor315Degrees = false;
         CONFIG.enableProximitySensor360Degrees = false;
 
@@ -32,15 +32,15 @@ public class ChasingPhenotype extends KheperaIIIPhenotype {
         CONFIG.enableUltrasonicSensor120Degrees = false;
         CONFIG.enableUltrasonicSensor180Degrees = false;
 
-        CONFIG.enableUltrasonicSensor240Degrees = true;
+        CONFIG.enableUltrasonicSensor240Degrees = false;
         CONFIG.enableUltrasonicSensor300Degrees = false;
         CONFIG.enableUltrasonicSensor360Degrees = false;
 
         // Colour Proximity Sensors
-        CONFIG.enableColourProximitySensor180Degrees = true;
+        CONFIG.enableColourProximitySensor180Degrees = false;
         CONFIG.enableColourProximitySensor360Degrees = false;
 
-        CONFIG.enableBottomProximitySensor = true;
+        CONFIG.enableBottomProximitySensor = false;
 
     }
 

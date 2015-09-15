@@ -21,6 +21,7 @@ public interface SelectSensors {
      * Setup the selector.
      * @param theTrainer The trainer.
      */
+    
     void init(EvolutionaryAlgorithm theTrainer);
 
     /**

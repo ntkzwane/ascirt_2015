@@ -28,10 +28,11 @@ public class KheperaIIIMorphology extends SensorMorphology {
 
     static 
     {
+        DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
         DEFAULT_CONFIGURATION.enableProximitySensor45Degrees = true;
         DEFAULT_CONFIGURATION.enableBottomProximitySensor = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensor60Degrees = true;
-        DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
+        //DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
     }
 
     public KheperaIIIMorphology()
@@ -124,21 +125,21 @@ public class KheperaIIIMorphology extends SensorMorphology {
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
         if (config.enableUltrasonicSensor360Degrees) {
-            sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(0 ), 0,
+            sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(0), 0,
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
 
         // Colour Proximity Sensors
         if(config.enableColourProximitySensor180Degrees)
         {
-            sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(180), 0,
-                    UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
+            sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(45), 0,
+                    ColourProximitySensor.RANGE, ColourProximitySensor.FIELD_OF_VIEW);
         }
 
         if(config.enableColourProximitySensor360Degrees)
         {
             sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(0), 0,
-                    UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
+                    ColourProximitySensor.RANGE, ColourProximitySensor.FIELD_OF_VIEW);
         }
 
         return sensorModels;

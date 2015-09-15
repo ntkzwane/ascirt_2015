@@ -49,6 +49,7 @@ public abstract class AgentSensor extends Sensor<List<Double>> {
     private final List<SensedObject> sensedObjects = new ArrayList<>();
     private final List<Double> readings = new ArrayList<>();
     private final List<Double> unmodifiableReadings = Collections.unmodifiableList(readings);
+    public static String name = "Sensor";
 
     private final static float default_consumption_rate = 0.02f;
     private float energy_consumption_rate;
