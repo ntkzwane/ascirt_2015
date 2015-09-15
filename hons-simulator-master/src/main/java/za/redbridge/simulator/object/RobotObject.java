@@ -103,8 +103,6 @@ public class RobotObject extends PhysicalObject {
 
         for (AgentSensor sensor : phenotype.getSensors()) 
         {
-           Class cls = sensor.getClass();
-           System.out.println(cls.getName());
            sensor.attach(this); // <--- Bug is here!
         }
 

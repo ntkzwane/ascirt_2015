@@ -1,0 +1,90 @@
+15:30:27.981 [main] INFO  za.redbridge.experiment.Main - Options: 
+	Config file path: hons-experiment-master/config/mediumSimConfig.yml
+	Number of simulation steps: 500
+	Population size: 100
+	Number of simulation tests per iteration: 5
+	Initial connection density: 0.5
+	Demo network config path: null
+	Running with the control case: false
+	Morphology path: null
+	Population path: null
+15:30:35.029 [main] DEBUG za.redbridge.experiment.Main - Population initialized
+15:30:35.083 [main] INFO  z.redbridge.experiment.StatsRecorder - Epoch 0 complete
+15:30:35.084 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+15:30:35.087 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+15:30:35.087 [main] DEBUG z.redbridge.experiment.StatsRecorder - Recording stats - max: NaN, mean: NaN
+15:30:35.255 [main] INFO  z.redbridge.experiment.StatsRecorder - New best genome! Epoch: 0, score: NaN, num sensors: 4
+15:30:43.895 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:45.808 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:48.420 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:48.632 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:48.770 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:49.513 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:51.790 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:52.135 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:52.377 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:54.903 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:55.168 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:58.799 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:30:59.327 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:00.382 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:03.858 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:05.851 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:07.711 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:07.792 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:08.616 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:12.083 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:12.497 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:12.935 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:14.213 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:17.631 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:18.281 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:20.537 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:21.430 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:22.372 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:23.079 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.6666666666666667
+15:31:24.526 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:25.452 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:28.723 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:28.800 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 1.3333333333333335
+15:31:29.107 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:31.258 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:32.170 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:33.886 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:34.376 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:36.450 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:39.447 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 2.666666666666667
+15:31:41.163 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:41.241 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:42.582 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:43.389 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:45.353 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:47.622 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:49.224 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:51.380 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.6666666666666667
+15:31:54.050 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:55.549 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:55.599 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:31:58.966 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:02.233 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:02.738 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 1.3333333333333335
+15:32:03.171 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:04.878 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:06.640 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:09.392 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:09.583 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:10.332 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:12.941 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:14.038 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:15.309 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 2.666666666666667
+15:32:15.887 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:18.840 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:20.974 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:22.196 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:23.466 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:25.552 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:28.839 [pool-1-thread-3] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:29.154 [pool-1-thread-1] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:30.498 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:33.862 [pool-1-thread-4] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
+15:32:33.945 [pool-1-thread-2] DEBUG z.r.experiment.ScoreCalculator - Score calculation completed: 0.0
