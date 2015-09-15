@@ -233,11 +233,11 @@ public class MorphChrom implements MLMethod, Serializable{
 
     public void countSensors(double[] encoded){
         // add one to the total number of sensors to include the bottom proximity sensor
-        numSensors = ((int) Math.round(decodePart(encoded, "numSensors", -1))) + 1;
-        NumProxiSensors = (int) decodePart(encoded, "numProxi", -1);
-        NumUltraSensors = (int) decodePart(encoded, "numUltra", -1);
-        NumColourProxiSensors = (int) decodePart(encoded, "numColorProxi", -1);
-//        numSensors = NumProxiSensors + NumUltraSensors + NumColourProxiSensors + 1;
+//        numSensors = ((int) Math.round(decodePart(encoded, "numSensors", -1))) + 1;
+        NumProxiSensors = (int) Math.round(decodePart(encoded, "numProxi", -1));
+        NumUltraSensors = (int) Math.round(decodePart(encoded, "numUltra", -1));
+        NumColourProxiSensors = (int) Math.round(decodePart(encoded, "numColorProxi", -1));
+        numSensors = NumProxiSensors + NumUltraSensors + NumColourProxiSensors + 1;
 
     }
 
