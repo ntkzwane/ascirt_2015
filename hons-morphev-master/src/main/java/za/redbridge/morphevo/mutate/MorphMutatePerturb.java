@@ -8,7 +8,7 @@ import org.encog.ml.ea.train.EvolutionaryAlgorithm;
 import org.encog.ml.genetic.genome.DoubleArrayGenome;
 import org.encog.ml.genetic.mutate.MutatePerturb;
 
-public class MorphMutate extends MutatePerturb{
+public class MorphMutatePerturb extends MutatePerturb{
     /**
      * The amount to perturb by.
      */
@@ -18,7 +18,7 @@ public class MorphMutate extends MutatePerturb{
      * Construct a perturb mutation.
      * @param thePerturbAmount The amount to mutate by(percent).
      */
-    public MorphMutate(final double thePerturbAmount) {
+    public MorphMutatePerturb(final double thePerturbAmount) {
         super(thePerturbAmount);
         this.perturbAmount = thePerturbAmount;
     }
@@ -33,7 +33,7 @@ public class MorphMutate extends MutatePerturb{
 
         offspring[offspringIndex] = parent.getPopulation().getGenomeFactory().factor();
         DoubleArrayGenome child = (DoubleArrayGenome)offspring[offspringIndex];
-        
+
         for(int i=0;i<parent.size();i++) {
             double value = parent.getData()[i];
             value += value * (perturbAmount - (rnd.nextDouble() * perturbAmount * 2));

@@ -37,8 +37,8 @@ import org.encog.ml.ea.sort.MinimizeScoreComp;
 import org.encog.ml.ea.species.BasicSpecies;
 import org.encog.ml.ea.species.Species;
 import org.encog.ml.ea.train.basic.TrainEA;
-import org.encog.ml.genetic.crossover.Splice;
-import za.redbridge.morphevo.mutate.MorphMutate;
+import za.redbridge.morphevo.crossover.MorphCrossover;
+import za.redbridge.morphevo.mutate.MorphMutateReplace;
 import org.encog.ml.train.BasicTraining;
 import org.encog.neural.networks.training.propagation.TrainingContinuation;
 import org.encog.util.concurrency.MultiThreadable;
@@ -160,8 +160,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		final int s = Math.max(defaultSpecies.getMembers().get(0).size() / 5, 1);
 		getGenetic().setPopulation(population);
 
-		this.genetic.addOperation(0.5, new Splice(s));		// crossover operation
-		this.genetic.addOperation(0.5, new MorphMutate(0.1));
+		this.genetic.addOperation(0.25, new MorphCrossover(s));		// crossover operation
+		this.genetic.addOperation(0.04, new MorphMutateReplace());
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
 	}
