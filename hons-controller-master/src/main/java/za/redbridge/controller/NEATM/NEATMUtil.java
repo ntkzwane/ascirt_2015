@@ -28,6 +28,7 @@ import za.redbridge.controller.NEATM.training.species.NEATMSpeciation;
 
 import static za.redbridge.controller.NEATM.sensor.SensorType.PROXIMITY;
 import static za.redbridge.controller.NEATM.sensor.SensorType.ULTRASONIC;
+import static za.redbridge.controller.NEATM.sensor.SensorType.COLOUR_PROXIMITY;
 import static za.redbridge.controller.NEATM.sensor.parameter.spec.ParameterType.BEARING;
 import static za.redbridge.controller.NEATM.sensor.parameter.spec.ParameterType.FIELD_OF_VIEW;
 import static za.redbridge.controller.NEATM.sensor.parameter.spec.ParameterType.ORIENTATION;

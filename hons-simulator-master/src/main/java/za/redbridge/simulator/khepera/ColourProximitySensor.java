@@ -21,8 +21,8 @@ public class ColourProximitySensor extends AgentSensor {
 
 
     // Naeem : there is no lower range for the ProximitySensor.
-    private static final float PROXIMITY_SENSOR_RANGE = 3.0f;
-    private static final float PROXIMITY_SENSOR_FOV = 3.0f; // This is a guess
+    private static final float COLOUR_PROXIMITY_SENSOR_RANGE = 3.0f;
+    private static final float COLOUR_PROXIMITY_SENSOR_FOV = 3.0f; // This is a guess
 
     //    public static final float RANGE = 0.2f;
     public static final float RANGE = 3.0f;
@@ -31,7 +31,7 @@ public class ColourProximitySensor extends AgentSensor {
     private final GammaDistribution function = new GammaDistribution(2.5, 2.0);
 
     public ColourProximitySensor(float bearing, float orientation) {
-        this(bearing, orientation, PROXIMITY_SENSOR_RANGE, PROXIMITY_SENSOR_FOV);
+        this(bearing, orientation, COLOUR_PROXIMITY_SENSOR_RANGE, COLOUR_PROXIMITY_SENSOR_FOV);
     }
 
     public ColourProximitySensor(float bearing, float orientation, float range, float fieldOfView) {
@@ -49,7 +49,7 @@ public class ColourProximitySensor extends AgentSensor {
 
     @Override
     public AgentSensor clone() {
-        return new ProximitySensor(bearing, orientation, range, fieldOfView);
+        return new ColourProximitySensor(bearing, orientation, range, fieldOfView);
     }
 
     @Override

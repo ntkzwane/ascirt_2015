@@ -76,7 +76,8 @@ public class HeuristicPhenotype implements Phenotype, Drawable {
     }
 
     @Override
-    public List<AgentSensor> getSensors() {
+    public List<AgentSensor> getSensors()
+    {
         return null;
     }
 

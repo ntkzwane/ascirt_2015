@@ -28,6 +28,8 @@ import za.redbridge.experiment.NEATM.training.species.NEATMSpeciation;
 
 import static za.redbridge.experiment.NEATM.sensor.SensorType.PROXIMITY;
 import static za.redbridge.experiment.NEATM.sensor.SensorType.ULTRASONIC;
+import static za.redbridge.experiment.NEATM.sensor.SensorType.COLOUR_PROXIMITY;
+
 import static za.redbridge.experiment.NEATM.sensor.parameter.spec.ParameterType.BEARING;
 import static za.redbridge.experiment.NEATM.sensor.parameter.spec.ParameterType.FIELD_OF_VIEW;
 import static za.redbridge.experiment.NEATM.sensor.parameter.spec.ParameterType.ORIENTATION;
@@ -124,10 +126,18 @@ public final class NEATMUtil {
         fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
                 new SelectSensorsType(PROXIMITY), new MutatePerturbSensorParameter(5.0f, RANGE)));
         fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
+                new SelectSensorsType(COLOUR_PROXIMITY), new MutatePerturbSensorParameter(5.0f, RANGE)));
+
+        
+
+        fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
                 new SelectSensorsType(ULTRASONIC),
                 new MutatePerturbSensorParameter(5.0f, FIELD_OF_VIEW)));
         fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
                 new SelectSensorsType(PROXIMITY),
+                new MutatePerturbSensorParameter(5.0f, FIELD_OF_VIEW)));
+        fieldMutationComponents.add(0.5, new NEATMMutateSensorGroup(
+                new SelectSensorsType(COLOUR_PROXIMITY),
                 new MutatePerturbSensorParameter(5.0f, FIELD_OF_VIEW)));
         fieldMutationComponents.finalizeStructure();
 
@@ -142,6 +152,8 @@ public final class NEATMUtil {
                 connectionDensity, /*new FixedLinkWeight() chuck : edit weight */new MutateResetLinkWeight()));
         addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.ULTRASONIC,
                 connectionDensity, /*new FixedLinkWeight() chuck : edit weight */new MutatePerturbLinkWeight(0.2)));
+        addSensorComponents.add(0.5, new NEATMMutateAddSensor(SensorType.COLOUR_PROXIMITY,
+                connectionDensity, /*new FixedLinkWeight() chuck : edit weight */new MutateResetLinkWeight()));
         addSensorComponents.finalizeStructure();
 
         result.addOperation(0.05, addSensorMutation);

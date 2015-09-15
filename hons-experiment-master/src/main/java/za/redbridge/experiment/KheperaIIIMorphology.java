@@ -5,6 +5,7 @@ import za.redbridge.experiment.NEATM.sensor.SensorMorphology;
 import za.redbridge.simulator.khepera.KheperaIIIPhenotype;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.ColourProximitySensor;
 
 
 import static za.redbridge.experiment.NEATM.sensor.SensorType.BOTTOM_PROXIMITY;
@@ -132,13 +133,13 @@ public class KheperaIIIMorphology extends SensorMorphology {
         if(config.enableColourProximitySensor180Degrees)
         {
             sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(180), 0,
-                    UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
+                    ColourProximitySensor.RANGE, ColourProximitySensor.FIELD_OF_VIEW);
         }
 
         if(config.enableColourProximitySensor360Degrees)
         {
             sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(0), 0,
-                    UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
+                    ColourProximitySensor.RANGE, ColourProximitySensor.FIELD_OF_VIEW);
         }
 
         return sensorModels;

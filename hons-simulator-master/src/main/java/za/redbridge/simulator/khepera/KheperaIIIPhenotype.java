@@ -42,7 +42,6 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
     public KheperaIIIPhenotype(Configuration config) {
         configuration = new Configuration(config);
         sensors = new ArrayList<>(config.getNumberOfSensors());
-        
         initSensors();
     }
 
@@ -161,15 +160,15 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
     public static class Configuration {
 
         // Proximity Sensors
-        public boolean enableProximitySensor45Degrees = false;
-        public boolean enableProximitySensor90Degrees = false;
-        public boolean enableProximitySensor135Degrees = false;
+        public boolean enableProximitySensor45Degrees = true;
+        public boolean enableProximitySensor90Degrees = true;
+        public boolean enableProximitySensor135Degrees = true;
         public boolean enableProximitySensor180Degrees = false;
 
         public boolean enableProximitySensor225Degrees = false;
         public boolean enableProximitySensor270Degrees = false;
         public boolean enableProximitySensor315Degrees = false;
-        public boolean enableProximitySensor360Degrees = false;
+        public boolean enableProximitySensor360Degrees = true;
 
         // Ultrasonic Sensors
         public boolean enableUltrasonicSensor60Degrees = false;
@@ -178,11 +177,11 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
 
         public boolean enableUltrasonicSensor240Degrees = false;
         public boolean enableUltrasonicSensor300Degrees = false;
-        public boolean enableUltrasonicSensor360Degrees = false;
+        public boolean enableUltrasonicSensor360Degrees = true;
 
         // Colour Proximity Sensor
         public boolean enableColourProximitySensor180Degrees = false;
-        public boolean enableColourProximitySensor360Degrees = false;
+        public boolean enableColourProximitySensor360Degrees = true;
 
         public boolean enableBottomProximitySensor = false;
 

@@ -82,7 +82,8 @@ public enum SensorType {
 
     private final SensorParameterSpecSet defaultSpecSet;
 
-    SensorType(SensorParameterSpecSet defaultSpecSet) {
+    SensorType(SensorParameterSpecSet defaultSpecSet) 
+    {
         this.defaultSpecSet = defaultSpecSet;
     }
 

@@ -41,12 +41,14 @@ public interface Phenotype extends Cloneable {
         }
 
         @Override
-        public Phenotype clone() {
+        public Phenotype clone() 
+        {
             return this;
         }
 
         @Override
-        public List<AgentSensor> getSensors() {
+        public List<AgentSensor> getSensors()
+        {
             return Collections.emptyList();
         }
 
