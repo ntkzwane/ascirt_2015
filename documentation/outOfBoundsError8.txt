@@ -1,0 +1,23 @@
+Exception in thread "main" org.encog.ml.genetic.GeneticError: java.lang.ArrayIndexOutOfBoundsException: 8
+	at org.encog.ml.ea.train.basic.BasicEA.iteration(BasicEA.java:618)
+	at org.encog.ml.ea.train.basic.TrainEA.iteration(TrainEA.java:196)
+	at za.redbridge.experiment.Main.main(Main.java:96)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 8
+	at org.jbox2d.collision.shapes.PolygonShape.set(PolygonShape.java:181)
+	at org.jbox2d.collision.shapes.PolygonShape.set(PolygonShape.java:110)
+	at za.redbridge.simulator.sensor.AgentSensor.createShape(AgentSensor.java:110)
+	at za.redbridge.simulator.sensor.Sensor.attach(Sensor.java:118)
+	at za.redbridge.simulator.object.RobotObject.initSensors(RobotObject.java:106)
+	at za.redbridge.simulator.object.RobotObject.<init>(RobotObject.java:89)
+	at za.redbridge.simulator.factories.HomogeneousRobotFactory.placeInstances(HomogeneousRobotFactory.java:40)
+	at za.redbridge.simulator.Simulation.start(Simulation.java:76)
+	at za.redbridge.simulator.Simulation.runForNIterations(Simulation.java:192)
+	at za.redbridge.simulator.Simulation.run(Simulation.java:184)
+	at za.redbridge.experiment.ScoreCalculator.calculateScore(ScoreCalculator.java:64)
+	at org.encog.ml.ea.train.basic.BasicEA.calculateScore(BasicEA.java:348)
+	at org.encog.ml.ea.train.basic.EAWorker.call(EAWorker.java:154)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
