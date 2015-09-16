@@ -275,7 +275,8 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		int genomeLength = 0;
 
 		// number of sensors of each type
-		int[] numPossibleSensors = {MorphChrom.MAX_NUM_PROXI_SENSORS,
+		int[] numPossibleSensors = {
+			MorphChrom.MAX_NUM_PROXI_SENSORS,
 			MorphChrom.MAX_NUM_ULTRA_SENSORS,
 			MorphChrom.MAX_NUM_COLOUR_PROXI_SENSORS};
 
