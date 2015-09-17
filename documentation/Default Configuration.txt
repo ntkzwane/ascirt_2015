@@ -1,0 +1,4 @@
+10 Robots
+5 Small Boxes
+5 Medium Boxes
+5 Big Boxes

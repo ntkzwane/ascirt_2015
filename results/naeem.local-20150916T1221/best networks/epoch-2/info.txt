@@ -1,0 +1,1 @@
+epoch: 2, fitness: 30.000000, sensors: 5

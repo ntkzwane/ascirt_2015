@@ -33,6 +33,10 @@ public class KheperaIIIMorphology extends SensorMorphology {
         DEFAULT_CONFIGURATION.enableBottomProximitySensor = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensor60Degrees = true;
         DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor90Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor135Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor180Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor225Degrees = true;
     }
 
     public KheperaIIIMorphology()

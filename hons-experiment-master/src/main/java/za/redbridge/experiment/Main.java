@@ -118,7 +118,6 @@ public class Main {
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
         private int simulationRuns = 1;
-
         @Parameter(names = "--conn-density", description = "Adjust the initial connection density"
                 + " for the population")
         private double connectionDensity = 0.5;
