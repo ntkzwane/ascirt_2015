@@ -28,6 +28,8 @@ import org.jbox2d.common.MathUtils;
 import java.io.Serializable;
 
 public class MorphChrom implements MLMethod, Serializable{
+    private static long serialVersionUID =  5956456018923114112L;
+
     private SensorMorphology sensorMorphology;
     protected static final int MAX_NUM_PROXI_SENSORS = 8;
     protected static final int MAX_NUM_ULTRA_SENSORS = 4;
