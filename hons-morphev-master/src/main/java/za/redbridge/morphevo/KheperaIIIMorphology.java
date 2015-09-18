@@ -5,6 +5,7 @@ import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.simulator.khepera.KheperaIIIPhenotype;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.ColourProximitySensor;
 
 
 import static za.redbridge.morphevo.sensor.SensorType.BOTTOM_PROXIMITY;
@@ -28,11 +29,14 @@ public class KheperaIIIMorphology extends SensorMorphology {
 
     static 
     {
-        DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
         DEFAULT_CONFIGURATION.enableProximitySensor45Degrees = true;
         DEFAULT_CONFIGURATION.enableBottomProximitySensor = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensor60Degrees = true;
         DEFAULT_CONFIGURATION.enableColourProximitySensor180Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor90Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor135Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor180Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensor225Degrees = true;
     }
 
     public KheperaIIIMorphology()
@@ -125,14 +129,14 @@ public class KheperaIIIMorphology extends SensorMorphology {
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
         if (config.enableUltrasonicSensor360Degrees) {
-            sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(0), 0,
+            sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(0 ), 0,
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
 
         // Colour Proximity Sensors
         if(config.enableColourProximitySensor180Degrees)
         {
-            sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(45), 0,
+            sensorModels[sensorIndex++] = new SensorModel(COLOUR_PROXIMITY, (float) Math.toRadians(180), 0,
                     ColourProximitySensor.RANGE, ColourProximitySensor.FIELD_OF_VIEW);
         }
 
