@@ -20,6 +20,7 @@ import za.redbridge.simulator.khepera.ColourProximitySensor;
 
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import org.jbox2d.common.MathUtils;
+import static za.redbridge.simulator.Utils.wrapAngle;
 
 import java.io.Serializable;
 
@@ -66,48 +67,24 @@ public class MorphPhenotype implements Phenotype, Serializable{
 
     @Override
     public Double2D step(List<List<Double>> sensorReadings) {
-        /*if(sensorReadings.size() == 0){
-            return new Double2D(1.0,1.0);
-        }
-
-        Double2D left = new Double2D(0.5,1.0);
-        Double2D forward = new Double2D(1.0,1.0);
-        Double2D right = new Double2D(1.0,0.5);
-        Double2D random = new Double2D((float)Math.random()*2f - 1f, (float)Math.random()*2f - 1f);
-
-        if(cooldownCounter > 0) {
-            cooldownCounter--;
+        // check if in target area. the bottom proximity is the only sensor that can detect the target area
+        // so just check the reading of the sensor at sensorReadings.get(0)
+        if(sensorReadings.get(0).get(0) > 0.0f){
+            double bearing = sensors.get(0).getBearing();
+            lastMove = wheelDriveForTargetAngle(bearing);
             return lastMove;
-        }else {
-            cooldownCounter = COOLDOWN;
         }
 
-        double leftReading = sensorReadings.get(0).get(0);
-        double forwardReading = sensorReadings.get(1).get(0);
-        double rightReading = sensorReadings.get(2).get(0);
-        double max = Math.max(leftReading, Math.max(forwardReading, rightReading));
-        if(max < 0.0001){
-            lastMove = random;
-            return random;
-        }else if(leftReading == max) {
-            lastMove = left;
-            return left;
-        }else if(rightReading == max) {
-            lastMove = right;
-            return right;
-        }else {
-            lastMove = forward;
-            return forward;
-        }*/
-        //return new Double2D(1.0,1.0);
-        // System.out.println("MorphPhenotype.step.numreadings: "+sensorReadings.size());
+
         int nearestSensed = -1;
         float maxSensed = 0.0f;
-        for(int i = 0; i < sensorReadings.size(); i++){
+        /*for(int i = 1; i < sensorReadings.size(); i++){
+            System.out.print("Size: "+sensorReadings.get(i).size()+": Reading: "+sensorReadings.get(i).get(0)+" ");
             if(sensorReadings.get(i).get(0) > maxSensed){
                 nearestSensed = i; //\TODO check that this is a sensor that is 'allowed' to sense resources
             }
         }
+        System.out.println();*/
         // get bearing and move in direction of the bearing of the sensor
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
@@ -157,7 +134,7 @@ public class MorphPhenotype implements Phenotype, Serializable{
         return new ColourProximitySensor(bearing, orientation);
     }
 
-/**
+    /**
      * Get the wheel drive that will steer the agent towards the target angle.
      * @param targetAngle The angle to the target
      * @return the heuristic wheel drive
@@ -188,5 +165,23 @@ public class MorphPhenotype implements Phenotype, Serializable{
             }
         }
         return new Double2D(left, right);
+    }
+
+    //target area bearing from robot angle (the brearing of the bottom proximity)
+    protected double awayTargetAreaAngle(double robotAngle) {
+        double targetAreaPosition = -1;
+
+        /*if (targetAreaDirection == SimConfig.Direction.NORTH) {
+            targetAreaPosition = -HALF_PI;
+        } else if (targetAreaDirection == SimConfig.Direction.SOUTH) {
+            targetAreaPosition = HALF_PI;
+        } else if (targetAreaDirection == SimConfig.Direction.EAST) {
+            targetAreaPosition = Math.PI;
+        } else if (targetAreaDirection == SimConfig.Direction.WEST) {
+            targetAreaPosition = 0;
+        }*/targetAreaPosition = HALF_PI;
+
+        return wrapAngle(targetAreaPosition - robotAngle);
+
     }
 }

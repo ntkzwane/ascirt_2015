@@ -164,6 +164,7 @@ public class MorphologyEvolution extends BasicTraining implements MultiThreadabl
 		this.genetic.addOperation(0.04, new MorphMutateReplace());
 		// create the stats recorder
 		statsRecorder = new StatsRecorder(getGenetic(),(ScoreCalculator) getGenetic().getScoreFunction());
+		statsRecorder.recordIterationStats();
 	}
 
 	/**

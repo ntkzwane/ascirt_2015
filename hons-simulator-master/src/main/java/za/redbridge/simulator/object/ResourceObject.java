@@ -421,6 +421,26 @@ public class ResourceObject extends PhysicalObject {
         this.isCollected = isCollected;
     }
 
+    /**
+     * detach the robot from the resource regardless of whether or not the resource
+     * in the target area
+     */
+    public void forceDetach( ){
+        // Break all the joints
+        for (Map.Entry<RobotObject, Joint> entry : joints.entrySet()) {
+            RobotObject robot = entry.getKey();
+            robot.setBoundToResource(false ,0);
+            getBody().getWorld().destroyJoint(entry.getValue());
+        }
+        joints.clear();
+
+        // Reset the anchor points
+        AnchorPoint[] anchorPoints = getAnchorPointsForSide(stickySide);
+        for (AnchorPoint anchorPoint : anchorPoints) {
+            anchorPoint.taken = false;
+        }
+    }
+
     /** Check whether this resource already has the max number of robots attached to it. */
     public boolean pushedByMaxRobots() {
         return getNumberPushingRobots() >= pushingRobots;

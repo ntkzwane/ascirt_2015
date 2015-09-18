@@ -66,7 +66,7 @@ public abstract class KheperaIIIPhenotype implements Phenotype {
             sensors.add(createProximitySensor((float) Math.toRadians(-90), 0f));}
 
         if (configuration.enableProximitySensor315Degrees) {
-            sensors.add(createProximitySensor((float) Math.toRadians(-135), 0f));}        
+            sensors.add(createProximitySensor((float) Math.toRadians(-135), 0f));}
 
         if (configuration.enableProximitySensor360Degrees) {
             sensors.add(createProximitySensor((float) Math.toRadians(0), 0f));}

@@ -1,5 +1,6 @@
 SRC_DIR = hons-simulator-master/src/%.java
 EXP_DIR = hons-experiment-master/src/%.java
+DEMO_PATH = ""
 
 all:
 	@echo building simulator...
@@ -80,7 +81,16 @@ experiment_and_sim:
 	./gradlew fatJar && \
 	echo done
 
-
 run_experiment:
 	@echo running experiment
 	@java -jar hons-experiment-master/build/libs/hons-experiment-master-all.jar -c hons-experiment-master/config/mediumSimConfig.yml
+
+run_morphev:
+	@echo running morphology evolution
+	@cd hons-morphev-master && \
+	java -jar build/libs/hons-morphev-master-all.jar
+
+run_morphev_demo:
+	@echo running morphology evolution demo
+	@cd hons-morphev-master && \
+	java -jar build/libs/hons-morphev-master-all.jar --demo DEMO_PATH
