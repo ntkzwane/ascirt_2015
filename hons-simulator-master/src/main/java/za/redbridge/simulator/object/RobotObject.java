@@ -103,7 +103,7 @@ public class RobotObject extends PhysicalObject {
 
         for (AgentSensor sensor : phenotype.getSensors()) 
         {
-           sensor.attach(this); // <--- Bug is here!
+           sensor.attach(this); // Bug is fixed :)
         }
 
         getPortrayal().setChildDrawable(new Drawable() {

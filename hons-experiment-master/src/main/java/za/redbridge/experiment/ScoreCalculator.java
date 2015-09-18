@@ -64,6 +64,7 @@ public class ScoreCalculator implements CalculateScore {
             simulation.run();
             fitness += simulation.getFitness().getTeamFitness();
             fitness += 20 * (1.0 - simulation.getProgressFraction()); // Time bonus
+            
         }
 
         // Get the fitness and update the total score
