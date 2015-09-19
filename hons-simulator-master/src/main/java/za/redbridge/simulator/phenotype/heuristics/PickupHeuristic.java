@@ -48,7 +48,7 @@ public class PickupHeuristic extends Heuristic {
             SimStepCount = 0;
             currentResource = null;
             return null; // No viable resource, nothing to do
-        }else if(resource != null){
+        }else if(resource != null && robot.isBoundToResource()){
             // set the current resource, this is the one the robot is about the pick up (becomes null later)
             currentResource = resource;
         }
