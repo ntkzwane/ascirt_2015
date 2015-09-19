@@ -77,7 +77,6 @@ public class PickupHeuristic extends Heuristic {
         if (!resource.canBePickedUp()) {
             // no longer has resource, reset the counter
             SimStepCount = 0;
-            System.out.println("Can no longer be picked up");
             //  chuck : todo Check if sensor directly above target area
             return null; // No viable resource, nothing to do
         }
