@@ -43,17 +43,20 @@ public class PickupHeuristic extends Heuristic {
         // Check for a resource in the sensor
         ResourceObject resource = pickupSensor.sense().map(o -> (ResourceObject) o.getObject()).orElse(null);
 
-        if (resource == null && !robot.isBoundToResource()) {
+        if (resource == null) {
             // no longer has resource, reset the counter
             SimStepCount = 0;
             currentResource = null;
-            return null; // No viable resource, nothing to do
-        }else if(resource != null){
-            // set the current resource, this is the one the robot is about the pick up (becomes null later)
-            currentResource = resource;
+            return null; // No viable resource, nothing to do for this heuristic
         }
 
-        if (robot.isBoundToResource()) {
+        // Try pick it up
+        if (resource.tryPickup(robot)) {
+            // Success! Head for the target zone
+            // set the current resource, this is the one the robot is about the pick up (becomes null later)
+            currentResource = resource;
+            return wheelDriveForTargetAngle(targetAreaAngle());
+        } else if (robot.isBoundToResource()) {
             // check that the robot has not been holding onto the resource for too long (or it can hold into it
             // for long if there are enough pushers)
             if(SimStepCount < MaxStepCounter){
@@ -71,7 +74,9 @@ public class PickupHeuristic extends Heuristic {
                 currentResource.forceDetach();
                 return wheelDriveForTargetAngle(awayResourceTargetAngle());
             }
-
+        } else if (ENABLE_PICKUP_POSITIONING) {
+            // Couldn't pick it up, add a heuristic to navigate to the resource
+            getSchedule().addHeuristic(new PickupPositioningHeuristic(pickupSensor, robot));
         }
 
         if (!resource.canBePickedUp()) {
@@ -79,15 +84,6 @@ public class PickupHeuristic extends Heuristic {
             SimStepCount = 0;
             //  chuck : todo Check if sensor directly above target area
             return null; // No viable resource, nothing to do
-        }
-
-        // Try pick it up
-        if (resource.tryPickup(robot)) {
-            // Success! Head for the target zone
-            return wheelDriveForTargetAngle(targetAreaAngle());
-        } else if (ENABLE_PICKUP_POSITIONING) {
-            // Couldn't pick it up, add a heuristic to navigate to the resource
-            getSchedule().addHeuristic(new PickupPositioningHeuristic(pickupSensor, robot));
         }
 
         return null;
