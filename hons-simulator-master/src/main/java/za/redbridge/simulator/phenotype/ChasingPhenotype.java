@@ -18,15 +18,15 @@ public class ChasingPhenotype extends KheperaIIIPhenotype {
     private static final Configuration CONFIG = new Configuration();
     static {
 
-        CONFIG.enableProximitySensor45Degrees = false;
+        CONFIG.enableProximitySensor45Degrees = true;
         CONFIG.enableProximitySensor90Degrees = false;
         CONFIG.enableProximitySensor135Degrees = false;
         CONFIG.enableProximitySensor180Degrees = false;
 
-        CONFIG.enableProximitySensor225Degrees = false;
+        CONFIG.enableProximitySensor225Degrees = true;
         CONFIG.enableProximitySensor270Degrees = false;
         CONFIG.enableProximitySensor315Degrees = false;
-        CONFIG.enableProximitySensor360Degrees = false;
+        CONFIG.enableProximitySensor360Degrees = true;
 
         // Ultrasonic Sensors
         CONFIG.enableUltrasonicSensor120Degrees = false;

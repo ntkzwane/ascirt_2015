@@ -30,7 +30,7 @@ public class PickupHeuristic extends Heuristic {
     private ResourceObject currentResource = null;
 
     public PickupHeuristic(PickupSensor pickupSensor, RobotObject robot,
-            SimConfig.Direction targetAreaDirection) {
+                           SimConfig.Direction targetAreaDirection) {
         super(robot);
         this.pickupSensor = pickupSensor;
         this.targetAreaDirection = targetAreaDirection;
@@ -43,25 +43,30 @@ public class PickupHeuristic extends Heuristic {
         // Check for a resource in the sensor
         ResourceObject resource = pickupSensor.sense().map(o -> (ResourceObject) o.getObject()).orElse(null);
 
-        if (resource == null) {
+        /////
+        if(resource != null){
+            System.out.println("Resource state "+robot.isBoundToResource()+" "+resource.canBePickedUp());
+        }
+        /////
+
+        if (resource == null && !robot.isBoundToResource()) {
             // no longer has resource, reset the counter
             SimStepCount = 0;
             currentResource = null;
-            return null; // No viable resource, nothing to do for this heuristic
-        }
-
-        // Try pick it up
-        if (resource.tryPickup(robot)) {
-            // Success! Head for the target zone
+            return null; // No viable resource, nothing to do
+        }else if(resource != null && (robot.isBoundToResource() || resource.canBePickedUp())){
             // set the current resource, this is the one the robot is about the pick up (becomes null later)
             currentResource = resource;
-            return wheelDriveForTargetAngle(targetAreaAngle());
-        } else if (robot.isBoundToResource()) {
+//            System.out.println("Setting Resource "+robot.isBoundToResource()+" "+resource.canBePickedUp());
+        }
+
+        if (robot.isBoundToResource()) {
             // check that the robot has not been holding onto the resource for too long (or it can hold into it
             // for long if there are enough pushers)
             if(SimStepCount < MaxStepCounter){
                 if(currentResource.pushedByMaxRobots()){
                     // Go for the target area if we've managed to attach to a resource
+//                    System.out.println("Just go home");
                     return wheelDriveForTargetAngle(targetAreaAngle());
                 }else{
                     // incriment the counter
@@ -71,19 +76,29 @@ public class PickupHeuristic extends Heuristic {
             }else if(SimStepCount >= MaxStepCounter){
                 // been holding this resourse for too long, detach from it and drive away
                 SimStepCount = 0;
+//                System.out.println("Detatching");
                 currentResource.forceDetach();
                 return wheelDriveForTargetAngle(awayResourceTargetAngle());
             }
-        } else if (ENABLE_PICKUP_POSITIONING) {
-            // Couldn't pick it up, add a heuristic to navigate to the resource
-            getSchedule().addHeuristic(new PickupPositioningHeuristic(pickupSensor, robot));
         }
 
         if (!resource.canBePickedUp()) {
             // no longer has resource, reset the counter
             SimStepCount = 0;
+//            System.out.println("Reset counter");
             //  chuck : todo Check if sensor directly above target area
             return null; // No viable resource, nothing to do
+        }
+
+        // Try pick it up
+        if (resource.tryPickup(robot)) {
+            // Success! Head for the target zone
+//            System.out.println("picked up");
+            return wheelDriveForTargetAngle(targetAreaAngle());
+        } else if (ENABLE_PICKUP_POSITIONING) {
+            // Couldn't pick it up, add a heuristic to navigate to the resource
+//            System.out.println("pick up positioning");
+            getSchedule().addHeuristic(new PickupPositioningHeuristic(pickupSensor, robot));
         }
 
         return null;
