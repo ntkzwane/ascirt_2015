@@ -435,6 +435,7 @@ public class ResourceObject extends PhysicalObject {
         joints.clear();
 
         // Reset the anchor points
+        if(stickySide == null){return;} // only reset them if they exist
         AnchorPoint[] anchorPoints = getAnchorPointsForSide(stickySide);
         for (AnchorPoint anchorPoint : anchorPoints) {
             anchorPoint.taken = false;
