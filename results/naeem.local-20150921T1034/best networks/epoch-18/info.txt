@@ -1,0 +1,1 @@
+epoch: 18, fitness: 21.176471, sensors: 6

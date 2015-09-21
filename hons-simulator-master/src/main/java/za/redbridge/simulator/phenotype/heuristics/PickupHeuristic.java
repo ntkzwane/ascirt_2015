@@ -45,7 +45,7 @@ public class PickupHeuristic extends Heuristic {
 
         /////
         if(resource != null){
-            System.out.println("Resource state "+robot.isBoundToResource()+" "+resource.canBePickedUp());
+        
         }
         /////
 
