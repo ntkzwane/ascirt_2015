@@ -1,0 +1,17 @@
+digraph G {
+  0 [ label="Bias (0)" ];
+  1 [ label="Input (1)\nBottom proximity" ];
+  2 [ label="Input (2)\nProximity\nB:-2.74, O:-1.24, R:0.76, F:0.62" ];
+  3 [ label="Input (3)\nUltrasonic\nB:-0.24, O:0.48, R:2.37, F:3.09" ];
+  4 [ label="Input (4)\nColour proximity\nB:-0.13, O:0.40, R:2.55, F:2.54" ];
+  5 [ label="Output (5)" ];
+  6 [ label="Output (6)" ];
+  { rank=same 0 1 2 3 4 }
+  { rank=same 5 6 }
+  0 -> 6 [ label="0.834" ];
+  1 -> 6 [ label="0.158" ];
+  2 -> 5 [ label="-0.374" ];
+  2 -> 6 [ label="-0.772" ];
+  3 -> 6 [ label="0.205" ];
+  4 -> 5 [ label="-0.937" ];
+}

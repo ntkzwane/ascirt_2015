@@ -35,7 +35,7 @@ import static za.redbridge.simulator.physics.AABBUtil.resizeAABB;
  */
 public class TargetAreaObject extends PhysicalObject implements Collideable {
 
-    private static final boolean ALLOW_REMOVAL = true;
+    private static final boolean ALLOW_REMOVAL = false;
 
     private static final float BLAME_BOX_EXPANSION_RATE = 1.5f;
     private static final int BLAME_BOX_TRIES = 5;
@@ -123,6 +123,8 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
             // Mark resource as collected (this breaks the joints)
             resource.setCollected(true);
             resource.getPortrayal().setPaint(Color.CYAN);
+            resource.getPortrayal().setEnabled(false);
+            // resource = null; // Naeem Ganey code.
         }
     }
 
