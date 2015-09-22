@@ -69,22 +69,22 @@ public class MorphPhenotype implements Phenotype, Serializable{
     public Double2D step(List<List<Double>> sensorReadings) {
         // check if in target area. the bottom proximity is the only sensor that can detect the target area
         // so just check the reading of the sensor at sensorReadings.get(0)
-        if(sensorReadings.get(0).get(0) > 0.0f){
+       /* if(sensorReadings.get(0).get(0) > 0.0f){
             double bearing = sensors.get(0).getBearing();
             lastMove = wheelDriveForTargetAngle(bearing);
             return lastMove;
-        }
+        }*/
 
 
         int nearestSensed = -1;
         float maxSensed = 0.0f;
         for(int i = 1; i < sensorReadings.size(); i++){
-            System.out.print("Size: "+sensorReadings.get(i).size()+": Reading: "+sensorReadings.get(i).get(0)+" ");
+//            System.out.print("Size: "+sensorReadings.get(i).size()+": Reading: "+sensorReadings.get(i).get(0)+" ");
             if(sensorReadings.get(i).get(0) > maxSensed){
                 nearestSensed = i; //\TODO check that this is a sensor that is 'allowed' to sense resources
             }
         }
-        System.out.println();
+//        System.out.println();
         // get bearing and move in direction of the bearing of the sensor
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
