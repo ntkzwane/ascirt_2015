@@ -78,13 +78,13 @@ public class MorphPhenotype implements Phenotype, Serializable{
 
         int nearestSensed = -1;
         float maxSensed = 0.0f;
-        /*for(int i = 1; i < sensorReadings.size(); i++){
+        for(int i = 1; i < sensorReadings.size(); i++){
             System.out.print("Size: "+sensorReadings.get(i).size()+": Reading: "+sensorReadings.get(i).get(0)+" ");
             if(sensorReadings.get(i).get(0) > maxSensed){
                 nearestSensed = i; //\TODO check that this is a sensor that is 'allowed' to sense resources
             }
         }
-        System.out.println();*/
+        System.out.println();
         // get bearing and move in direction of the bearing of the sensor
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
