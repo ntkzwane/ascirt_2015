@@ -25,7 +25,8 @@ import static za.redbridge.simulator.Utils.wrapAngle;
 import java.io.Serializable;
 
 public class MorphPhenotype implements Phenotype, Serializable{
-    protected static final double HALF_PI = MathUtils.PI / 2;
+    private static long serialVersionUID =  687991492884005033L;
+    protected static final double HALF_PI = MathUtils.PI / 2.0;
     private List<AgentSensor> sensors;
     private SensorMorphology morphology;
 
@@ -78,8 +79,8 @@ public class MorphPhenotype implements Phenotype, Serializable{
 
         int nearestSensed = -1;
         float maxSensed = 0.0f;
-        for(int i = 1; i < sensorReadings.size(); i++){
-//            System.out.print("Size: "+sensorReadings.get(i).size()+": Reading: "+sensorReadings.get(i).get(0)+" ");
+        for(int i = 1; i < sensorReadings.size(); i++){ // start iterating at 1 to ignore the BottomProximity sensor
+//            System.out.print("Sensor: "+i+": Reading: "+sensorReadings.get(i).get(0)+" ");
             if(sensorReadings.get(i).get(0) > maxSensed){
                 nearestSensed = i; //\TODO check that this is a sensor that is 'allowed' to sense resources
             }
@@ -89,7 +90,7 @@ public class MorphPhenotype implements Phenotype, Serializable{
         if(nearestSensed > -1){
             double bearing = sensors.get(nearestSensed).getBearing();
             lastMove = wheelDriveForTargetAngle(bearing);
-            // System.out.println("B "+bearing+" ("+lastMove.x+","+lastMove.y+")");
+//             System.out.println("B "+bearing+" ("+lastMove.x+","+lastMove.y+") ~> "+(bearing*180/MathUtils.PI));
             return lastMove;
         }else if(lastMove != null){
             return lastMove;
@@ -139,28 +140,33 @@ public class MorphPhenotype implements Phenotype, Serializable{
      * @param targetAngle The angle to the target
      * @return the heuristic wheel drive
      */
-    protected static Double2D wheelDriveForTargetAngle(double targetAngle) {
+    protected Double2D wheelDriveForTargetAngle(double targetAngle) {
         final double left, right;
         if(Math.abs(targetAngle) > MathUtils.PI) targetAngle = MathUtils.PI*Math.signum(targetAngle);
+//        System.out.println("target angle : "+targetAngle);
         // Different response for each of four quadrants
         if (targetAngle >= 0) {
             if (targetAngle < HALF_PI) {
                 // First
                 left = (HALF_PI - targetAngle) / HALF_PI;
+//                left = (HALF_PI - targetAngle) / MathUtils.PI;
                 right = 1;
             } else {
                 // Second
                 left = -(targetAngle - HALF_PI) / HALF_PI;
+//                left = -(HALF_PI - targetAngle) / MathUtils.PI;
                 right = -1;
             }
         } else {
             if (targetAngle < -HALF_PI) {
                 // Third
                 left = -1;
+//                right = (HALF_PI + targetAngle) / MathUtils.PI;
                 right = (targetAngle + HALF_PI) / HALF_PI;
             } else {
                 // Fourth
                 left = 1;
+//                right = (HALF_PI + targetAngle) / MathUtils.PI;
                 right = (HALF_PI + targetAngle) / HALF_PI;
             }
         }

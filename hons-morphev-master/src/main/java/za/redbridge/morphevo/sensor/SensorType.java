@@ -37,8 +37,8 @@ public enum SensorType {
             new BearingSpec(random(), plusMinusPi(), wrap()),
             new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
             // TODO: query environment size for range value
-//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 40), clamp()),
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp()))),
   
@@ -47,8 +47,8 @@ public enum SensorType {
             new BearingSpec(random(), plusMinusPi(), wrap()),
             new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
             // TODO: query environment size for range value
-//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 40), clamp()),
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp()))),
 
@@ -56,8 +56,8 @@ public enum SensorType {
             new BearingSpec(random(), plusMinusPi(), wrap()),
             new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
             // TODO: query environment size for range value
-//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
-            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 0.2f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
                     clamp())));
 
