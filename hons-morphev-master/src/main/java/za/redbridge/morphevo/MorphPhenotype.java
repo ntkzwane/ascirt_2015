@@ -143,30 +143,25 @@ public class MorphPhenotype implements Phenotype, Serializable{
     protected Double2D wheelDriveForTargetAngle(double targetAngle) {
         final double left, right;
         if(Math.abs(targetAngle) > MathUtils.PI) targetAngle = MathUtils.PI*Math.signum(targetAngle);
-//        System.out.println("target angle : "+targetAngle);
         // Different response for each of four quadrants
         if (targetAngle >= 0) {
             if (targetAngle < HALF_PI) {
                 // First
                 left = (HALF_PI - targetAngle) / HALF_PI;
-//                left = (HALF_PI - targetAngle) / MathUtils.PI;
                 right = 1;
             } else {
                 // Second
                 left = -(targetAngle - HALF_PI) / HALF_PI;
-//                left = -(HALF_PI - targetAngle) / MathUtils.PI;
                 right = -1;
             }
         } else {
             if (targetAngle < -HALF_PI) {
                 // Third
                 left = -1;
-//                right = (HALF_PI + targetAngle) / MathUtils.PI;
                 right = (targetAngle + HALF_PI) / HALF_PI;
             } else {
                 // Fourth
                 left = 1;
-//                right = (HALF_PI + targetAngle) / MathUtils.PI;
                 right = (HALF_PI + targetAngle) / HALF_PI;
             }
         }

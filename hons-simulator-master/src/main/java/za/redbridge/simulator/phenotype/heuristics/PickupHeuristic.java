@@ -3,6 +3,7 @@ package za.redbridge.simulator.phenotype.heuristics;
 import java.awt.Color;
 import java.util.List;
 
+import org.omg.CORBA.Current;
 import sim.util.Double2D;
 import za.redbridge.simulator.config.SimConfig;
 import za.redbridge.simulator.object.ResourceObject;
@@ -27,6 +28,7 @@ public class PickupHeuristic extends Heuristic {
 
     private int SimStepCount = 0;
     private final int MaxStepCounter = 2500; // I think this is like 5 seconds
+    private int CurrentNumPusingRobots = 0;
     private ResourceObject currentResource = null;
 
     public PickupHeuristic(PickupSensor pickupSensor, RobotObject robot,
@@ -45,7 +47,7 @@ public class PickupHeuristic extends Heuristic {
 
         if (resource == null && !robot.isBoundToResource()) {
             // no longer has resource, reset the counter
-            SimStepCount = 0;
+            resetCounter(currentResource);
             currentResource = null;
             return null; // No viable resource, nothing to do
         }else if(resource != null && resource.canBePickedUp()){
@@ -53,7 +55,11 @@ public class PickupHeuristic extends Heuristic {
             currentResource = resource;
             // Try pick it up
             if (resource.tryPickup(robot)) {
-                // Success! Head for the target zone
+                // Success!
+                // set the current number of robots pushing this resource
+//                CurrentNumPusingRobots = currentResource.getNumberPushingRobots();
+                resetCounter(currentResource);
+                // Head for the target zone
                 return wheelDriveForTargetAngle(targetAreaAngle());
             } else if (ENABLE_PICKUP_POSITIONING) {
                 // Couldn't pick it up, add a heuristic to navigate to the resource
@@ -69,26 +75,44 @@ public class PickupHeuristic extends Heuristic {
                     // Go for the target area if we've managed to attach to a resource
                     return wheelDriveForTargetAngle(targetAreaAngle());
                 }else{
-                    // incriment the counter
-                    SimStepCount++;
+                    // reset the counter if a new robot has attached to the resource
+                    updateCounter(currentResource);
                     return wheelDriveForTargetAngle(targetAreaAngle());
                 }
             }else if(SimStepCount >= MaxStepCounter){
                 // been holding this resourse for too long, detach from it and drive away
-                SimStepCount = 0;
                 currentResource.forceDetach();
+                resetCounter(currentResource);
                 return wheelDriveForTargetAngle(awayResourceTargetAngle());
             }
         }
 
         if (!resource.canBePickedUp()) {
             // no longer has resource, reset the counter
-            SimStepCount = 0;
+            resetCounter(currentResource);
             //  chuck : todo Check if sensor directly above target area
             return null; // No viable resource, nothing to do
         }
 
         return null;
+    }
+
+    public void resetCounter(ResourceObject resource){
+        SimStepCount = 0;
+        if(resource != null){ // set to the remaining pushing robots
+            CurrentNumPusingRobots = resource.getNumberPushingRobots();
+        }else{ // reset if no resource
+            CurrentNumPusingRobots = 0;
+        }
+    }
+
+    public void updateCounter(ResourceObject resource){
+        if(resource.getNumberPushingRobots() != CurrentNumPusingRobots){
+            SimStepCount = 0;
+            CurrentNumPusingRobots = resource.getNumberPushingRobots();
+        }else{
+            SimStepCount ++;
+        }
     }
 
     @Override
