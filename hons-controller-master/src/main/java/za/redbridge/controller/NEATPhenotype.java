@@ -51,7 +51,6 @@ public class NEATPhenotype implements Phenotype {
         }
 
         MLData output = network.compute(input);
-
         return new Double2D(output.getData(0) * 2.0 - 1.0, output.getData(1) * 2.0 - 1.0);
     }
 
