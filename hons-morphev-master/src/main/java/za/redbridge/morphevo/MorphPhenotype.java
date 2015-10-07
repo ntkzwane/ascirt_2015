@@ -3,6 +3,7 @@ package za.redbridge.morphevo;
 import org.encog.ml.MLEncodable;
 import org.encog.ml.genetic.GeneticError;
 
+import java.lang.Exception;
 import java.lang.Override;
 import java.lang.StackTraceElement;
 import java.lang.System;
@@ -19,8 +20,13 @@ import za.redbridge.simulator.khepera.UltrasonicSensor;
 import za.redbridge.simulator.khepera.ColourProximitySensor;
 
 import za.redbridge.morphevo.sensor.SensorMorphology;
+import za.redbridge.simulator.khepera.BottomProximitySensor;
 import org.jbox2d.common.MathUtils;
 import static za.redbridge.simulator.Utils.wrapAngle;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.File;
 
 import java.io.Serializable;
 
@@ -70,11 +76,14 @@ public class MorphPhenotype implements Phenotype, Serializable{
     public Double2D step(List<List<Double>> sensorReadings) {
         // check if in target area. the bottom proximity is the only sensor that can detect the target area
         // so just check the reading of the sensor at sensorReadings.get(0)
-       /* if(sensorReadings.get(0).get(0) > 0.0f){
+        if(sensorReadings.get(0).get(0) > 0.0f){
             double bearing = sensors.get(0).getBearing();
-            lastMove = wheelDriveForTargetAngle(bearing);
+//            lastMove = wheelDriveForTargetAngle(MathUtils.PI/2/*awayTargetAreaAngle(bearing)*/);
+            lastMove = wheelDriveForTargetAngle(awayTargetAreaAngle(((BottomProximitySensor) sensors.get(0)).getRobotAngle()));
+//            System.out.println("moving away: "+sensorReadings.get(0).get(0)+" ("+lastMove.x+","+lastMove.y+") ~> ("+bearing+"|"+awayTargetAreaAngle(bearing)+")");
+//            System.out.println(sensorReadings.get(0).get(0));
             return lastMove;
-        }*/
+        }
 
 
         int nearestSensed = -1;
@@ -112,8 +121,6 @@ public class MorphPhenotype implements Phenotype, Serializable{
     public Phenotype clone() {
         return new MorphPhenotype(this);
     }
-
-
 
     /** Method can be overridden to customize proximity sensor */
     protected AgentSensor createProximitySensor(float bearing, float orientation) {

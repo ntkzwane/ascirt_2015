@@ -20,6 +20,7 @@ import za.redbridge.simulator.sensor.sensedobjects.SensedObject;
 
 
 import static za.redbridge.simulator.physics.AABBUtil.testPoint;
+import static za.redbridge.simulator.Utils.wrapAngle;
 
 /**
  * The Khepera III robots feature two IR proximity sensors facing the ground near the front of the
@@ -169,6 +170,10 @@ public class BottomProximitySensor extends ProximitySensor {
         // Assume that the sensor is 2.5mm above the ground so that its reading peaks when the
         // target area is exactly below it
         return super.readingCurve(distance + 0.0025f);
+    }
+
+    public double getRobotAngle( ){
+        return robot.getBody().getAngle();
     }
 
 }
