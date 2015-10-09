@@ -60,6 +60,9 @@ public class NeuronMutate implements EvolutionaryOperator
         {
             if(random.nextDouble() <= mutation_rate)
             {
+                //mark neuron as mutated
+                neuron.setMutated(true);
+
                 //obtain unique random number by shuffling the list of unique numbers
                 Set<Integer> ints = new HashSet<Integer>();
 

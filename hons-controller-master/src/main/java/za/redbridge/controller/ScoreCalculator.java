@@ -71,10 +71,6 @@ public class ScoreCalculator implements CalculateScore {
         double score = fitness / simulationRuns;
         scoreStats.addValue(score);
 
-        if (isEvolvingMorphology()) {
-            sensorStats.addValue(network.getInputCount());
-        }
-
         log.debug("Score calculation completed: " + score);
 
         long duration = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start);

@@ -67,11 +67,6 @@ public class SANESpeciation implements Speciation
             //replace
             neuron.replace((NeuronGenome) new_neurons.get(i - eliteCount));
         }
-
-        //sorts in descending order of score
-        Collections.sort(species.getMembers(), this.sortGenomes);
-
-        species.setLeader((Genome)species.getMembers().get(0));
     }
     private void updateShare(Population population) {
         int speciesCount = population.getSpecies().size();

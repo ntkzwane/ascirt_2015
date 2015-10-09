@@ -38,7 +38,7 @@ public class StatsRecorder {
     private final ScoreCalculator calculator;
 
     private Genome currentBestGenome;
-
+    private double currentBestScore = 0;
     private Path rootDirectory;
     private Path populationDirectory;
     private Path bestNetworkDirectory;
@@ -108,9 +108,10 @@ public class StatsRecorder {
 
         // Check if new best network and save it if so
         BlueprintGenome newBestGenome = (BlueprintGenome) trainer.getBestGenome();
-        if (newBestGenome != currentBestGenome) {
+        if (newBestGenome != currentBestGenome && newBestGenome.getScore() >= currentBestScore) {
             saveGenome(newBestGenome, epoch);
             currentBestGenome = newBestGenome;
+            currentBestScore = newBestGenome.getScore();
         }
     }
 
