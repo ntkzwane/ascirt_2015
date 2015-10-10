@@ -26,7 +26,7 @@ import static za.redbridge.controller.Utils.getLoggingDirectory;
 import static za.redbridge.controller.Utils.saveObjectToFile;
 
 /**
- * Class for recording stats each epoch.
+ * Class for recording stats each generation.
  *
  * Created by jamie on 2014/09/28.
  */
@@ -37,7 +37,7 @@ public class StatsRecorder {
     private final EvolutionaryAlgorithm trainer;
     private final ScoreCalculator calculator;
 
-    private Genome currentBestGenome;
+    //private Genome currentBestGenome;
     private double currentBestScore = 0;
     private Path rootDirectory;
     private Path populationDirectory;
@@ -89,46 +89,45 @@ public class StatsRecorder {
 
     private static void initStatsFile(Path path) {
         try (BufferedWriter writer = Files.newBufferedWriter(path, Charset.defaultCharset())) {
-            writer.write("epoch, max, min, mean, standev\n");
+            writer.write("gemeratopm, max, min, mean, standev\n");
         } catch (IOException e) {
             log.error("Unable to initialize stats file", e);
         }
     }
 
     public void recordIterationStats() {
-        int epoch = trainer.getIteration();
-        log.info("Epoch " + epoch + " complete");
+        int generation = trainer.getIteration();
+        log.info("generation " + generation + " complete");
 
-        recordStats(calculator.getPerformanceStatistics(), epoch, performanceStatsFile);
+        recordStats(calculator.getPerformanceStatistics(), generation, performanceStatsFile);
 
-        recordStats(calculator.getScoreStatistics(), epoch, scoreStatsFile);
+        recordStats(calculator.getScoreStatistics(), generation, scoreStatsFile);
 
 
-        savePopulation((Population) trainer.getPopulation(), epoch);
+        savePopulation((Population) trainer.getPopulation(), generation);
 
         // Check if new best network and save it if so
         BlueprintGenome newBestGenome = (BlueprintGenome) trainer.getBestGenome();
-        if (newBestGenome != currentBestGenome && newBestGenome.getScore() >= currentBestScore) {
-            saveGenome(newBestGenome, epoch);
-            currentBestGenome = newBestGenome;
+        if (newBestGenome.getScore() >= currentBestScore) {
+            saveGenome(newBestGenome, generation);
             currentBestScore = newBestGenome.getScore();
         }
     }
 
-    private void savePopulation(Population population, int epoch) {
-        String filename = "epoch-" + epoch + ".ser";
+    private void savePopulation(Population population, int generation) {
+        String filename = "generation-" + generation + ".ser";
         Path path = populationDirectory.resolve(filename);
         saveObjectToFile(population, path);
     }
 
-    private void saveGenome(BlueprintGenome genome, int epoch) {
-        Path directory = bestNetworkDirectory.resolve("epoch-" + epoch);
+    private void saveGenome(BlueprintGenome genome, int generation) {
+        Path directory = bestNetworkDirectory.resolve("generation-" + generation);
         initDirectory(directory);
 
         String txt;
 
-        log.info("New best genome! Epoch: " + epoch + ", score: "  + genome.getScore());
-        txt = String.format("epoch: %d, fitness: %f", epoch, genome.getScore());
+        log.info("New best genome! generation: " + generation + ", score: "  + genome.getScore());
+        txt = String.format("generation: %d, fitness: %f", generation, genome.getScore());
 
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
@@ -143,7 +142,7 @@ public class StatsRecorder {
         //GraphvizEngine.saveGenome(genome, directory.resolve("graph.dot"));
     }
 
-    private void recordStats(DescriptiveStatistics stats, int epoch, Path filepath) {
+    private void recordStats(DescriptiveStatistics stats, int generation, Path filepath) {
         double max = stats.getMax();
         double min = stats.getMin();
         double mean = stats.getMean();
@@ -151,16 +150,16 @@ public class StatsRecorder {
         stats.clear();
 
         log.debug("Recording stats - max: " + max + ", mean: " + mean);
-        saveStats(filepath, epoch, max, min, mean, sd);
+        saveStats(filepath, generation, max, min, mean, sd);
     }
 
     private BasicNetwork decodeGenome(Genome genome) {
         return (BasicNetwork) trainer.getCODEC().decode(genome);
     }
 
-    private static void saveStats(Path path, int epoch, double max, double min, double mean,
+    private static void saveStats(Path path, int generation, double max, double min, double mean,
             double sd) {
-        String line = String.format("%d, %f, %f, %f, %f\n", epoch, max, min, mean, sd);
+        String line = String.format("%d, %f, %f, %f, %f\n", generation, max, min, mean, sd);
 
         final OpenOption[] options = {
                 StandardOpenOption.APPEND, StandardOpenOption.CREATE, StandardOpenOption.WRITE

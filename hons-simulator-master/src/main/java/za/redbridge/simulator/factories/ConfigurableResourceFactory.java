@@ -41,6 +41,14 @@ public class ConfigurableResourceFactory extends Config implements ResourceFacto
     private ResourceSpec mediumResourceSpec;
     private ResourceSpec largeResourceSpec;
 
+    private ResourceSpec smallTrashSpec;
+    private ResourceSpec mediumTrashSpec;
+    private ResourceSpec largeTrashSpec;
+
+    private static final double DEFAULT_TRASH_SMALL_VALUE = -1;
+    private static final double DEFAULT_TRASH_MEDIUM_VALUE = -2;
+    private static final double DEFAULT_TRASH_LARGE_VALUE = -3;
+
     public ConfigurableResourceFactory() {
         smallResourceSpec = new ResourceSpec(DEFAULT_SMALL_QUANTITY, DEFAULT_SMALL_WIDTH,
                 DEFAULT_SMALL_HEIGHT, DEFAULT_SMALL_MASS, DEFAULT_SMALL_PUSHING_BOTS,
@@ -60,6 +68,9 @@ public class ConfigurableResourceFactory extends Config implements ResourceFacto
         placeInstances(smallResourceSpec, placementArea, world);
         placeInstances(mediumResourceSpec, placementArea, world);
         placeInstances(largeResourceSpec, placementArea, world);
+        placeInstances(smallTrashSpec, placementArea, world);
+        placeInstances(mediumTrashSpec, placementArea, world);
+        placeInstances(largeTrashSpec, placementArea, world);
     }
 
     private void placeInstances(ResourceSpec spec,
@@ -89,6 +100,22 @@ public class ConfigurableResourceFactory extends Config implements ResourceFacto
         mediumResourceSpec =
                 readConfig(mediumConfig, "resourceConfig:medium:", DEFAULT_MEDIUM_VALUE, Integer.parseInt(resQuantity[1]));
         largeResourceSpec = readConfig(largeConfig, "resourceConfig:large:", DEFAULT_LARGE_VALUE, Integer.parseInt(resQuantity[2]));
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public void configure_trash(Map<String, Object> resourceConfigs, String[] trashQuantity) {
+
+
+        Map<String, Object> smallConfig = (Map<String, Object>) resourceConfigs.get("small");
+        Map<String, Object> mediumConfig = (Map<String, Object>) resourceConfigs.get("medium");
+        Map<String, Object> largeConfig = (Map<String, Object>) resourceConfigs.get("large");
+
+        smallTrashSpec = readConfig(smallConfig, "resourceConfig:small:", DEFAULT_TRASH_SMALL_VALUE, Integer.parseInt(trashQuantity[0]));
+        mediumTrashSpec =
+                readConfig(mediumConfig, "resourceConfig:medium:", DEFAULT_TRASH_MEDIUM_VALUE, Integer.parseInt(trashQuantity[1]));
+        largeTrashSpec = readConfig(largeConfig, "resourceConfig:large:", DEFAULT_TRASH_LARGE_VALUE, Integer.parseInt(trashQuantity[2]));
+
     }
     
     private ResourceSpec readConfig(Map<String, Object> config, String path, double value, int q) {

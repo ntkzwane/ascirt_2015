@@ -163,8 +163,10 @@ public class SimConfig extends Config {
             boolean valid = false;
             while(!valid)
             {
-                System.out.println("Enter number of robots (1 - 20)");
-                robots = Integer.parseInt(inputReader.readLine());
+                System.out.println("Enter number of robots (1 - 20) - default 10");
+                String robot_input = inputReader.readLine();
+                if (robot_input.equalsIgnoreCase("")) robot_input = "10";
+                robots = Integer.parseInt(robot_input);
                 if(robots > 20 || robots <1)
                 {
                     System.out.println("Please enter a number in range!");
@@ -209,12 +211,26 @@ public class SimConfig extends Config {
                         throw new InvalidClassException("");
                     }
 
-                    System.out.println("Enter resource quantity separated by spaces (small medium large)");
-                    String[] resQuantity = inputReader.readLine().split(" ");
+                    //get quantity of resource objects
+                    System.out.println("Enter resource quantity separated by spaces (small medium large) - default 10 5 1");
+                    String res_input = inputReader.readLine();
+
+                    if (res_input.equalsIgnoreCase("")) res_input = "10 5 1";
+                    String[] resQuantity = res_input.split(" ");
+
+                    //get quantity of trash objects
+                    System.out.println("Enter trash quantity separated by spaces (small medium large) - default none");
+                    String trash_input = inputReader.readLine();
+
+                    if (trash_input.equalsIgnoreCase("")) res_input = "0 0 0";
+                    String[] trashQuantity = trash_input.split(" ");
 
                     resFactory = (ResourceFactory) o;
                     Map resources = (Map) config.get("resources");
                     resFactory.configure(resources,resQuantity);
+
+                    //configur trash
+                    resFactory.configure_trash(resources, trashQuantity);
                 } catch (ClassNotFoundException c) {
                     System.out.println("Invalid class name specified in SimConfig: " + rFactory + ". Using default resource factory.");
                     c.printStackTrace();

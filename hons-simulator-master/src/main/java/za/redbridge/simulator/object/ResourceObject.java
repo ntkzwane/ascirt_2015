@@ -10,6 +10,7 @@ import org.jbox2d.dynamics.joints.WeldJointDef;
 
 import java.awt.Color;
 import java.awt.Paint;
+import java.time.temporal.ValueRange;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -29,9 +30,12 @@ import za.redbridge.simulator.portrayal.RectanglePortrayal;
  */
 public class ResourceObject extends PhysicalObject {
 
-    private static final Paint DEFAULT_COLOUR = new Color(255, 235, 82);
+    //private static final Paint DEFAULT_COLOUR = new Color(255, 235, 82);
+    private static final Paint DEFAULT__TRASH_COLOUR = new Color(30, 30, 30);
+    private static final Paint DEFAULT__RESOURCE_COLOUR = new Color(255, 235, 82);
     private static final boolean DEBUG = false;
 
+    private boolean trash = false;
     public enum Side {
         LEFT, RIGHT, TOP, BOTTOM
     }
@@ -59,7 +63,7 @@ public class ResourceObject extends PhysicalObject {
 
     public ResourceObject(World world, Vec2 position, float angle, float width, float height,
             float mass, int pushingRobots, double value) {
-        super(createPortrayal(width, height),
+        super(createPortrayal(width, height, (value > 0) ? DEFAULT__RESOURCE_COLOUR : DEFAULT__TRASH_COLOUR ),
                 createBody(world, position, angle, width, height, mass));
         this.width = width;
         this.height = height;
@@ -82,8 +86,8 @@ public class ResourceObject extends PhysicalObject {
         }
     }
 
-    protected static Portrayal createPortrayal(double width, double height) {
-        return new RectanglePortrayal(width, height, DEFAULT_COLOUR, true);
+    protected static Portrayal createPortrayal(double width, double height, Paint color) {
+        return new RectanglePortrayal(width, height, color, true);
     }
 
     protected static Body createBody(World world, Vec2 position, float angle, float width,

@@ -85,7 +85,7 @@ controller_run:
 	java -jar build/libs/hons-controller-master-all.jar
 	
 controller_build_run:
-	controller_build && controller_run
+	make controller_build && make controller_run
 	
 
 

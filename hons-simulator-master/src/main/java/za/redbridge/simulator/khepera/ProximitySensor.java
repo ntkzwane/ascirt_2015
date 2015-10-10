@@ -23,11 +23,11 @@ public class ProximitySensor extends AgentSensor {
     // Naeem : there is no lower range for the ProximitySensor.
     
 
-    private static final float PROXIMITY_SENSOR_RANGE = 3.0f;
+    private static final float PROXIMITY_SENSOR_RANGE = 0.2f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
 //    public static final float RANGE = 0.2f;
-    public static final float RANGE = 3.0f;
+    public static final float RANGE = 0.2f;
     public static final float FIELD_OF_VIEW = 0.2f; // This is a guess
 
     private final GammaDistribution function = new GammaDistribution(2.5, 2.0);
