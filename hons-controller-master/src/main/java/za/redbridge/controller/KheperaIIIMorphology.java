@@ -32,6 +32,8 @@ public class KheperaIIIMorphology extends SensorMorphology {
         DEFAULT_CONFIGURATION.enableUltrasonicSensor0Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors40Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors90Degrees = true;
+        DEFAULT_CONFIGURATION.enableColourRangedSensor = true;
+        DEFAULT_CONFIGURATION.enableLowResCameraSensor = true;
     }
 
     public KheperaIIIMorphology() {
@@ -109,6 +111,15 @@ public class KheperaIIIMorphology extends SensorMorphology {
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
 
+        if (config.enableColourRangedSensor)
+        {
+
+        }
+
+        if (config.enableLowResCameraSensor)
+        {
+
+        }
         return sensorModels;
     }
 }

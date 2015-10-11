@@ -21,8 +21,6 @@ public class ProximitySensor extends AgentSensor {
 
 
     // Naeem : there is no lower range for the ProximitySensor.
-    
-
     private static final float PROXIMITY_SENSOR_RANGE = 0.2f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
@@ -43,6 +41,7 @@ public class ProximitySensor extends AgentSensor {
     @Override
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output) {
         if (!sensedObjects.isEmpty()) {
+            //return only the closest object
             output.add(readingCurve(sensedObjects.get(0).getDistance()));
         } else {
             output.add(0.0);

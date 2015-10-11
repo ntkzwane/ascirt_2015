@@ -91,6 +91,15 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
         if (configuration.enableColourProximitySensor){
             sensors.add(createColourProximitySensor((float) Math.PI, 0f));
         }
+
+        if (configuration.enableColourRangedSensor)
+        {
+            sensors.add(createColourProximitySensor((float) Math.toRadians(20), 0f));
+        }
+        if (configuration.enableLowResCameraSensor)
+        {
+            sensors.add(createColourProximitySensor((float) Math.toRadians(-20), 0f));
+        }
     }
 
     /** Method can be overridden to customize proximity sensor */
@@ -113,7 +122,12 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
         return new ColourProximitySensor(bearing, orientation);
     }
 
-
+    protected AgentSensor createColourRangedSensor(float bearing, float orientation){
+        return new ColourRangedSensor(bearing, orientation);
+    }
+    protected AgentSensor createLowResCameraSensor(float bearing, float orientation){
+        return new LowResCameraSensor(bearing, orientation);
+    }
     /** Returns a copy of the current configuration */
     public Configuration getConfiguration() {
         return new Configuration(configuration);
@@ -154,6 +168,8 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
         public boolean enableUltrasonicSensors90Degrees = false;
 
         public boolean enableColourProximitySensor = false;
+        public boolean enableColourRangedSensor = false;
+        public boolean enableLowResCameraSensor = false;
 
         public Configuration() {
         }
@@ -171,6 +187,8 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
             this.enableUltrasonicSensors40Degrees = other.enableUltrasonicSensors40Degrees;
             this.enableUltrasonicSensors90Degrees = other.enableUltrasonicSensors90Degrees;
             this.enableColourProximitySensor = other.enableColourProximitySensor;
+            this.enableColourRangedSensor = other.enableColourRangedSensor;
+            this.enableLowResCameraSensor = other.enableLowResCameraSensor;
         }
 
         public int getNumberOfSensors() {
@@ -186,6 +204,8 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
             if (enableUltrasonicSensors40Degrees) numSensors += 2;
             if (enableUltrasonicSensors90Degrees) numSensors += 2;
             if (enableColourProximitySensor) numSensors +=1;
+            if (enableColourRangedSensor) numSensors +=1;
+            if (enableLowResCameraSensor) numSensors +=1;
 
             return numSensors;
         }

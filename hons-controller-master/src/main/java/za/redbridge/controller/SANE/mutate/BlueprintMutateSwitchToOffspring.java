@@ -51,7 +51,7 @@ public class BlueprintMutateSwitchToOffspring implements EvolutionaryOperator
                                  Genome[] BlueprintGenomes, int blueprintIndex)
     {
         //blueprint genomes array
-        BlueprintGenome B =  (BlueprintGenome)BlueprintGenomes[parentIndex];
+        BlueprintGenome B =  (BlueprintGenome)BlueprintGenomes[blueprintIndex];
 
         //perform mutation on each neuron reference
         for (int i = 0; i < SANE.HIDDEN_SIZE; i++)

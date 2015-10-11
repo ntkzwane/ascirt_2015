@@ -35,7 +35,6 @@ public class ResourceObject extends PhysicalObject {
     private static final Paint DEFAULT__RESOURCE_COLOUR = new Color(255, 235, 82);
     private static final boolean DEBUG = false;
 
-    private boolean trash = false;
     public enum Side {
         LEFT, RIGHT, TOP, BOTTOM
     }
@@ -69,6 +68,7 @@ public class ResourceObject extends PhysicalObject {
         this.height = height;
         this.pushingRobots = pushingRobots;
         this.value = value;
+
 
         adjustedValue = value;
 
@@ -145,6 +145,11 @@ public class ResourceObject extends PhysicalObject {
             default:
                 return null;
         }
+    }
+
+    public boolean isTrash()
+    {
+        return (value > 0);
     }
 
     public void adjustValue(SimState simState) {
@@ -547,4 +552,9 @@ public class ResourceObject extends PhysicalObject {
         }
     }
 
+    //return size of the resource
+    public int getSize()
+    {
+        return pushingRobots;
+    }
 }

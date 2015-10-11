@@ -49,7 +49,28 @@ public enum SensorType {
 //            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
             new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.2f, 4.0f), clamp()),
             new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
-                    clamp())))/*,
+                    clamp()))),
+
+    COLOURRANGED(new SensorParameterSpecSet(
+            new BearingSpec(random(), plusMinusPi(), wrap()),
+            new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
+            // TODO: query environment size for range value
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 3.0f), clamp()),
+            new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
+                    clamp()))),
+
+    LOWRESCAMERA(new SensorParameterSpecSet(
+            new BearingSpec(random(), plusMinusPi(), wrap()),
+            new OrientationSpec(random(), plusMinusHalfPi(), clamp()),
+            // TODO: query environment size for range value
+//            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.01f, 40), clamp()),
+            new RangeSpec(copyExistingOrRandom(), exclusiveRange(0.0f, 3.0f), clamp()),
+            new FieldOfViewSpec(copyExistingOrRandom(), new Range(0.1f, MathUtils.PI, true, true),
+                    clamp()))),
+
+
+                    /*,
 
     PICKUP(new SensorParameterSpecSet(
         new BearingSpec(random(), plusMinusPi(), wrap()),
