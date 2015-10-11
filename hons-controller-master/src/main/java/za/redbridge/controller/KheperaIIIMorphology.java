@@ -2,14 +2,9 @@ package za.redbridge.controller;
 
 import za.redbridge.controller.NEATM.sensor.SensorModel;
 import za.redbridge.controller.NEATM.sensor.SensorMorphology;
-import za.redbridge.simulator.khepera.KheperaIIIPhenotype_simple;
-import za.redbridge.simulator.khepera.ProximitySensor;
-import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.*;
 
-
-import static za.redbridge.controller.NEATM.sensor.SensorType.BOTTOM_PROXIMITY;
-import static za.redbridge.controller.NEATM.sensor.SensorType.PROXIMITY;
-import static za.redbridge.controller.NEATM.sensor.SensorType.ULTRASONIC;
+import static za.redbridge.controller.NEATM.sensor.SensorType.*;
 
 /**
  * A horrible adapter class for different representations of morphologies. Creates a
@@ -113,12 +108,14 @@ public class KheperaIIIMorphology extends SensorMorphology {
 
         if (config.enableColourRangedSensor)
         {
-
+            sensorModels[sensorIndex++] = new SensorModel(COLOURRANGED, (float) Math.toRadians(5), 0,
+                    ColourRangedSensor.RANGE, ColourRangedSensor.FIELD_OF_VIEW);
         }
 
         if (config.enableLowResCameraSensor)
         {
-
+            sensorModels[sensorIndex++] = new SensorModel(LOWRESCAMERA, (float) Math.toRadians(-5), 0,
+                    LowResCameraSensor.RANGE, LowResCameraSensor.FIELD_OF_VIEW);
         }
         return sensorModels;
     }

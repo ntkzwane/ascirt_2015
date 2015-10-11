@@ -94,11 +94,11 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
 
         if (configuration.enableColourRangedSensor)
         {
-            sensors.add(createColourProximitySensor((float) Math.toRadians(20), 0f));
+            sensors.add(createColourRangedSensor((float) Math.toRadians(5), 0f));
         }
         if (configuration.enableLowResCameraSensor)
         {
-            sensors.add(createColourProximitySensor((float) Math.toRadians(-20), 0f));
+            sensors.add(createLowResCameraSensor((float) Math.toRadians(-5), 0f));
         }
     }
 
@@ -125,9 +125,11 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
     protected AgentSensor createColourRangedSensor(float bearing, float orientation){
         return new ColourRangedSensor(bearing, orientation);
     }
+
     protected AgentSensor createLowResCameraSensor(float bearing, float orientation){
         return new LowResCameraSensor(bearing, orientation);
     }
+
     /** Returns a copy of the current configuration */
     public Configuration getConfiguration() {
         return new Configuration(configuration);

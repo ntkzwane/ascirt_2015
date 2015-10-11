@@ -222,7 +222,7 @@ public class SimConfig extends Config {
                     System.out.println("Enter trash quantity separated by spaces (small medium large) - default none");
                     String trash_input = inputReader.readLine();
 
-                    if (trash_input.equalsIgnoreCase("")) res_input = "0 0 0";
+                    if (trash_input.equalsIgnoreCase("")) trash_input = "0 0 0";
                     String[] trashQuantity = trash_input.split(" ");
 
                     resFactory = (ResourceFactory) o;

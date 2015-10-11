@@ -2,11 +2,11 @@ package za.redbridge.simulator.khepera;
 
 import org.apache.commons.math3.distribution.GammaDistribution;
 
+import java.awt.*;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
-import java.awt.Color;
 import za.redbridge.simulator.portrayal.ConePortrayal;
 import za.redbridge.simulator.portrayal.Portrayal;
 
@@ -27,6 +27,8 @@ public class ProximitySensor extends AgentSensor {
 //    public static final float RANGE = 0.2f;
     public static final float RANGE = 0.2f;
     public static final float FIELD_OF_VIEW = 0.2f; // This is a guess
+
+    private static final Paint color = new Color(255, 0, 0, 50);
 
     private final GammaDistribution function = new GammaDistribution(2.5, 2.0);
 
@@ -76,7 +78,7 @@ public class ProximitySensor extends AgentSensor {
 
     @Override
     protected Portrayal createPortrayal() {
-        return new ConePortrayal(range, fieldOfView, new Color(255, 0, 0, 50));
+        return new ConePortrayal(range, fieldOfView, color);
     }
 
 }

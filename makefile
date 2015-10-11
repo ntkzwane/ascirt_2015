@@ -42,6 +42,11 @@ simulator:
 	mv hons-morphev-master/libs/hons-simulator-master-all.jar hons-morphev-master/libs/hons-simulator-all.jar && \
 	echo done
 
+simulator_run:
+	@echo running simulator simulator...
+	@cd hons-simulator-master && \
+	java -jar build/libs/hons-simulator-master-all.jar -v
+
 morphev_and_sim:
 	@echo building simulator...
 	@cd hons-simulator-master && \

@@ -20,11 +20,12 @@ import java.util.Map;
 public class ColourRangedSensor extends AgentSensor
 {
     private static final float COLOR_SENSOR_RANGE = 3.0f;
-    private static final float COLOR_SENSOR_FOV = 1.0f; // This is a guess
+    private static final float COLOR_SENSOR_FOV = 1.5f; // This is a guess
 
     public static final float RANGE = 3.0f;
-    public static final float FIELD_OF_VIEW = 1.0f; // This is a guess
+    public static final float FIELD_OF_VIEW = 1.5f; // This is a guess
 
+    private static final Paint color = new Color(255, 4, 187, 112);
     //constructor
     public ColourRangedSensor(float bearing, float orientation)
     {
@@ -87,6 +88,6 @@ public class ColourRangedSensor extends AgentSensor
 
     @Override
     protected Portrayal createPortrayal() {
-        return new ConePortrayal(range, fieldOfView, new Color(255, 4, 187, 112));
+        return new ConePortrayal(range, fieldOfView, color);
     }
 }
