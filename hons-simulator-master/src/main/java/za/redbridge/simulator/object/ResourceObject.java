@@ -62,7 +62,7 @@ public class ResourceObject extends PhysicalObject {
 
     public ResourceObject(World world, Vec2 position, float angle, float width, float height,
             float mass, int pushingRobots, double value) {
-        super(createPortrayal(width, height, (value > 0) ? DEFAULT__RESOURCE_COLOUR : DEFAULT__TRASH_COLOUR ),
+        super(createPortrayal(width, height, DEFAULT__RESOURCE_COLOUR),
                 createBody(world, position, angle, width, height, mass));
         this.width = width;
         this.height = height;

@@ -27,7 +27,8 @@ public class KheperaIIIMorphology extends SensorMorphology {
         DEFAULT_CONFIGURATION.enableUltrasonicSensor0Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors40Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors90Degrees = true;
-        DEFAULT_CONFIGURATION.enableColourRangedSensor = true;
+        DEFAULT_CONFIGURATION.enableColourProximitySensor=false;
+        //DEFAULT_CONFIGURATION.enableColourRangedSensor = true;
         DEFAULT_CONFIGURATION.enableLowResCameraSensor = true;
     }
 
@@ -44,6 +45,7 @@ public class KheperaIIIMorphology extends SensorMorphology {
         final int sensorCount = config.getNumberOfSensors();
         SensorModel[] sensorModels = new SensorModel[sensorCount];
 
+        System.out.println("SENSOR NUMBERS :" + sensorCount);
         if (config.enableProximitySensorBottom) {
             sensorModels[sensorIndex++] = new SensorModel(BOTTOM_PROXIMITY);
         }
@@ -102,7 +104,7 @@ public class KheperaIIIMorphology extends SensorMorphology {
             sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(90), 0,
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
 
-            sensorModels[sensorIndex] = new SensorModel(ULTRASONIC, (float) Math.toRadians(-90), 0,
+            sensorModels[sensorIndex++] = new SensorModel(ULTRASONIC, (float) Math.toRadians(-90), 0,
                     UltrasonicSensor.RANGE, UltrasonicSensor.FIELD_OF_VIEW);
         }
 
@@ -114,9 +116,18 @@ public class KheperaIIIMorphology extends SensorMorphology {
 
         if (config.enableLowResCameraSensor)
         {
-            sensorModels[sensorIndex++] = new SensorModel(LOWRESCAMERA, (float) Math.toRadians(-5), 0,
+            sensorModels[sensorIndex] = new SensorModel(LOWRESCAMERA, (float) Math.toRadians(5), 0,
                     LowResCameraSensor.RANGE, LowResCameraSensor.FIELD_OF_VIEW);
         }
+
+        for (int i = 0; i < sensorCount; i++)
+        {
+            if (sensorModels[i] == null)
+            {
+                System.out.println("Its null at :" + i);
+            }
+        }
+
         return sensorModels;
     }
 }

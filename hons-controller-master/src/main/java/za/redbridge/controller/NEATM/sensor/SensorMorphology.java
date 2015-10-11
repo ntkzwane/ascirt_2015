@@ -3,10 +3,7 @@ package za.redbridge.controller.NEATM.sensor;
 import java.io.Serializable;
 import java.util.Arrays;
 
-import za.redbridge.simulator.khepera.BottomProximitySensor;
-import za.redbridge.simulator.khepera.ColourRangedSensor;
-import za.redbridge.simulator.khepera.ProximitySensor;
-import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.*;
 import za.redbridge.simulator.sensor.AgentSensor;
 
 /**
@@ -24,8 +21,7 @@ public class SensorMorphology implements Serializable {
             throw new IllegalArgumentException("There must be at least one sensor");
         }
 
-        this.sensorModels =
-                Arrays.copyOf(sensorModels, sensorModels.length);
+        this.sensorModels = Arrays.copyOf(sensorModels, sensorModels.length);
     }
 
     public int getNumSensors() {
@@ -49,7 +45,7 @@ public class SensorMorphology implements Serializable {
                 return new ColourRangedSensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
             case LOWRESCAMERA:
-                return new ColourRangedSensor(config.getBearing(), config.getOrientation(),
+                return new LowResCameraSensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
         }
 

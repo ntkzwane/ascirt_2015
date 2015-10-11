@@ -33,6 +33,7 @@ public class SANEPhenotype implements Phenotype
 
         // Initialise sensors
         final int numSensors = morphology.getNumSensors();
+
         sensors = new ArrayList<>(numSensors);
         for (int i = 0; i < numSensors; i++) {
             sensors.add(morphology.getSensor(i));
@@ -50,6 +51,7 @@ public class SANEPhenotype implements Phenotype
     @Override
     public Double2D step(List<List<Double>> sensorReadings) {
         final MLData input = this.input;
+
         for (int i = 0, n = input.size(); i < n; i++) {
 
             //System.out.println("Sensor "+i+" : " + sensorReadings.get(i).get(0));

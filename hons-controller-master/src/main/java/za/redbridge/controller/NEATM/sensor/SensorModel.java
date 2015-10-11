@@ -2,9 +2,7 @@ package za.redbridge.controller.NEATM.sensor;
 
 import java.io.Serializable;
 
-import za.redbridge.simulator.khepera.BottomProximitySensor;
-import za.redbridge.simulator.khepera.ProximitySensor;
-import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.*;
 import za.redbridge.simulator.sensor.AgentSensor;
 
 /**
@@ -92,6 +90,10 @@ public class SensorModel implements Serializable {
                 return new ProximitySensor(bearing, orientation, range, fieldOfView);
             case ULTRASONIC:
                 return new UltrasonicSensor(bearing, orientation, range, fieldOfView);
+            case COLOURRANGED:
+                return new ColourRangedSensor(bearing, orientation, range, fieldOfView);
+            case LOWRESCAMERA:
+                return new LowResCameraSensor(bearing, orientation, range, fieldOfView);
         }
         return null;
     }

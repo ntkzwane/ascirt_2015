@@ -736,12 +736,14 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         //neuron iteration
         for (final Species species : getNeuronPopulation().getSpecies())
         {
+/*
             for (int i = 0; i < 800; i++)
             {
                 System.out.println("neuron score " +i+" :" +species.getMembers().get(i).getScore() +" participation :"+((NeuronGenome) species.getMembers().get(i)).get_participation() + " previously rank : "+((NeuronGenome) species.getMembers().get(i)).prev_rank);
                 NeuronGenome gg = ((NeuronGenome) species.getMembers().get(i));
                 gg.prev_rank = i;
             }
+*/
 
             int numToSpawn = species.getOffspringCount();
             // preserve elite genomes
@@ -859,7 +861,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
 
             System.out.println("blueprint count "+species.getMembers().size());
             int numToSpawn = species.getOffspringCount()-1;
-
+/*
             for (int i = 0; i < species.getMembers().size(); i++)
             {
                 System.out.println("blueprint " + i + " : " + species.getMembers().get(i).getScore() +" prev_rank :"+((BlueprintGenome)species
@@ -874,7 +876,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
                 }
                 g.prev_rank = i;
                 System.out.println();
-            }
+            }*/
 
             // Add elite genomes directly
             final int idealEliteCount = (int) (species.getMembers().size() * getEliteRate());
