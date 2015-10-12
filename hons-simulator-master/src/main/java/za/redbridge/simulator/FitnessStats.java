@@ -38,7 +38,8 @@ public class FitnessStats {
      * Increment the team fitness.
      * @param value the unadjusted resource value
      */
-    public void addToTeamFitness(double value) {
+    public void addToTeamFitness(double value)
+    {
         teamFitness += value;
     }
 
