@@ -73,8 +73,7 @@ public class ConfigurableResourceFactory extends Config implements ResourceFacto
         placeInstances(largeTrashSpec, placementArea, world);
     }
 
-    private void placeInstances(ResourceSpec spec,
-            PlacementArea.ForType<ResourceObject> placementArea, World world) {
+    private void placeInstances(ResourceSpec spec, PlacementArea.ForType<ResourceObject> placementArea, World world) {
         for (int i = 0; i < spec.quantity; i++) {
             PlacementArea.Space space =
                     placementArea.getRandomRectangularSpace(spec.width, spec.height);

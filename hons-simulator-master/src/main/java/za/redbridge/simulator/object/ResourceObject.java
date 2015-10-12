@@ -31,7 +31,7 @@ import za.redbridge.simulator.portrayal.RectanglePortrayal;
 public class ResourceObject extends PhysicalObject {
 
     //private static final Paint DEFAULT_COLOUR = new Color(255, 235, 82);
-    private static final Paint DEFAULT__TRASH_COLOUR = new Color(30, 30, 30);
+    private static final Paint DEFAULT__TRASH_COLOUR = new Color(243, 16, 0);
     private static final Paint DEFAULT__RESOURCE_COLOUR = new Color(255, 235, 82);
     private static final boolean DEBUG = false;
 
@@ -149,7 +149,7 @@ public class ResourceObject extends PhysicalObject {
 
     public boolean isTrash()
     {
-        return (value > 0);
+        return (value < 0);
     }
 
     public void adjustValue(SimState simState) {

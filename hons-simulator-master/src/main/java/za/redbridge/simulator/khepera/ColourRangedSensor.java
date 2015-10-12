@@ -48,36 +48,30 @@ public class ColourRangedSensor extends AgentSensor
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output)
     {
         if (!sensedObjects.isEmpty()) {
-            //return only the closest object
-            output.add(1.0);
-        } else {
-            output.add(0.0);
-        }
-
-/*        if (!sensedObjects.isEmpty()) {
-            //returns higher numbers for obstacles and trash
+            //returns higher number for obstacles and trash
             SensedObject closest = sensedObjects.get(0);
-            if(closest.getObject() instanceof RobotObject)
+            if (closest.getObject() instanceof ResourceObject)
             {
-                System.out.println("BABABEBE");
+                if(((ResourceObject) closest.getObject()).isTrash())
+                {
+                    output.add(1.0);
+                }
+                else output.add(0.0);
+            }
+            else if (closest.getObject() instanceof RobotObject)
+            {
                 output.add(0.3);
             }
-            else if(closest.getObject() instanceof WallObject)
+            else if (closest.getObject() instanceof WallObject)
             {
-                System.out.println("FEFEF");
                 output.add(1.0);
-            }
-            else if (closest.getObject() instanceof ResourceObject)
-            {
-                System.out.println("awegaeg");
-
             }
             else output.add(0.0);
         }
         else
         {
             output.add(0.0);
-        }*/
+        }
     }
 
     @Override
