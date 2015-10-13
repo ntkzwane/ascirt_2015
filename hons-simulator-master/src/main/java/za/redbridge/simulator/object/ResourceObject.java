@@ -31,7 +31,7 @@ import za.redbridge.simulator.portrayal.RectanglePortrayal;
 public class ResourceObject extends PhysicalObject {
 
     //private static final Paint DEFAULT_COLOUR = new Color(255, 235, 82);
-    private static final Paint DEFAULT__TRASH_COLOUR = new Color(243, 16, 0);
+    private static final Paint DEFAULT__TRASH_COLOUR = new Color(43, 54, 50);
     private static final Paint DEFAULT__RESOURCE_COLOUR = new Color(255, 235, 82);
     private static final boolean DEBUG = false;
 
@@ -62,7 +62,7 @@ public class ResourceObject extends PhysicalObject {
 
     public ResourceObject(World world, Vec2 position, float angle, float width, float height,
             float mass, int pushingRobots, double value) {
-        super(createPortrayal(width, height, DEFAULT__RESOURCE_COLOUR),
+        super(createPortrayal(width, height, (value < 0) ? DEFAULT__TRASH_COLOUR : DEFAULT__RESOURCE_COLOUR),
                 createBody(world, position, angle, width, height, mass));
         this.width = width;
         this.height = height;
