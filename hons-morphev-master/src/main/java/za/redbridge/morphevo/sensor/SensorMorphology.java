@@ -3,11 +3,13 @@ package za.redbridge.morphevo.sensor;
 import java.io.Serializable;
 import java.util.Arrays;
 
+import za.redbridge.simulator.sensor.AgentSensor;
 import za.redbridge.simulator.khepera.BottomProximitySensor;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
 import za.redbridge.simulator.khepera.ColourProximitySensor;
-import za.redbridge.simulator.sensor.AgentSensor;
+import za.redbridge.simulator.khepera.ColourRangedSensor;
+import za.redbridge.simulator.khepera.LowResCameraSensor;
 
 /**
  * Container class for the bearing and orientation values for a sensor morphology configuration.
@@ -50,6 +52,12 @@ public class SensorMorphology implements Serializable {
                         config.getRange(), config.getFieldOfView());
             case COLOUR_PROXIMITY:
                 return new ColourProximitySensor(config.getBearing(), config.getOrientation(),
+                        config.getRange(), config.getFieldOfView());
+            case COLOUR_RANGED:
+                return new ColourRangedSensor(config.getBearing(), config.getOrientation(),
+                        config.getRange(), config.getFieldOfView());
+            case LOW_RES_CAMERA:
+                return new LowResCameraSensor(config.getBearing(), config.getOrientation(),
                         config.getRange(), config.getFieldOfView());
         }
 
