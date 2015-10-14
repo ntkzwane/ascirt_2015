@@ -20,19 +20,19 @@ public class ChasingPhenotype_simple extends KheperaIIIPhenotype_simple
     private static final Configuration CONFIG = new Configuration();
     static {
 
-        CONFIG.enableProximitySensors10Degrees = true;
+        //CONFIG.enableProximitySensors10Degrees = true;
         CONFIG.enableProximitySensors40Degrees = true;
-        CONFIG.enableProximitySensors75Degrees = true;
-        CONFIG.enableProximitySensors140Degrees = true;
-        CONFIG.enableProximitySensor180Degrees = true;
+        //CONFIG.enableProximitySensors75Degrees = true;
+        //CONFIG.enableProximitySensors140Degrees = true;
+        //CONFIG.enableProximitySensor180Degrees = true;
 
         CONFIG.enableProximitySensorBottom = true;
 
         CONFIG.enableUltrasonicSensor0Degrees = true;
-        CONFIG.enableUltrasonicSensors40Degrees = true;
-        CONFIG.enableUltrasonicSensors90Degrees = true;
+        //CONFIG.enableUltrasonicSensors40Degrees = true;
+        //CONFIG.enableUltrasonicSensors90Degrees = true;
 
-        CONFIG.enableColourProximitySensor = false;
+       // CONFIG.enableColourProximitySensor = false;
         CONFIG.enableColourRangedSensor = true;
         CONFIG.enableLowResCameraSensor = true;
 
@@ -80,15 +80,6 @@ public class ChasingPhenotype_simple extends KheperaIIIPhenotype_simple
         return new ChasingPhenotype_simple();
     }
 
-    @Override
-    protected AgentSensor createUltrasonicSensor(float bearing, float orientation) {
-        return new UltrasonicSensor(bearing, orientation) {
-            @Override
-            protected int getFilterMaskBits() {
-                return FilterConstants.CategoryBits.RESOURCE;
-            }
-        };
-    }
 
     @Override
     public void configure(Map<String,Object> phenotypeConfigs) {}

@@ -30,7 +30,6 @@ import za.redbridge.controller.SANE.crossover.BlueprintCrossover;
 import za.redbridge.controller.SANE.crossover.NeuronCrossover;
 import za.redbridge.controller.SANE.mutate.BlueprintMutateSwitchToOffspring;
 import za.redbridge.controller.SANE.mutate.BlueprintMutateSwitchToRandom;
-import za.redbridge.controller.SANE.mutate.DeltaCoding;
 import za.redbridge.controller.SANE.mutate.NeuronMutate;
 
 import java.io.Serializable;
@@ -183,7 +182,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
     //blueprint genetic operators
     private EvolutionaryOperator blueprint_crossover, blueprint_mutate_offspring;
     private BlueprintMutateSwitchToRandom blueprint_mutate_random;
-    private DeltaCoding delta_coding;
 
     private int max_parents, max_children;
 
@@ -232,6 +230,9 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
     private int maxOperationErrors = 500;
 
     private int generation_since_last_evolution = 0;
+
+    Random neuron_random;
+
     /**
      * Construct an EA.
      *
@@ -268,9 +269,8 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         this.blueprint_mutate_offspring = new BlueprintMutateSwitchToOffspring(SANE.blueprint_mutation_rate_offspring);
         this.blueprint_mutate_offspring.init(this);
 
-        //delta coding mutation
-        this.delta_coding = new DeltaCoding();
-        this.delta_coding.init(this);
+
+        neuron_random = getRandomNumberFactory().factor();
 
         // set the score compare method
         if (theScoreFunction.shouldMinimize())
@@ -676,18 +676,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
     //evaluation and fitness assignment of neurons
     public void fitness_assignment()
     {
-        //keep track of number of generation since new best behaviour has emerged
-/*        if(this.oldBestGenome.getScore() <= this.bestGenome.getScore()) generation_since_last_evolution++;
-        else generation_since_last_evolution = 0;
-
-        //perform delta coding
-        if (generation_since_last_evolution >= 20)
-        {
-            //System.out.println("Performing delta coding");
-            //delta_coding.performOperation(this.getRandomNumberFactory().factor(), getPopulation().getSpecies().get(0).getMembers(), 0, getNeuronPopulation().getSpecies().get(0).getMembers(), 0);
-            generation_since_last_evolution = 0;
-        }*/
-
         //clear fitness of neuron
         for (final Genome g : getNeuronPopulation().getSpecies().get(0).getMembers())
         {
@@ -696,7 +684,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             neuron.setScore(0);
             neuron.setAdjustedScore(0);
             neuron.clear_children();
-            neuron.setMutated(false);
         }
         //assign fitness to neurons
         for (final Genome g : getPopulation().getSpecies().get(0).getMembers())
@@ -736,14 +723,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         //neuron iteration
         for (final Species species : getNeuronPopulation().getSpecies())
         {
-/*
-            for (int i = 0; i < 800; i++)
-            {
-                System.out.println("neuron score " +i+" :" +species.getMembers().get(i).getScore() +" participation :"+((NeuronGenome) species.getMembers().get(i)).get_participation() + " previously rank : "+((NeuronGenome) species.getMembers().get(i)).prev_rank);
-                NeuronGenome gg = ((NeuronGenome) species.getMembers().get(i));
-                gg.prev_rank = i;
-            }
-*/
 
             int numToSpawn = species.getOffspringCount();
             // preserve elite genomes
@@ -764,13 +743,10 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
                 }
             }
 
-            System.out.println("unfit :" + unfit_elites);
             neuron_elite_count = eliteCount - unfit_elites;
-            System.out.println("neuron_elite_count :" + neuron_elite_count);
 
             numToSpawn -= neuron_elite_count;
 
-            System.out.println("numToSpawn :" + numToSpawn);
 
 
             if (numToSpawn % 2 == 0)
@@ -816,7 +792,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         this.neuron_population.purgeInvalidGenomes();
 
 
-        Random neuron_random = getRandomNumberFactory().factor();
         //as last step perform mutation on all neurons
         for (Genome genome : neuron_population.getSpecies().get(0).getMembers())
         {
@@ -827,8 +802,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             neuron_mutate.performOperation(neuron_random, neuron, 0, neuron, 0);
         }
 
-
-        System.out.println("neuron iteration end");
 
     }
 
@@ -843,40 +816,15 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         // execute species in parallel
         this.threadList.clear();
 
-        System.out.println("blueprint iteration start");
         //blueprint iteration
         for (final Species species : getPopulation().getSpecies())
         {
             final BlueprintGenome topGenome = (BlueprintGenome) oldBestGenome;
 
             //if neuron in top blueprint has mutated, update the fitness of the best solution
-            for (int b = 0; b < topGenome.getBlueprint().length; b++)
-            {
-                if (topGenome.getBlueprint()[b].isMutated())
-                {
-                    calculateScore(topGenome);
-                    break;
-                }
-            }
+            calculateScore(topGenome);
 
-            System.out.println("blueprint count "+species.getMembers().size());
             int numToSpawn = species.getOffspringCount()-1;
-/*
-            for (int i = 0; i < species.getMembers().size(); i++)
-            {
-                System.out.println("blueprint " + i + " : " + species.getMembers().get(i).getScore() +" prev_rank :"+((BlueprintGenome)species
-                        .getMembers().get(i)
-                ).prev_rank);
-                System.out.print("participating neurons :");
-                BlueprintGenome g =  (BlueprintGenome) species.getMembers().get(i);
-                for (int b = 0; b < SANE.HIDDEN_SIZE; b++)
-                {
-                    System.out.print(g.getBlueprint()[b].prev_rank + " " +"("+g.getBlueprint()[b].getScore()+"), ");
-
-                }
-                g.prev_rank = i;
-                System.out.println();
-            }*/
 
             // Add elite genomes directly
             final int idealEliteCount = (int) (species.getMembers().size() * getEliteRate());
@@ -889,16 +837,9 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
                 {
                     numToSpawn--;
 
-                    //if one of the neurons in the elite blueprint has been mutated, re-evaluate it
-                    for (int b = 0; b < eliteGenome.getBlueprint().length; b++)
-                    {
-                        if (eliteGenome.getBlueprint()[b].isMutated())
-                        {
-                            final BlueprintWorker worker = new BlueprintWorker(this, species, eliteGenome);
-                            this.threadList.add(worker);
-                            break;
-                        }
-                    }
+                    //re-evaluate elite genomes
+                    final BlueprintWorker worker = new BlueprintWorker(this, species, eliteGenome);
+                    this.threadList.add(worker);
 
                     if (!addChild(eliteGenome))
                     {
@@ -906,9 +847,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
                     }
                 }
             }
-
-
-            System.out.println("elite blueprints :" + (species.getMembers().size() - numToSpawn));
 
             if (numToSpawn % 2 == 0)
             {
@@ -940,10 +878,8 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             throw new GeneticError(this.reportedError);
         }
 
-        System.out.println("new blueprint size : " + newBlueprints.size());
         this.speciation.performBlueprintSpeciation(this.newBlueprints, blueprint_population);
 
-        System.out.println("blueprint iteration end");
     }
     /**
      * {@inheritDoc}

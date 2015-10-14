@@ -44,7 +44,11 @@ public class UltrasonicSensor extends AgentSensor {
             if (closestDistance > ULTRASONIC_SENSOR_MIN_RANGE) {
                 float range = ULTRASONIC_SENSOR_MAX_RANGE - ULTRASONIC_SENSOR_MIN_RANGE;
                 float distance = closestDistance - ULTRASONIC_SENSOR_MIN_RANGE;
-                output.add(1.0 - distance / range);
+                double value = 1.0 - distance / range;
+
+                if(value < 0) value = 0;
+                else if(value >1) value = 1;
+                output.add(value);
             } else {
                 // Objects closer than the minimum range just return 1.0
                 output.add(1.0);

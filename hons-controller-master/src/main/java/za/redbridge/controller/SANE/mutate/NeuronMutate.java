@@ -60,9 +60,6 @@ public class NeuronMutate implements EvolutionaryOperator
         {
             if(random.nextDouble() <= mutation_rate)
             {
-                //mark neuron as mutated
-                neuron.setMutated(true);
-
                 //obtain unique random number by shuffling the list of unique numbers
                 Set<Integer> ints = new HashSet<Integer>();
 
@@ -79,8 +76,7 @@ public class NeuronMutate implements EvolutionaryOperator
                     new_label = random.nextInt(SANE.IO_COUNT);
                 }
 
-                //weight mutated by multiplying with value between -2 and 2;
-                double new_weight = neuron.getChromosome()[i].getWeight() * ((random.nextDouble() * 4) - 2);
+                double new_weight = ((random.nextDouble() * 2) - 1);
 
                 //update information
                 neuron.getChromosome()[i].set(new_label, new_weight);

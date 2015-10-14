@@ -25,9 +25,6 @@ public class NeuronGenome extends BasicGenome implements ArrayGenome, Serializab
     //list of children
     private List<NeuronGenome> parents = new ArrayList<NeuronGenome>();
 
-    public int prev_rank = -1;
-
-    private boolean mutated = false;
 
     //constructor - empty chromosome
     public NeuronGenome(int size)
@@ -191,15 +188,5 @@ public class NeuronGenome extends BasicGenome implements ArrayGenome, Serializab
 
         setScore(fitness);
         setAdjustedScore(fitness);
-    }
-
-    public boolean isMutated()
-    {
-        return mutated;
-    }
-
-    public void setMutated(boolean mutated)
-    {
-        this.mutated = mutated;
     }
 }

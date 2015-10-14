@@ -28,7 +28,6 @@ public class BlueprintGenome extends BasicGenome implements ArrayGenome, Seriali
         this.blueprint = blueprint;
     }
 
-    public int prev_rank = -1;
     //copy constructor
     public BlueprintGenome(BlueprintGenome b)
     {

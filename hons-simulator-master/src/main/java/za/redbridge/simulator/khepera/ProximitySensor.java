@@ -7,6 +7,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
+import za.redbridge.simulator.object.WallObject;
 import za.redbridge.simulator.portrayal.ConePortrayal;
 import za.redbridge.simulator.portrayal.Portrayal;
 
@@ -21,11 +22,11 @@ public class ProximitySensor extends AgentSensor {
 
 
     // Naeem : there is no lower range for the ProximitySensor.
-    private static final float PROXIMITY_SENSOR_RANGE = 0.2f;
+    private static final float PROXIMITY_SENSOR_RANGE = 1.0f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
 //    public static final float RANGE = 0.2f;
-    public static final float RANGE = 0.2f;
+    public static final float RANGE = 1.0f;
     public static final float FIELD_OF_VIEW = 0.2f; // This is a guess
 
     private static final Paint color = new Color(255, 0, 0, 50);
@@ -42,7 +43,8 @@ public class ProximitySensor extends AgentSensor {
 
     @Override
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output) {
-        if (!sensedObjects.isEmpty()) {
+        if (!sensedObjects.isEmpty())
+        {
             //return only the closest object
             output.add(readingCurve(sensedObjects.get(0).getDistance()));
         } else {

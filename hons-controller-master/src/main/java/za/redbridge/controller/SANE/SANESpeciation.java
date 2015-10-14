@@ -55,10 +55,7 @@ public class SANESpeciation implements Speciation
         Species species = (Species)population.getSpecies().get(0);
         List<Genome> neuron_population = species.getMembers();
 
-        System.out.println("speciation size : "+neuron_population.size());
         //replace worst performing individuals with offsprings
-        System.out.println("replacing neurons starting from position " + eliteCount);
-        System.out.println("replacing neurons ended at position " + neuron_population.size());
         for (int i = eliteCount; i < neuron_population.size(); i++)
         {
             //neuron to be replaced

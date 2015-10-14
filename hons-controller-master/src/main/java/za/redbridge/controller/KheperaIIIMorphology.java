@@ -21,11 +21,11 @@ public class KheperaIIIMorphology extends SensorMorphology {
 /*        DEFAULT_CONFIGURATION.enableProximitySensorBottom = true;
         DEFAULT_CONFIGURATION.enableProximitySensors10Degrees = true;
         DEFAULT_CONFIGURATION.enableProximitySensors40Degrees = true;
-        DEFAULT_CONFIGURATION.enableProximitySensors75Degrees = true;
+        DEFAULT_CONFIGURATION.enableProximitySensors75Degrees = true;*/
         DEFAULT_CONFIGURATION.enableProximitySensors140Degrees = true;
-        DEFAULT_CONFIGURATION.enableProximitySensor180Degrees = true;*/
+     //   DEFAULT_CONFIGURATION.enableProximitySensor180Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensor0Degrees = true;
-        DEFAULT_CONFIGURATION.enableUltrasonicSensors40Degrees = true;
+        //DEFAULT_CONFIGURATION.enableUltrasonicSensors40Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors90Degrees = true;
         DEFAULT_CONFIGURATION.enableColourProximitySensor=false;
         DEFAULT_CONFIGURATION.enableColourRangedSensor = true;
@@ -109,22 +109,14 @@ public class KheperaIIIMorphology extends SensorMorphology {
 
         if (config.enableColourRangedSensor)
         {
-            sensorModels[sensorIndex++] = new SensorModel(COLOURRANGED, (float) Math.toRadians(5), 0,
+            sensorModels[sensorIndex++] = new SensorModel(COLOURRANGED, (float) Math.toRadians(15), 0,
                     ColourRangedSensor.RANGE, ColourRangedSensor.FIELD_OF_VIEW);
         }
 
         if (config.enableLowResCameraSensor)
         {
-            sensorModels[sensorIndex] = new SensorModel(LOWRESCAMERA, (float) Math.toRadians(-5), 0,
+            sensorModels[sensorIndex] = new SensorModel(LOWRESCAMERA, (float) Math.toRadians(-15), 0,
                     LowResCameraSensor.RANGE, LowResCameraSensor.FIELD_OF_VIEW);
-        }
-
-        for (int i = 0; i < sensorCount; i++)
-        {
-            if (sensorModels[i] == null)
-            {
-                System.out.println("Its null at :" + i);
-            }
         }
 
         return sensorModels;
