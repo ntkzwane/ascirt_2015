@@ -105,8 +105,13 @@ public class BlueprintWorker implements Callable<Object>
                 //evaluate the elite genome
                 if (elite_mode)
                 {
+
                     this.train.calculateScore(eliteGenome);
-                    success=true;
+                    if (!this.train.addChild(eliteGenome))
+                    {
+                        return null;
+                    }
+                    success = true;
                 }
                 //produce offspring and evaluate the offspring
                 else

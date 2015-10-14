@@ -786,9 +786,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         //survivor selection
         this.speciation.performNeuronSpeciation(this.newNeurons, neuron_population, neuron_elite_count);
 
-        // purge invalid genos
-        this.neuron_population.purgeInvalidGenomes();
-
 
         //as last step perform mutation on all neurons
         for (Genome genome : neuron_population.getSpecies().get(0).getMembers())
@@ -808,7 +805,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
     {
         // Clear new population to just best genome.
         this.newBlueprints.clear();
-        this.newBlueprints.add(this.bestGenome);
         this.oldBestGenome = this.bestGenome;
 
         // execute species in parallel
@@ -817,10 +813,13 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         //blueprint iteration
         for (final Species species : getPopulation().getSpecies())
         {
-            final BlueprintGenome topGenome = (BlueprintGenome) oldBestGenome;
+            final BlueprintGenome topGenome = (BlueprintGenome) this.oldBestGenome;
 
             //if neuron in top blueprint has mutated, update the fitness of the best solution
             calculateScore(topGenome);
+
+            //add the top genome directly
+            this.newBlueprints.add(topGenome);
 
             int numToSpawn = species.getOffspringCount()-1;
 
@@ -828,6 +827,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             final int idealEliteCount = (int) (species.getMembers().size() * getEliteRate());
             final int eliteCount = Math.min(numToSpawn, idealEliteCount);
 
+            int count = 1;
             for (int i = 0; i < eliteCount; i++)
             {
                 final BlueprintGenome eliteGenome = (BlueprintGenome) species.getMembers().get(i);
@@ -838,11 +838,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
                     //re-evaluate elite genomes
                     final BlueprintWorker worker = new BlueprintWorker(this, species, eliteGenome);
                     this.threadList.add(worker);
-
-                    if (!addChild(eliteGenome))
-                    {
-                        break;
-                    }
+                    count++;
                 }
             }
 
@@ -850,7 +846,14 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             {
                 numToSpawn = numToSpawn/2;
             }
-            else numToSpawn = (numToSpawn/2) +1;
+
+            else
+            {
+                numToSpawn = (numToSpawn/2);
+                //if odd number of offspring produced add an additional elite genome
+                final BlueprintWorker worker = new BlueprintWorker(this, species, species.getMembers().get(count));
+                this.threadList.add(worker);
+            }
 
             // now add one task for each offspring that each species is allowed
             for (int i = 0; i < numToSpawn; i++)
