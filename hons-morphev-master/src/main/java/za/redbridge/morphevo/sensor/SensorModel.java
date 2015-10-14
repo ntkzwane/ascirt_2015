@@ -100,6 +100,10 @@ public class SensorModel implements Serializable {
                 return new UltrasonicSensor(bearing, orientation, range, fieldOfView);
             case COLOUR_PROXIMITY:
                 return new ColourProximitySensor(bearing, orientation, range, fieldOfView);
+            case COLOUR_RANGED:
+                return new ColourRangedSensor(bearing, orientation, range, fieldOfView);
+            case LOW_RES_CAMERA:
+                return new LowResCameraSensor(bearing, orientation, range, fieldOfView);
         }
         return null;
     }

@@ -16,3 +16,6 @@ desktop.ini
 */results/
 OLD_MORPHEV/
 mymake
+build/
+out/
+Android/

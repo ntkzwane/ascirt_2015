@@ -15,6 +15,7 @@ import za.redbridge.simulator.config.MorphologyConfig;
 import za.redbridge.simulator.config.SimConfig;
 import za.redbridge.simulator.factories.HomogeneousRobotFactory;
 import za.redbridge.simulator.phenotype.ChasingPhenotype;
+import za.redbridge.simulator.phenotype.ChasingPhenotype_simple;
 
 //entry point into simulator
 
@@ -67,7 +68,7 @@ public class Main {
             //UGUGGHGHUHGHGGH, this is just with chasing phenotype, no ML stuff
 
             HomogeneousRobotFactory robotFactory = new HomogeneousRobotFactory(
-                    new ChasingPhenotype(), simulationConfiguration.getRobotMass(),
+                    new ChasingPhenotype_simple(), simulationConfiguration.getRobotMass(),
                     simulationConfiguration.getRobotRadius(), simulationConfiguration.getRobotColour(),
                     simulationConfiguration.getObjectsRobots());
 

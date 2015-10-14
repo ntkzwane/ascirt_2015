@@ -22,6 +22,8 @@ public interface ResourceFactory {
 
     void configure(Map<String, Object> resourceConfigs, String[] q);
 
+    void configure_trash(Map<String, Object> resourceConfigs, String[] q);
+
     /**
      * @return the number of resources this resource factory will place
      */

@@ -32,7 +32,8 @@ public class NEATMCODEC implements GeneticCODEC, Serializable {
     private static final long serialVersionUID = -5767773750949848124L;
 
     @Override
-    public MLMethod decode(Genome genome) {
+    public MLMethod decode(Genome genome)
+    {
         final NEATMGenome neatGenome = (NEATMGenome) genome;
         final NEATPopulation pop = (NEATPopulation) neatGenome.getPopulation();
         final List<NEATNeuronGene> neuronsChromosome = neatGenome.getNeuronsChromosome();

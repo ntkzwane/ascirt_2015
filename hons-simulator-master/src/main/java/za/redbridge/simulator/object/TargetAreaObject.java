@@ -50,6 +50,7 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
     private final Set<ResourceObject> containedObjects = new HashSet<>();
     private final List<Fixture> watchedFixtures = new ArrayList<>();
 
+    int resource_count = 0;
     //keeps track of what has been pushed into this place
     public TargetAreaObject(World world, Vec2 position, int width, int height,
             double totalResourceValue, int maxSteps) {
@@ -103,8 +104,9 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
         if (containedObjects.add(resource)) {
             fitnessStats.addToTeamFitness(resource.getValue());
 
+            if(resource.getValue() > 0)resource_count++;
             // Get the robots joined to the resource
-            Set<RobotObject> pushingBots = resource.getPushingRobots();
+/*            Set<RobotObject> pushingBots = resource.getPushingRobots();
 
             // If no robots joined, get nearby robots
             if (pushingBots.isEmpty()) {
@@ -118,13 +120,15 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
                     fitnessStats
                             .addToPhenotypeFitness(robot.getPhenotype(), adjustedFitness);
                 }
-            }
+            }*/ //not required since we only care about team fitness - Jae
+
 
             // Mark resource as collected (this breaks the joints)
             resource.setCollected(true);
             resource.getPortrayal().setPaint(Color.CYAN);
             resource.getPortrayal().setEnabled(false);
             // resource = null; // Naeem Ganey code.
+
         }
     }
 
@@ -132,6 +136,7 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
         if (containedObjects.remove(resource)) {
             fitnessStats.addToTeamFitness(-resource.getValue());
 
+            if(resource.getValue() > 0) resource_count--;
             // Mark resource as no longer collected
             resource.setCollected(false);
             resource.getPortrayal().setPaint(Color.MAGENTA);
@@ -181,7 +186,8 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
     }
 
     public int getNumberOfContainedResources() {
-        return containedObjects.size();
+        return resource_count;
+        //containedObjects.size();
     }
 
     public AABB getAabb() {

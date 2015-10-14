@@ -1,10 +1,10 @@
 package za.redbridge.simulator.khepera;
 
+import java.awt.*;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
-import java.awt.Color;
 import za.redbridge.simulator.portrayal.ConePortrayal;
 import za.redbridge.simulator.portrayal.Portrayal;
 
@@ -26,6 +26,8 @@ public class UltrasonicSensor extends AgentSensor {
     public static final float RANGE = 4.0f; // 4 meters
     public static final float FIELD_OF_VIEW = 1.22f; // 35 degrees
 
+    private static final Paint color = new Color(0, 255, 0, 50);
+
     public UltrasonicSensor(float bearing, float orientation) {
         this(bearing, orientation, ULTRASONIC_SENSOR_MAX_RANGE, ULTRASONIC_SENSOR_FOV);
     }
@@ -38,11 +40,16 @@ public class UltrasonicSensor extends AgentSensor {
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output) {
         if (!sensedObjects.isEmpty()) {
             SensedObject closestObject = sensedObjects.get(0);
+
             float closestDistance = closestObject.getDistance();
             if (closestDistance > ULTRASONIC_SENSOR_MIN_RANGE) {
                 float range = ULTRASONIC_SENSOR_MAX_RANGE - ULTRASONIC_SENSOR_MIN_RANGE;
                 float distance = closestDistance - ULTRASONIC_SENSOR_MIN_RANGE;
-                output.add(1.0 - distance / range);
+                double value = 1.0 - distance / range;
+
+                if(value < 0) value = 0;
+                else if(value >1) value = 1;
+                output.add(value);
             } else {
                 // Objects closer than the minimum range just return 1.0
                 output.add(1.0);
@@ -75,7 +82,7 @@ public class UltrasonicSensor extends AgentSensor {
     @Override
     protected Portrayal createPortrayal() {
 //        return new ConePortrayal(range, fieldOfView, new Color(0, 0, 255, 50));
-        return new ConePortrayal(range, fieldOfView, new Color(0, 255, 0, 50));
+        return new ConePortrayal(range, fieldOfView, color);
     }
 
 }

@@ -115,7 +115,7 @@ public class ScoreCalculator implements CalculateScore{
 
     @Override
     public boolean requireSingleThreaded() {
-        return false;
+        return true;
     }
 
     public DescriptiveStatistics getPerformanceStatistics() {

@@ -42,6 +42,11 @@ simulator:
 	mv hons-morphev-master/libs/hons-simulator-master-all.jar hons-morphev-master/libs/hons-simulator-all.jar && \
 	echo done
 
+simulator_run:
+	@echo running simulator simulator...
+	@cd hons-simulator-master && \
+	java -jar build/libs/hons-simulator-master-all.jar -v
+
 morphev_and_sim:
 	@echo building simulator...
 	@cd hons-simulator-master && \
@@ -61,11 +66,32 @@ morphev_only:
 	./gradlew fatJar && \
 	echo done
 
-controller_only:
+controller_and_sim:
+	@echo building simulator...
+	@cd hons-simulator-master && \
+	./gradlew fatJar && \
+	cd .. && \
+	rm hons-controller-master/libs/hons-simulator-all.jar && \
+	cp hons-simulator-master/build/libs/hons-simulator-master-all.jar hons-controller-master/libs && \
+	mv hons-controller-master/libs/hons-simulator-master-all.jar hons-controller-master/libs/hons-simulator-all.jar && \
+	echo building controller... && \
+	cd hons-controller-master && \
+	./gradlew fatJar && \
+	echo done
+
+controller_build:
 	@echo building controller... && \
 	cd hons-controller-master && \
 	./gradlew fatJar && \
 	echo done
+
+controller_run:
+	cd hons-controller-master && \
+	java -jar build/libs/hons-controller-master-all.jar
+	
+controller_build_run:
+	make controller_build && make controller_run
+	
 
 
 experiment_and_sim:

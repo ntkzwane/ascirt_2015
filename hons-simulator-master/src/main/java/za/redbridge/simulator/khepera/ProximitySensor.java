@@ -2,11 +2,12 @@ package za.redbridge.simulator.khepera;
 
 import org.apache.commons.math3.distribution.GammaDistribution;
 
+import java.awt.*;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
-import java.awt.Color;
+import za.redbridge.simulator.object.WallObject;
 import za.redbridge.simulator.portrayal.ConePortrayal;
 import za.redbridge.simulator.portrayal.Portrayal;
 
@@ -21,14 +22,14 @@ public class ProximitySensor extends AgentSensor {
 
 
     // Naeem : there is no lower range for the ProximitySensor.
-    
-
-    private static final float PROXIMITY_SENSOR_RANGE = 3.0f;
+    private static final float PROXIMITY_SENSOR_RANGE = 1.0f;
     private static final float PROXIMITY_SENSOR_FOV = 0.2f; // This is a guess
 
 //    public static final float RANGE = 0.2f;
-    public static final float RANGE = 3.0f;
+    public static final float RANGE = 1.0f;
     public static final float FIELD_OF_VIEW = 0.2f; // This is a guess
+
+    private static final Paint color = new Color(255, 0, 0, 50);
 
     private final GammaDistribution function = new GammaDistribution(2.5, 2.0);
 
@@ -42,8 +43,21 @@ public class ProximitySensor extends AgentSensor {
 
     @Override
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output) {
-        if (!sensedObjects.isEmpty()) {
-            output.add(readingCurve(sensedObjects.get(0).getDistance()));
+        if (!sensedObjects.isEmpty())
+        {
+            //return only the closest object
+            //output.add(readingCurve(sensedObjects.get(0).getDistance()));
+
+            SensedObject closestObject = sensedObjects.get(0);
+
+            float closestDistance = closestObject.getDistance();
+
+            double value = 1.0 - closestDistance / PROXIMITY_SENSOR_RANGE;
+
+            if(value < 0) value = 0;
+            else if(value >1) value = 1;
+            output.add(value);
+
         } else {
             output.add(0.0);
         }
@@ -77,7 +91,7 @@ public class ProximitySensor extends AgentSensor {
 
     @Override
     protected Portrayal createPortrayal() {
-        return new ConePortrayal(range, fieldOfView, new Color(255, 0, 0, 50));
+        return new ConePortrayal(range, fieldOfView, color);
     }
 
 }
