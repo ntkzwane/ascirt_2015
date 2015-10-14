@@ -155,17 +155,18 @@ public class SimConfig extends Config {
             }
         }
 
+
         // Robots
+        String robot_input = "";
         Map bots = (Map) config.get("robots");
         if (checkFieldPresent(bots, "robots")) {
-
 
             boolean valid = false;
             while(!valid)
             {
-                System.out.println("Enter number of robots (1 - 20) - default 10");
-                String robot_input = inputReader.readLine();
-                if (robot_input.equalsIgnoreCase("")) robot_input = "10";
+                System.out.println("Enter number of robots (1 - 20) - default 20");
+                robot_input = inputReader.readLine();
+                if (robot_input.equalsIgnoreCase("")) robot_input = "20";
                 robots = Integer.parseInt(robot_input);
                 if(robots > 20 || robots <1)
                 {
@@ -197,6 +198,7 @@ public class SimConfig extends Config {
         }
 
         //factories
+        String trash_input ="", res_input ="";
         Map factories = (Map) config.get("factories");
         if (checkFieldPresent(factories, "factories")) {
 
@@ -212,15 +214,15 @@ public class SimConfig extends Config {
                     }
 
                     //get quantity of resource objects
-                    System.out.println("Enter resource quantity separated by spaces (small medium large) - default 10 5 1");
-                    String res_input = inputReader.readLine();
+                    System.out.println("Enter resource quantity separated by spaces (small medium large) - default 10 5 0");
+                    res_input = inputReader.readLine();
 
-                    if (res_input.equalsIgnoreCase("")) res_input = "10 5 1";
+                    if (res_input.equalsIgnoreCase("")) res_input = "10 5 0";
                     String[] resQuantity = res_input.split(" ");
 
                     //get quantity of trash objects
                     System.out.println("Enter trash quantity separated by spaces (small medium large) - default none");
-                    String trash_input = inputReader.readLine();
+                    trash_input = inputReader.readLine();
 
                     if (trash_input.equalsIgnoreCase("")) trash_input = "0 0 0";
                     String[] trashQuantity = trash_input.split(" ");
@@ -242,6 +244,9 @@ public class SimConfig extends Config {
                 }
             }
 
+            System.out.println("Number of robots : " + robot_input);
+            System.out.println("Number of resources : " + res_input);
+            System.out.println("Number of trashes : " + trash_input);
             String robFactory = (String) factories.get("robotFactory");
             if (checkFieldPresent(robFactory, "factories:robotFactory")) {
                 robotFactory = robFactory;

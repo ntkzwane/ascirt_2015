@@ -19,3 +19,4 @@ mymake
 build/
 *.jar
 out/
+Android/

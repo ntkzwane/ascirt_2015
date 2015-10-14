@@ -731,7 +731,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
 
             int unfit_elites =0;
 
-            System.out.println("eliteCount :" + eliteCount);
             for (int i = 0; i < eliteCount; i++)
             {
                 final Genome eliteGenome = species.getMembers().get(i);
@@ -784,7 +783,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             throw new GeneticError(this.reportedError);
         }
 
-        System.out.println("elite neurons :" + neuron_elite_count);
         //survivor selection
         this.speciation.performNeuronSpeciation(this.newNeurons, neuron_population, neuron_elite_count);
 
@@ -899,7 +897,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
 
         this.iteration++;
 
-        System.out.println("neuron iteration start");
 
         //reproduce neurons
         neuron_iteration();

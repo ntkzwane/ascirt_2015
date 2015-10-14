@@ -46,7 +46,18 @@ public class ProximitySensor extends AgentSensor {
         if (!sensedObjects.isEmpty())
         {
             //return only the closest object
-            output.add(readingCurve(sensedObjects.get(0).getDistance()));
+            //output.add(readingCurve(sensedObjects.get(0).getDistance()));
+
+            SensedObject closestObject = sensedObjects.get(0);
+
+            float closestDistance = closestObject.getDistance();
+
+            double value = 1.0 - closestDistance / range;
+
+            if(value < 0) value = 0;
+            else if(value >1) value = 1;
+            output.add(value);
+
         } else {
             output.add(0.0);
         }
