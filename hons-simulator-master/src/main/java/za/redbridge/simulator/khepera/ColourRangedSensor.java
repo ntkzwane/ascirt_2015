@@ -60,7 +60,7 @@ public class ColourRangedSensor extends AgentSensor
             }
             else if (closest.getObject() instanceof RobotObject)
             {
-                output.add(0.3);
+                output.add(0.5);
             }
             else if (closest.getObject() instanceof WallObject)
             {

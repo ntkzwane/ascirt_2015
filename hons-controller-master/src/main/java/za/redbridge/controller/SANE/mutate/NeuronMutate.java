@@ -76,7 +76,13 @@ public class NeuronMutate implements EvolutionaryOperator
                     new_label = random.nextInt(SANE.IO_COUNT);
                 }
 
-                double new_weight = ((random.nextDouble() * 2) - 1);
+                double num = random.nextDouble();
+                double new_weight;
+                if (num + neuron.getChromosome()[i].getWeight() > 1 || num + neuron.getChromosome()[i].getWeight() < -1)
+                {
+                    new_weight = num - neuron.getChromosome()[i].getWeight();
+                }
+                else new_weight = num + neuron.getChromosome()[i].getWeight();
 
                 //update information
                 neuron.getChromosome()[i].set(new_label, new_weight);

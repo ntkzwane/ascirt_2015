@@ -52,7 +52,7 @@ public class ProximitySensor extends AgentSensor {
 
             float closestDistance = closestObject.getDistance();
 
-            double value = 1.0 - closestDistance / range;
+            double value = 1.0 - closestDistance / PROXIMITY_SENSOR_RANGE;
 
             if(value < 0) value = 0;
             else if(value >1) value = 1;
