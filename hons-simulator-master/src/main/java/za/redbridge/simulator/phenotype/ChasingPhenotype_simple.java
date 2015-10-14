@@ -23,14 +23,14 @@ public class ChasingPhenotype_simple extends KheperaIIIPhenotype_simple
         //CONFIG.enableProximitySensors10Degrees = true;
         CONFIG.enableProximitySensors40Degrees = true;
         //CONFIG.enableProximitySensors75Degrees = true;
-        //CONFIG.enableProximitySensors140Degrees = true;
-        //CONFIG.enableProximitySensor180Degrees = true;
+        CONFIG.enableProximitySensors140Degrees = true;
+        CONFIG.enableProximitySensor180Degrees = true;
 
         CONFIG.enableProximitySensorBottom = true;
 
         CONFIG.enableUltrasonicSensor0Degrees = true;
         //CONFIG.enableUltrasonicSensors40Degrees = true;
-        //CONFIG.enableUltrasonicSensors90Degrees = true;
+        CONFIG.enableUltrasonicSensors90Degrees = true;
 
        // CONFIG.enableColourProximitySensor = false;
         CONFIG.enableColourRangedSensor = true;

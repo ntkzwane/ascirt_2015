@@ -85,7 +85,7 @@ public abstract class KheperaIIIPhenotype_simple implements Phenotype {
 
         if (configuration.enableUltrasonicSensors90Degrees) {
             sensors.add(createUltrasonicSensor((float) Math.PI / 2, 0f));
-           // sensors.add(createUltrasonicSensor((float) -Math.PI / 2, 0f));
+            sensors.add(createUltrasonicSensor((float) -Math.PI / 2, 0f));
         }
 
         if (configuration.enableColourProximitySensor){
