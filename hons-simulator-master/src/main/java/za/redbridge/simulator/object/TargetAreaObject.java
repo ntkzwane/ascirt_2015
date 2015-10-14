@@ -106,7 +106,7 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
 
             if(resource.getValue() > 0)resource_count++;
             // Get the robots joined to the resource
-/*            Set<RobotObject> pushingBots = resource.getPushingRobots();
+            Set<RobotObject> pushingBots = resource.getPushingRobots();
 
             // If no robots joined, get nearby robots
             if (pushingBots.isEmpty()) {
@@ -120,7 +120,7 @@ public class TargetAreaObject extends PhysicalObject implements Collideable {
                     fitnessStats
                             .addToPhenotypeFitness(robot.getPhenotype(), adjustedFitness);
                 }
-            }*/ //not required since we only care about team fitness - Jae
+            }
 
 
             // Mark resource as collected (this breaks the joints)

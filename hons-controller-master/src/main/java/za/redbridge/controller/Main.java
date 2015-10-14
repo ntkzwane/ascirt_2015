@@ -7,14 +7,19 @@ import org.encog.Encog;
 import org.encog.engine.network.activation.ActivationSigmoid;
 import org.encog.ml.MLMethod;
 import org.encog.ml.MethodFactory;
+import org.encog.ml.ea.train.basic.TrainEA;
 import org.encog.neural.neat.NEATNetwork;
 import org.encog.neural.networks.BasicNetwork;
 import org.encog.neural.networks.layers.BasicLayer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import za.redbridge.controller.NEAT.NEATPopulation;
+import za.redbridge.controller.NEAT.NEATUtil;
 
 import java.io.IOException;
 
+import za.redbridge.controller.NEATM.NEATMPopulation;
+import za.redbridge.controller.NEATM.NEATMUtil;
 import za.redbridge.controller.NEATM.sensor.SensorMorphology;
 import za.redbridge.controller.SANE.BlueprintGenome;
 import za.redbridge.controller.SANE.SANE;
@@ -36,6 +41,8 @@ public class Main {
 
     private static final double CONVERGENCE_SCORE = 110;
 
+    public static boolean NEAT_EVOLUTION;
+
     public static void main(String[] args) throws IOException {
         Args options = new Args();
         new JCommander(options, args);
@@ -52,42 +59,88 @@ public class Main {
         // Load the morphology
         SensorMorphology morphology = new KheperaIIIMorphology();
 
-        //initialize parameters
-        int hiddenSize = 8;
-        int outputSize =2;
-        SANE.init(morphology.getNumSensors(), hiddenSize, outputSize);
+        NEAT_EVOLUTION = options.control;
 
-        System.out.println("Neural network structure");
-        System.out.println("Input size " + morphology.getNumSensors());
-        System.out.println("Hidden size " + hiddenSize);
-        System.out.println("Output size " + outputSize);
-        ScoreCalculator calculateScore =
-                new ScoreCalculator(simConfig, options.simulationRuns, morphology);
+        //NEAT
+        if (NEAT_EVOLUTION)
+        {
+            System.out.println("Running NEAT");
+            ScoreCalculator calculateScore =
+                    new ScoreCalculator(simConfig, options.simulationRuns, morphology);
 
-        if (!isBlank(options.genomePath)) {
-            //BlueprintGenome gen = (BlueprintGenome)readObjectFromFile(options.genomePath);
-            BasicNetwork network = (BasicNetwork)readObjectFromFile(options.genomePath);
-            calculateScore.demo(network);
-            return;
-        }
+            if (!isBlank(options.genomePath)) {
+                NEATNetwork network = (NEATNetwork) readObjectFromFile(options.genomePath);
+                calculateScore.demo(network);
+                return;
+            }
 
-        int neuron_population_size = 800;
-        int blueprint_population_size = 100;
+            final NEATPopulation population;
 
-        SANEControllerEvolution sane = new SANEControllerEvolution(new MethodFactory(){ @Override public MLMethod
-                                                                                        factor(){System.out.println("Stub");return null; }},
-                calculateScore,neuron_population_size,blueprint_population_size);
+            population = new NEATPopulation(morphology.getNumSensors(), 2, options.populationSize);
+            population.setInitialConnectionDensity(options.connectionDensity);
+            population.reset();
 
-        log.debug("Neuron Population of size " + neuron_population_size + " initialized");
-        log.debug("Blueprint Population of size " + blueprint_population_size + " initialized");
+            log.debug("Population initialized : "+options.populationSize);
 
-        final StatsRecorder statsRecorder = new StatsRecorder(sane.getGenetic(), calculateScore);
-        statsRecorder.recordIterationStats();
 
-        for (int i = 0; i < options.numIterations; i++) {
-            sane.iteration();
+            TrainEA train;
+            train = NEATUtil.constructNEATTrainer(population, calculateScore);
+
+            final StatsRecorder statsRecorder = new StatsRecorder(train, calculateScore);
             statsRecorder.recordIterationStats();
+            for (int i = train.getIteration(); i < options.numIterations; i++) {
+                train.iteration();
+                statsRecorder.recordIterationStats();
+            }
         }
+        //SANE
+        else
+        {
+            System.out.println("Running SANE");
+            //initialize parameters
+            int hiddenSize = 8;
+            int outputSize = 2;
+            SANE.init(morphology.getNumSensors(), hiddenSize, outputSize);
+
+            ScoreCalculator calculateScore =
+                    new ScoreCalculator(simConfig, options.simulationRuns, morphology);
+
+            if (!isBlank(options.genomePath))
+            {
+                //BlueprintGenome gen = (BlueprintGenome)readObjectFromFile(options.genomePath);
+                BasicNetwork network = (BasicNetwork) readObjectFromFile(options.genomePath);
+                calculateScore.demo(network);
+                return;
+            }
+
+            int neuron_population_size = 800;
+            int blueprint_population_size = 100;
+
+            SANEControllerEvolution sane = new SANEControllerEvolution(new MethodFactory()
+            {
+                @Override
+                public MLMethod
+                factor()
+                {
+                    System.out.println("Stub");
+                    return null;
+                }
+            },
+                    calculateScore, neuron_population_size, blueprint_population_size);
+
+            log.debug("Neuron Population of size " + neuron_population_size + " initialized");
+            log.debug("Blueprint Population of size " + blueprint_population_size + " initialized");
+
+            final StatsRecorder statsRecorder = new StatsRecorder(sane.getGenetic(), calculateScore);
+            statsRecorder.recordIterationStats();
+
+            for (int i = 0; i < options.numIterations; i++)
+            {
+                sane.iteration();
+                statsRecorder.recordIterationStats();
+            }
+        }
+
 
         log.debug("Training complete");
         Encog.getInstance().shutdown();
@@ -101,7 +154,7 @@ public class Main {
         private int numIterations = 500;
 
         @Parameter(names = "-p", description = "Initial population size")
-        private int populationSize = 200;
+        private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
         private int simulationRuns = 5;
@@ -113,7 +166,7 @@ public class Main {
         private String genomePath = null;
 
         @Parameter(names = "--control", description = "Run with the control case")
-        private boolean control = true;
+        private boolean control = false;
 
         @Parameter(names = "--morphology", description = "For use with the control case, provide"
                 + " the path to a serialized MMNEATNetwork to have its morphology used for the"
