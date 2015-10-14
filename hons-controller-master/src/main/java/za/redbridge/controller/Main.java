@@ -57,6 +57,10 @@ public class Main {
         int outputSize =2;
         SANE.init(morphology.getNumSensors(), hiddenSize, outputSize);
 
+        System.out.println("Neural network structure");
+        System.out.println("Input size " + morphology.getNumSensors());
+        System.out.println("Hidden size " + hiddenSize);
+        System.out.println("Output size " + outputSize);
         ScoreCalculator calculateScore =
                 new ScoreCalculator(simConfig, options.simulationRuns, morphology);
 

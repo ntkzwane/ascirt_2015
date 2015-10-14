@@ -879,6 +879,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             throw new GeneticError(this.reportedError);
         }
 
+        System.out.println("size "+ newBlueprints.size());
         this.speciation.performBlueprintSpeciation(this.newBlueprints, blueprint_population);
 
     }

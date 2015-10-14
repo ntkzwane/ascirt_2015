@@ -45,6 +45,7 @@ public class KheperaIIIMorphology extends SensorMorphology {
         final int sensorCount = config.getNumberOfSensors();
         SensorModel[] sensorModels = new SensorModel[sensorCount];
 
+        System.out.println("Sensor count " + sensorCount);
         if (config.enableProximitySensorBottom) {
             sensorModels[sensorIndex++] = new SensorModel(BOTTOM_PROXIMITY);
         }
