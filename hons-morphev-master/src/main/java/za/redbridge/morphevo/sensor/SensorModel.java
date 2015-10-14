@@ -6,6 +6,8 @@ import za.redbridge.simulator.khepera.BottomProximitySensor;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
 import za.redbridge.simulator.khepera.ColourProximitySensor;
+import za.redbridge.simulator.khepera.ColourRangedSensor;
+import za.redbridge.simulator.khepera.LowResCameraSensor;
 
 // make a new one in the simulator and import it.
 
@@ -100,6 +102,10 @@ public class SensorModel implements Serializable {
                 return new UltrasonicSensor(bearing, orientation, range, fieldOfView);
             case COLOUR_PROXIMITY:
                 return new ColourProximitySensor(bearing, orientation, range, fieldOfView);
+            case COLOUR_RANGED:
+                return new ColourRangedSensor(bearing, orientation, range, fieldOfView);
+            case LOW_RES_CAMERA:
+                return new LowResCameraSensor(bearing, orientation, range, fieldOfView);
         }
         return null;
     }

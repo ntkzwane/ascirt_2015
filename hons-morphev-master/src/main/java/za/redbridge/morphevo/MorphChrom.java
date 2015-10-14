@@ -18,6 +18,9 @@ import za.redbridge.simulator.sensor.AgentSensor;
 import za.redbridge.simulator.khepera.BottomProximitySensor;
 import za.redbridge.simulator.khepera.ProximitySensor;
 import za.redbridge.simulator.khepera.UltrasonicSensor;
+import za.redbridge.simulator.khepera.ColourRangedSensor;
+import za.redbridge.simulator.khepera.LowResCameraSensor;
+
 
 import za.redbridge.morphevo.sensor.SensorMorphology;
 import za.redbridge.morphevo.sensor.SensorModel;
@@ -34,6 +37,8 @@ public class MorphChrom implements MLMethod, Serializable{
     protected static final int MAX_NUM_PROXI_SENSORS = 8;
     protected static final int MAX_NUM_ULTRA_SENSORS = 4;
     protected static final int MAX_NUM_COLOUR_PROXI_SENSORS = 2;
+    protected static final int MAX_NUM_LOW_RES_CAMERA_SENSOR = 1;
+    protected static final int MAX_NUM_COLOUR_RANGED_SENSOR = 1;
 
     private int numSensors;
     private int NumProxiSensors;
@@ -156,6 +161,24 @@ public class MorphChrom implements MLMethod, Serializable{
                     (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
                     (float) decodePart(null, "range_colour_proxi", encoded[paramRegion+2]),
                     (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
+                );
+                break;
+            case COLOUR_RANGED:
+                sensorModels_[sensorModelIter] = new SensorModel(
+                        SensorType.COLOUR_RANGED,
+                        (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                        (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
+                        (float) decodePart(null, "range_colour_proxi", encoded[paramRegion+2]),
+                        (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
+                );
+                break;
+            case LOW_RES_CAMERA:
+                sensorModels_[sensorModelIter] = new SensorModel(
+                        SensorType.LOW_RES_CAMERA,
+                        (float) decodePart(null, "zero_to_2pi", encoded[paramRegion]),
+                        (float) (decodePart(null, "zero_to_pi", encoded[paramRegion+1])),
+                        (float) decodePart(null, "range_colour_proxi", encoded[paramRegion+2]),
+                        (float) decodePart(null, "filed_of_view", encoded[paramRegion+3])
                 );
                 break;
         }

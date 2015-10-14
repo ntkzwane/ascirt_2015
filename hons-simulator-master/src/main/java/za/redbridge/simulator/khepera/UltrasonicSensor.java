@@ -40,6 +40,7 @@ public class UltrasonicSensor extends AgentSensor {
     protected void provideObjectReading(List<SensedObject> sensedObjects, List<Double> output) {
         if (!sensedObjects.isEmpty()) {
             SensedObject closestObject = sensedObjects.get(0);
+
             float closestDistance = closestObject.getDistance();
             if (closestDistance > ULTRASONIC_SENSOR_MIN_RANGE) {
                 float range = ULTRASONIC_SENSOR_MAX_RANGE - ULTRASONIC_SENSOR_MIN_RANGE;
