@@ -53,7 +53,7 @@ public class Main {
         SensorMorphology morphology = new KheperaIIIMorphology();
 
         //initialize parameters
-        int hiddenSize = 4;
+        int hiddenSize = 8;
         int outputSize =2;
         SANE.init(morphology.getNumSensors(), hiddenSize, outputSize);
 
