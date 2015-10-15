@@ -4,6 +4,7 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SynchronizedDescriptiveStatistics;
 import org.encog.ml.CalculateScore;
 import org.encog.ml.MLMethod;
+import org.encog.neural.neat.NEATNetwork;
 import org.encog.neural.networks.BasicNetwork;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,17 +46,30 @@ public class ScoreCalculator implements CalculateScore {
         this.sensorMorphology = sensorMorphology;
 
         // If fixed morphology then don't record sensor stats
-        this.sensorStats = isEvolvingMorphology() ? new SynchronizedDescriptiveStatistics() : null;
+        this.sensorStats =  null;
     }
 
     @Override
     public double calculateScore(MLMethod method) {
         long start = System.nanoTime();
 
-        BasicNetwork network = (BasicNetwork) method;
-        RobotFactory robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(network),
-                simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
-                simConfig.getObjectsRobots());
+        NEATNetwork neat_network = null;
+        BasicNetwork basic_network = null;
+        RobotFactory robotFactory;
+        if(Main.NEAT_EVOLUTION)
+        {
+            neat_network = (NEATNetwork) method;
+            robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(neat_network),
+                    simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
+                    simConfig.getObjectsRobots());
+        }
+        else
+        {
+            basic_network = (BasicNetwork) method;
+            robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(basic_network),
+                    simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
+                    simConfig.getObjectsRobots());
+        }
 
         // Create the simulation and run it
         Simulation simulation = new Simulation(simConfig, robotFactory);
@@ -81,10 +95,23 @@ public class ScoreCalculator implements CalculateScore {
 
     public void demo(MLMethod method) {
         // Create the robot and resource factories
-        BasicNetwork network = (BasicNetwork) method;
-        RobotFactory robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(network),
-                simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
-                simConfig.getObjectsRobots());
+        NEATNetwork neat_network = null;
+        BasicNetwork basic_network = null;
+        RobotFactory robotFactory;
+        if(Main.NEAT_EVOLUTION)
+        {
+            neat_network = (NEATNetwork) method;
+            robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(neat_network),
+                    simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
+                    simConfig.getObjectsRobots());
+        }
+        else
+        {
+            basic_network = (BasicNetwork) method;
+            robotFactory = new HomogeneousRobotFactory(getPhenotypeForNetwork(basic_network),
+                    simConfig.getRobotMass(), simConfig.getRobotRadius(), simConfig.getRobotColour(),
+                    simConfig.getObjectsRobots());
+        }
 
 
         // Create the simulation and run it
@@ -99,7 +126,9 @@ public class ScoreCalculator implements CalculateScore {
 
     private Phenotype getPhenotypeForNetwork(BasicNetwork network) {
             return new SANEPhenotype(network, sensorMorphology);
-
+    }
+    private Phenotype getPhenotypeForNetwork(NEATNetwork network) {
+            return new NEATPhenotype(network, sensorMorphology);
     }
     public boolean isEvolvingMorphology() {
         return false;

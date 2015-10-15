@@ -9,6 +9,7 @@ import org.encog.neural.neat.training.NEATGenome;
 import org.encog.neural.networks.BasicNetwork;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import za.redbridge.controller.NEAT.NEATPopulation;
 import za.redbridge.controller.SANE.BlueprintGenome;
 
 import java.io.BufferedWriter;
@@ -46,6 +47,8 @@ public class StatsRecorder {
     private Path performanceStatsFile;
     private Path scoreStatsFile;
     private Path sensorStatsFile;
+
+    private Genome currentBestGenome;
 
     public StatsRecorder(EvolutionaryAlgorithm trainer, ScoreCalculator calculator) {
         this.trainer = trainer;
@@ -103,16 +106,31 @@ public class StatsRecorder {
 
         recordStats(calculator.getScoreStatistics(), generation, scoreStatsFile);
 
+        if (Main.NEAT_EVOLUTION)
+        {
+            savePopulation((NEATPopulation) trainer.getPopulation(), generation);
 
-        savePopulation((Population) trainer.getPopulation(), generation);
+            // Check if new best network and save it if so
+            NEATGenome newBestGenome = (NEATGenome) trainer.getBestGenome();
+            if (newBestGenome != currentBestGenome) {
+                saveGenome(newBestGenome, generation);
+                currentBestGenome = newBestGenome;
+            }
+        }
+        else
+        {
+            savePopulation((Population) trainer.getPopulation(), generation);
 
-        // Check if new best network and save it if so
-        BlueprintGenome newBestGenome = (BlueprintGenome) trainer.getBestGenome();
-        if (newBestGenome.getScore() >= currentBestScore) {
-            saveGenome(newBestGenome, generation);
-            currentBestScore = newBestGenome.getScore();
+            // Check if new best network and save it if so
+            BlueprintGenome newBestGenome = (BlueprintGenome) trainer.getBestGenome();
+            if (newBestGenome.getScore() >= currentBestScore)
+            {
+                saveGenome(newBestGenome, generation);
+                currentBestScore = newBestGenome.getScore();
+            }
         }
     }
+
 
     private void savePopulation(Population population, int generation) {
         String filename = "generation-" + generation + ".ser";
@@ -120,6 +138,34 @@ public class StatsRecorder {
         saveObjectToFile(population, path);
     }
 
+
+    private NEATNetwork decodeNeatGenome(Genome genome) {
+        return (NEATNetwork) trainer.getCODEC().decode(genome);
+    }
+
+    private void saveGenome(NEATGenome genome, int epoch) {
+        Path directory = bestNetworkDirectory.resolve("epoch-" + epoch);
+        initDirectory(directory);
+
+        String txt;
+
+        log.info("New best genome! Epoch: " + epoch + ", score: "  + genome.getScore());
+        txt = String.format("epoch: %d, fitness: %f", epoch, genome.getScore());
+
+        Path txtPath = directory.resolve("info.txt");
+        try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
+            writer.write(txt);
+        } catch (IOException e) {
+            log.error("Error writing best network info file", e);
+        }
+
+        NEATNetwork network = decodeNeatGenome(genome);
+        saveObjectToFile(network, directory.resolve("network.ser"));
+
+        GraphvizEngine.saveGenome(genome, directory.resolve("graph.dot"));
+    }
+
+    //save blueprint genome
     private void saveGenome(BlueprintGenome genome, int generation) {
         Path directory = bestNetworkDirectory.resolve("generation-" + generation);
         initDirectory(directory);

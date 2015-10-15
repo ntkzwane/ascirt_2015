@@ -17,19 +17,15 @@ public class KheperaIIIMorphology extends SensorMorphology {
     private static final long serialVersionUID = 8121207679231125300L;
 
     private static final KheperaIIIPhenotype_simple.Configuration DEFAULT_CONFIGURATION = new KheperaIIIPhenotype_simple.Configuration();
+
     static {
-/*        DEFAULT_CONFIGURATION.enableProximitySensorBottom = true;
-        DEFAULT_CONFIGURATION.enableProximitySensors10Degrees = true;*/
-        DEFAULT_CONFIGURATION.enableProximitySensors40Degrees = true;
-       // DEFAULT_CONFIGURATION.enableProximitySensors75Degrees = true;
+/*        DEFAULT_CONFIGURATION.enableProximitySensors40Degrees = true;
         DEFAULT_CONFIGURATION.enableProximitySensors140Degrees = true;
         DEFAULT_CONFIGURATION.enableProximitySensor180Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensor0Degrees = true;
-        //DEFAULT_CONFIGURATION.enableUltrasonicSensors40Degrees = true;
         DEFAULT_CONFIGURATION.enableUltrasonicSensors90Degrees = true;
-        DEFAULT_CONFIGURATION.enableColourProximitySensor=false;
-        //DEFAULT_CONFIGURATION.enableColourRangedSensor = true;
-        //DEFAULT_CONFIGURATION.enableLowResCameraSensor = true;
+        DEFAULT_CONFIGURATION.enableColourRangedSensor = false;
+        DEFAULT_CONFIGURATION.enableLowResCameraSensor = false;*/
     }
 
     public KheperaIIIMorphology() {
@@ -45,7 +41,6 @@ public class KheperaIIIMorphology extends SensorMorphology {
         final int sensorCount = config.getNumberOfSensors();
         SensorModel[] sensorModels = new SensorModel[sensorCount];
 
-        System.out.println("Sensor count " + sensorCount);
         if (config.enableProximitySensorBottom) {
             sensorModels[sensorIndex++] = new SensorModel(BOTTOM_PROXIMITY);
         }
