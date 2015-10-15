@@ -38,7 +38,7 @@ public class Main {
     private static final double CONVERGENCE_SCORE = 110;
 
     public static boolean NEAT_EVOLUTION;
-
+    public static String RES_CONFIG;
     public static void main(String[] args) throws IOException {
         Args options = new Args();
         new JCommander(options, args);
@@ -72,6 +72,7 @@ public class Main {
 
         System.out.println("Sensors count :" + morphology.getNumSensors());
         NEAT_EVOLUTION = options.control;
+        RES_CONFIG = options.environment;
 
         //NEAT
         if (NEAT_EVOLUTION)
@@ -186,6 +187,9 @@ public class Main {
 
         @Parameter(names = "--advanced", description = "Run with advanced envrionment and morphology")
         private boolean advanced = false;
+
+        @Parameter(names = "--environment", description = "Run with advanced envrionment and morphology")
+        private String environment = "small";
 
         @Parameter(names = "--morphology", description = "For use with the control case, provide"
                 + " the path to a serialized MMNEATNetwork to have its morphology used for the"

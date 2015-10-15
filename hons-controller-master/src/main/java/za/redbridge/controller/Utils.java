@@ -2,6 +2,8 @@ package za.redbridge.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import za.redbridge.simulator.Simulation;
+import za.redbridge.simulator.factories.SimulationFactory;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -65,7 +67,7 @@ public final class Utils {
 
         //return Paths.get("results", hostname + "-" + date);
         String HexArrayCounter = System.getenv().get("PBS_ARRAYID");
-        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter);
+        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter+"_"+Main.RES_CONFIG);
     }
 
     public static String getLocalHostName() {
