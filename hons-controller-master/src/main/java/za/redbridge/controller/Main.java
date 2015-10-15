@@ -59,6 +59,7 @@ public class Main {
         morphology_config.enableUltrasonicSensor0Degrees = true;
         morphology_config.enableUltrasonicSensors90Degrees = true;
         morphology_config.enableProximitySensorBottom = true;
+
         if (options.advanced)
         {
             System.out.println("Running advanced sensors");
