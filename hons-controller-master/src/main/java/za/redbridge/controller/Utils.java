@@ -70,7 +70,7 @@ public final class Utils {
         else method = "SANE";
         //return Paths.get("results", hostname + "-" + date);
         String HexArrayCounter = System.getenv().get("PBS_ARRAYID");
-        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter+"_"+Main.RES_CONFIG+"_"+method);
+        return Paths.get("results", "Hex" + "-" + date + "_" + HexArrayCounter+"_"+Main.RES_CONFIG+"_"+method);
     }
 
     public static String getLocalHostName() {
