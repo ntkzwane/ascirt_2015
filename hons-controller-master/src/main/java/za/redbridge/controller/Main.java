@@ -105,6 +105,11 @@ public class Main {
             for (int i = train.getIteration(); i < options.numIterations; i++) {
                 train.iteration();
                 statsRecorder.recordIterationStats();
+
+                if (train.getBestGenome().getScore() >= CONVERGENCE_SCORE) {
+                    log.info("Convergence reached at epoch " + train.getIteration());
+                    break;
+                }
             }
         }
         //SANE
@@ -156,6 +161,11 @@ public class Main {
             {
                 sane.iteration();
                 statsRecorder.recordIterationStats();
+
+                if (sane.getGenetic().getBestGenome().getScore() >= CONVERGENCE_SCORE) {
+                    log.info("Convergence reached at epoch " + train.getIteration());
+                    break;
+                }
             }
         }
 
