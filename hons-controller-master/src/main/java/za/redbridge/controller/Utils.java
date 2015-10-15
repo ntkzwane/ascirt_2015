@@ -66,10 +66,7 @@ public final class Utils {
         String date = new SimpleDateFormat("yyyyMMdd'T'HHmm").format(new Date());
 
         String method = "";
-        if (Main.NEAT_EVOLUTION)
-        {
-            method = "NEAT";
-        }
+        if (Main.NEAT_EVOLUTION)method = "NEAT";
         else method = "SANE";
         //return Paths.get("results", hostname + "-" + date);
         String HexArrayCounter = System.getenv().get("PBS_ARRAYID");
