@@ -63,7 +63,9 @@ public final class Utils {
 
         String date = new SimpleDateFormat("yyyyMMdd'T'HHmm").format(new Date());
 
-        return Paths.get("results", hostname + "-" + date);
+        //return Paths.get("results", hostname + "-" + date);
+        String HexArrayCounter = System.getenv().get("PBS_ARRAYID");
+        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter);
     }
 
     public static String getLocalHostName() {
