@@ -65,9 +65,15 @@ public final class Utils {
 
         String date = new SimpleDateFormat("yyyyMMdd'T'HHmm").format(new Date());
 
+        String method = "";
+        if (Main.NEAT_EVOLUTION)
+        {
+            method = "NEAT";
+        }
+        else method = "SANE";
         //return Paths.get("results", hostname + "-" + date);
         String HexArrayCounter = System.getenv().get("PBS_ARRAYID");
-        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter+"_"+Main.RES_CONFIG);
+        return Paths.get("results", hostname + "-" + date + "_" + HexArrayCounter+"_"+Main.RES_CONFIG+"_"+method);
     }
 
     public static String getLocalHostName() {
