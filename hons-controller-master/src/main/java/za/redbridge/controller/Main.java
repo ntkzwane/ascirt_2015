@@ -190,7 +190,7 @@ public class Main {
         private boolean advanced = false;
 
         @Parameter(names = "--environment", description = "Run with advanced envrionment and morphology")
-        private String environment = "small";
+        private String environment = "";
 
         @Parameter(names = "--morphology", description = "For use with the control case, provide"
                 + " the path to a serialized MMNEATNetwork to have its morphology used for the"
