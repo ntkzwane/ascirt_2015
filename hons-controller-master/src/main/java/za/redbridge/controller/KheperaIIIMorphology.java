@@ -28,10 +28,6 @@ public class KheperaIIIMorphology extends SensorMorphology {
         DEFAULT_CONFIGURATION.enableLowResCameraSensor = false;*/
     }
 
-    public KheperaIIIMorphology() {
-        this(DEFAULT_CONFIGURATION);
-    }
-
     public KheperaIIIMorphology(KheperaIIIPhenotype_simple.Configuration config) {
         super(createSensorModels(config));
     }
