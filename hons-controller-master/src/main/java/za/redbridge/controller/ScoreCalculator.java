@@ -148,12 +148,12 @@ public class ScoreCalculator implements CalculateScore {
 
     @Override
     public boolean shouldMinimize() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean requireSingleThreaded() {
-        return true;
+        return false;
     }
 
 }

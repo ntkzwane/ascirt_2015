@@ -37,6 +37,7 @@ public class Main {
 
     private static final double CONVERGENCE_SCORE = 110;
 
+    private static int thread_count = 1;
     public static boolean NEAT_EVOLUTION;
     public static String RES_CONFIG;
     public static void main(String[] args) throws IOException {
@@ -99,7 +100,9 @@ public class Main {
 
             TrainEA train;
             train = NEATUtil.constructNEATTrainer(population, calculateScore);
-
+            if (thread_count > 0) {
+                train.setThreadCount(thread_count);
+            }
             final StatsRecorder statsRecorder = new StatsRecorder(train, calculateScore);
             statsRecorder.recordIterationStats();
             for (int i = train.getIteration(); i < options.numIterations; i++) {
@@ -154,6 +157,10 @@ public class Main {
             log.debug("Neuron Population of size " + neuron_population_size + " initialized");
             log.debug("Blueprint Population of size " + blueprint_population_size + " initialized");
 
+            if (thread_count > 0) {
+                sane.getGenetic().setThreadCount(thread_count);
+            }
+
             final StatsRecorder statsRecorder = new StatsRecorder(sane.getGenetic(), calculateScore);
             statsRecorder.recordIterationStats();
 
@@ -163,7 +170,7 @@ public class Main {
                 statsRecorder.recordIterationStats();
 
                 if (sane.getGenetic().getBestGenome().getScore() >= CONVERGENCE_SCORE) {
-                    log.info("Convergence reached at epoch " + train.getIteration());
+                    log.info("Convergence reached at epoch " + sane.getGenetic().getIteration());
                     break;
                 }
             }
