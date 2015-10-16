@@ -37,7 +37,7 @@ public class Main {
 
     private static final double CONVERGENCE_SCORE = 110;
 
-    private static int thread_count = 1;
+    private static int thread_count = 0;
     public static boolean NEAT_EVOLUTION;
     public static String RES_CONFIG;
     public static void main(String[] args) throws IOException {

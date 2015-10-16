@@ -148,7 +148,7 @@ public class ScoreCalculator implements CalculateScore {
 
     @Override
     public boolean shouldMinimize() {
-        return true;
+        return false;
     }
 
     @Override
