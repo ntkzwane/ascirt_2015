@@ -61,13 +61,8 @@ public class Main {
         morphology_config.enableUltrasonicSensors90Degrees = true;
         morphology_config.enableProximitySensorBottom = true;
 
-        if (options.advanced)
-        {
-            System.out.println("Running advanced sensors");
-            morphology_config.enableColourRangedSensor = true;
-            morphology_config.enableLowResCameraSensor = true;
-        }
-        else System.out.println("Running simple sensors");
+        morphology_config.enableColourRangedSensor = true;
+        morphology_config.enableLowResCameraSensor = true;
 
         // Load the morphology
         SensorMorphology morphology = new KheperaIIIMorphology(morphology_config);
@@ -186,7 +181,7 @@ public class Main {
         private String configFile = "config/mediumSimConfig.yml";
 
         @Parameter(names = "-i", description = "Number of simulation iterations to train for")
-        private int numIterations = 500;
+        private int numIterations = 250;
 
         @Parameter(names = "-p", description = "Initial population size")
         private int populationSize = 100;
@@ -204,7 +199,7 @@ public class Main {
         private boolean control = false;
 
         @Parameter(names = "--advanced", description = "Run with advanced envrionment and morphology")
-        private boolean advanced = false;
+        private boolean advanced = true;
 
         @Parameter(names = "--environment", description = "Run with advanced envrionment and morphology")
         private String environment = "";
