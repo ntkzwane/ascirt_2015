@@ -30,8 +30,8 @@ public class SANE
     }
 
     static Random random = new Random();
-    static float neuron_mutation_rate = 0.1f;
-    static float blueprint_mutation_rate_random = 0.1f;
+    static float neuron_mutation_rate = 0.01f;
+    static float blueprint_mutation_rate_random = 0.01f;
     static float blueprint_mutation_rate_offspring = 0.5f;
 
     public SANE()

@@ -63,17 +63,22 @@ public class NeuronMutate implements EvolutionaryOperator
                 //obtain unique random number by shuffling the list of unique numbers
                 Set<Integer> ints = new HashSet<Integer>();
 
-                //add all the labels in the chromosome
-                for (int k = 0; k < SANE.CHROMOSOME_LENGTH; k++)
-                {
-                    if (k != i) ints.add(neuron.getChromosome()[k].getLabel());
-                }
+                int new_label = neuron.getChromosome()[i].getLabel();
 
-                //mutate connection label
-                int new_label = random.nextInt(SANE.IO_COUNT);
-                while (ints.contains(new_label))
+                if (random.nextFloat() <= 0.5)
                 {
+                    //add all the labels in the chromosome
+                    for (int k = 0; k < SANE.CHROMOSOME_LENGTH; k++)
+                    {
+                        if (k != i) ints.add(neuron.getChromosome()[k].getLabel());
+                    }
+
+                    //mutate connection label
                     new_label = random.nextInt(SANE.IO_COUNT);
+                    while (ints.contains(new_label))
+                    {
+                        new_label = random.nextInt(SANE.IO_COUNT);
+                    }
                 }
 
                 double num = random.nextDouble();

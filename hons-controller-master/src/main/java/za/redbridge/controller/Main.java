@@ -67,7 +67,6 @@ public class Main {
         // Load the morphology
         SensorMorphology morphology = new KheperaIIIMorphology(morphology_config);
 
-        System.out.println("Sensors count :" + morphology.getNumSensors());
         NEAT_EVOLUTION = options.control;
         RES_CONFIG = options.environment;
 
@@ -187,7 +186,7 @@ public class Main {
         private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 5;
+        private int simulationRuns = 3;
 
         @Parameter(names = "--conn-density", description = "Adjust the initial connection density"
                 + " for the population")
