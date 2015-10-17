@@ -1,5 +1,5 @@
 simulation:
-  iterations: 10000
+  iterations: 5000
 resources:
   small:
     quantity: 5
