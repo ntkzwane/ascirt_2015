@@ -37,9 +37,10 @@ public class Main {
 
     private static final double CONVERGENCE_SCORE = 110;
 
-    private static int thread_count = 0;
     public static boolean NEAT_EVOLUTION;
     public static String RES_CONFIG;
+
+    public static int thread_count = 1;
     public static void main(String[] args) throws IOException {
         Args options = new Args();
         new JCommander(options, args);
@@ -154,7 +155,7 @@ public class Main {
             log.debug("Blueprint Population of size " + blueprint_population_size + " initialized");
 
             if (thread_count > 0) {
-                sane.getGenetic().setThreadCount(thread_count);
+                sane.setThreadCount(thread_count);
             }
 
             final StatsRecorder statsRecorder = new StatsRecorder(sane.getGenetic(), calculateScore);
