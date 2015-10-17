@@ -53,6 +53,7 @@ public class Main {
             simConfig = new SimConfig();
         }
 
+        System.out.println("iteration :" + simConfig.getSimulationIterations());
         KheperaIIIPhenotype_simple.Configuration morphology_config = new KheperaIIIPhenotype_simple.Configuration();;
         morphology_config.enableProximitySensors40Degrees = true;
         morphology_config.enableProximitySensors140Degrees = true;
@@ -67,6 +68,7 @@ public class Main {
         // Load the morphology
         SensorMorphology morphology = new KheperaIIIMorphology(morphology_config);
 
+        System.out.println("Sensors count :" + morphology.getNumSensors());
         NEAT_EVOLUTION = options.control;
         RES_CONFIG = options.environment;
 
