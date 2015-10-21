@@ -40,7 +40,7 @@ public class Main {
     public static boolean NEAT_EVOLUTION;
     public static String RES_CONFIG;
 
-    public static int thread_count = 1;
+    public static int thread_count = 0;
     public static void main(String[] args) throws IOException {
         Args options = new Args();
         new JCommander(options, args);
