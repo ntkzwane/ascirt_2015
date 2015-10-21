@@ -26,7 +26,7 @@ public class SANE
         OUTPUT_SIZE = outputSize;
         IO_COUNT = INPUT_SIZE + OUTPUT_SIZE;
         network_size = IO_COUNT + HIDDEN_SIZE;
-        CHROMOSOME_LENGTH = IO_COUNT-1;
+        CHROMOSOME_LENGTH = IO_COUNT*3/4;
     }
 
     static Random random = new Random();
