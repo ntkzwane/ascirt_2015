@@ -26,12 +26,12 @@ public class SANE
         OUTPUT_SIZE = outputSize;
         IO_COUNT = INPUT_SIZE + OUTPUT_SIZE;
         network_size = IO_COUNT + HIDDEN_SIZE;
-        CHROMOSOME_LENGTH = IO_COUNT-1;
+        CHROMOSOME_LENGTH = IO_COUNT*3/4;
     }
 
     static Random random = new Random();
-    static float neuron_mutation_rate = 0.1f;
-    static float blueprint_mutation_rate_random = 0.1f;
+    static float neuron_mutation_rate = 0.01f;
+    static float blueprint_mutation_rate_random = 0.01f;
     static float blueprint_mutation_rate_offspring = 0.5f;
 
     public SANE()

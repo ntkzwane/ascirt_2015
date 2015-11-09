@@ -87,7 +87,7 @@ public class Main {
         private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 5;
+        private int simulationRuns = 3;
 
         @Parameter(names = "--demo", description = "Show a GUI demo of a given genome")
         private String genomePath = null;

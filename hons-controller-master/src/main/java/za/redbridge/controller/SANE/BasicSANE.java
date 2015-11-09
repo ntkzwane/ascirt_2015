@@ -879,7 +879,6 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
             throw new GeneticError(this.reportedError);
         }
 
-        System.out.println("size "+ newBlueprints.size());
         this.speciation.performBlueprintSpeciation(this.newBlueprints, blueprint_population);
 
     }
@@ -938,7 +937,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         {
             this.actualThreadCount = this.threadCount;
         }
-
+        System.out.println("Actual basic thread count be4 :" + actualThreadCount);
         // score the initial population
         final ParallelScore pscore = new ParallelScore(getPopulation(),
                 getCODEC(), new ArrayList<AdjustScore>(), getScoreFunction(),
@@ -947,6 +946,7 @@ public class BasicSANE implements EvolutionaryAlgorithm, MultiThreadable,
         pscore.process();
         this.actualThreadCount = pscore.getThreadCount();
 
+        System.out.println("Actual basic thread count :" + actualThreadCount);
         // start up the thread pool
         if (this.actualThreadCount == 1)
         {

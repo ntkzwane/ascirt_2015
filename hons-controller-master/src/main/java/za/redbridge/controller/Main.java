@@ -38,7 +38,9 @@ public class Main {
     private static final double CONVERGENCE_SCORE = 110;
 
     public static boolean NEAT_EVOLUTION;
+    public static String RES_CONFIG;
 
+    public static int thread_count = 0;
     public static void main(String[] args) throws IOException {
         Args options = new Args();
         new JCommander(options, args);
@@ -52,26 +54,24 @@ public class Main {
             simConfig = new SimConfig();
         }
 
+        System.out.println("iteration :" + simConfig.getSimulationIterations());
         KheperaIIIPhenotype_simple.Configuration morphology_config = new KheperaIIIPhenotype_simple.Configuration();;
         morphology_config.enableProximitySensors40Degrees = true;
         morphology_config.enableProximitySensors140Degrees = true;
         morphology_config.enableProximitySensor180Degrees = true;
         morphology_config.enableUltrasonicSensor0Degrees = true;
         morphology_config.enableUltrasonicSensors90Degrees = true;
+        morphology_config.enableProximitySensorBottom = true;
 
-        if (options.advanced)
-        {
-            System.out.println("Running advanced sensors");
-            morphology_config.enableColourRangedSensor = true;
-            morphology_config.enableLowResCameraSensor = true;
-        }
-        else System.out.println("Running simple sensors");
+        morphology_config.enableColourRangedSensor = true;
+        morphology_config.enableLowResCameraSensor = true;
 
         // Load the morphology
         SensorMorphology morphology = new KheperaIIIMorphology(morphology_config);
 
         System.out.println("Sensors count :" + morphology.getNumSensors());
         NEAT_EVOLUTION = options.control;
+        RES_CONFIG = options.environment;
 
         //NEAT
         if (NEAT_EVOLUTION)
@@ -97,12 +97,19 @@ public class Main {
 
             TrainEA train;
             train = NEATUtil.constructNEATTrainer(population, calculateScore);
-
+            if (thread_count > 0) {
+                train.setThreadCount(thread_count);
+            }
             final StatsRecorder statsRecorder = new StatsRecorder(train, calculateScore);
             statsRecorder.recordIterationStats();
             for (int i = train.getIteration(); i < options.numIterations; i++) {
                 train.iteration();
                 statsRecorder.recordIterationStats();
+
+                if (train.getBestGenome().getScore() >= CONVERGENCE_SCORE) {
+                    log.info("Convergence reached at epoch " + train.getIteration());
+                    break;
+                }
             }
         }
         //SANE
@@ -147,6 +154,10 @@ public class Main {
             log.debug("Neuron Population of size " + neuron_population_size + " initialized");
             log.debug("Blueprint Population of size " + blueprint_population_size + " initialized");
 
+            if (thread_count > 0) {
+                sane.setThreadCount(thread_count);
+            }
+
             final StatsRecorder statsRecorder = new StatsRecorder(sane.getGenetic(), calculateScore);
             statsRecorder.recordIterationStats();
 
@@ -154,6 +165,11 @@ public class Main {
             {
                 sane.iteration();
                 statsRecorder.recordIterationStats();
+
+                if (sane.getGenetic().getBestGenome().getScore() >= CONVERGENCE_SCORE) {
+                    log.info("Convergence reached at epoch " + sane.getGenetic().getIteration());
+                    break;
+                }
             }
         }
 
@@ -167,13 +183,13 @@ public class Main {
         private String configFile = "config/mediumSimConfig.yml";
 
         @Parameter(names = "-i", description = "Number of simulation iterations to train for")
-        private int numIterations = 500;
+        private int numIterations = 250;
 
         @Parameter(names = "-p", description = "Initial population size")
         private int populationSize = 100;
 
         @Parameter(names = "--sim-runs", description = "Number of simulation runs per iteration")
-        private int simulationRuns = 5;
+        private int simulationRuns = 3;
 
         @Parameter(names = "--conn-density", description = "Adjust the initial connection density"
                 + " for the population")
@@ -185,7 +201,10 @@ public class Main {
         private boolean control = false;
 
         @Parameter(names = "--advanced", description = "Run with advanced envrionment and morphology")
-        private boolean advanced = false;
+        private boolean advanced = true;
+
+        @Parameter(names = "--environment", description = "Run with advanced envrionment and morphology")
+        private String environment = "";
 
         @Parameter(names = "--morphology", description = "For use with the control case, provide"
                 + " the path to a serialized MMNEATNetwork to have its morphology used for the"

@@ -13,7 +13,7 @@ desktop.ini
 
 # other
 */.idea/
-*/results/
+*results/
 OLD_MORPHEV/
 mymake
 build/

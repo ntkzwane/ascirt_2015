@@ -27,7 +27,7 @@ public class PickupHeuristic extends Heuristic {
     protected final SimConfig.Direction targetAreaDirection;
 
     private int SimStepCount = 0;
-    private final int MaxStepCounter = 2500; // I think this is like 5 seconds
+    private final int MaxStepCounter = 750; // I think this is like 2 seconds
     private int CurrentNumPusingRobots = 0;
     private ResourceObject currentResource = null;
 
