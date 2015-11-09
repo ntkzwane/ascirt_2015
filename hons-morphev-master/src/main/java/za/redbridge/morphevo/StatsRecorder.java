@@ -134,7 +134,7 @@ public class StatsRecorder {
         );
         txt = String.format("epoch: %d, fitness: %f, sensors: %d, proximity: %d, ultrasonic: %d, colour proximity: %d",
             epoch, genome.getScore(), genome.getNumSensors() /*exclude bottom prox*/,
-            chromosome.getNumUltraSensors(), chromosome.getNumUltraSensors(), chromosome.getNumColourProxiSensors());
+            chromosome.getNumProxiSensors(), chromosome.getNumUltraSensors(), chromosome.getNumColourProxiSensors());
         Path txtPath = directory.resolve("info.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(txtPath, Charset.defaultCharset())) {
             writer.write(txt);
